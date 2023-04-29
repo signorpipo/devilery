@@ -50,13 +50,13 @@
             "translation": [
                 0.0,
                 0.0,
-                -8.0
+                0.0
             ],
             "rotation": [
                 0.0,
-                1.0,
                 0.0,
-                -4.3711388286737935e-8
+                0.0,
+                1.0
             ],
             "scaling": [
                 1.0,
@@ -747,7 +747,18 @@
                 {
                     "type": "pp-mute-everything",
                     "active": false
+                },
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
                 }
+            ],
+            "translation": [
+                0.0,
+                -1000.0,
+                0.0
             ]
         },
         "151": {
