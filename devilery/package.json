@@ -1,0 +1,19 @@
+{
+    "name": "devilery",
+    "version": "1.0.0",
+    "author": "Once Upon A Team",
+    "type": "module",
+    "license": "ISC",
+    "dependencies": {
+        "@wonderlandengine/api": "^1.0.0-rc.7",
+        "@wonderlandengine/components": "^1.0.0-rc.8",
+        "gl-matrix": "^3.4.3",
+        "howler": "^2.2.3"
+    },
+    "devDependencies": {
+        "esbuild": "^0.14.54"
+    },
+    "scripts": {
+        "build": "esbuild ./js/index.js --minify --sourcemap --bundle --outfile=\"deploy/devilery-bundle.js\""
+    }
+}
