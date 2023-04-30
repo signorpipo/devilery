@@ -1,3 +1,4 @@
+import { GameGlobals } from "../../../../../../../devilery/cauldron/game_globals";
 import { Timer } from "../../../../../../cauldron/cauldron/timer";
 import { XRUtils } from "../../../../../../cauldron/utils/xr_utils";
 import { InputUtils } from "../../../../../../input/cauldron/input_utils";
@@ -82,6 +83,13 @@ CleanedPlayerLocomotionSmooth.prototype.update = function () {
         axes[0] = Math.abs(axes[0]) > this._myParams.myMovementMinStickIntensityThreshold ? axes[0] : 0;
         axes[1] = Math.abs(axes[1]) > this._myParams.myMovementMinStickIntensityThreshold ? axes[1] : 0;
 
+        let maxSpeed = this._myParams.myMaxSpeed;
+        if (GameGlobals.myDebugEnabled) {
+            if (Globals.getGamepads(this._myParams.myEngine)[this._myParams.myHandedness].getButtonInfo(GamepadButtonID.SELECT).isPressed()) {
+                maxSpeed *= 3;
+            }
+        }
+
         let horizontalMovement = false;
         if (!axes.vec2_isZero()) {
             this._myStickIdleTimer.start();
@@ -95,7 +103,7 @@ CleanedPlayerLocomotionSmooth.prototype.update = function () {
                 }
 
                 let movementIntensity = axes.vec2_length();
-                let speed = Math.pp_lerp(0, this._myParams.myMaxSpeed, movementIntensity);
+                let speed = Math.pp_lerp(0, maxSpeed, movementIntensity);
 
                 headMovement = direction.vec3_scale(speed * dt, headMovement);
 
@@ -112,11 +120,11 @@ CleanedPlayerLocomotionSmooth.prototype.update = function () {
 
         if (this._myParams.myFlyEnabled) {
             if (Globals.getGamepads(this._myParams.myEngine)[this._myParams.myHandedness].getButtonInfo(GamepadButtonID.TOP_BUTTON).isPressed()) {
-                verticalMovement = playerUp.vec3_scale(this._myParams.myMaxSpeed * dt, verticalMovement);
+                verticalMovement = playerUp.vec3_scale(maxSpeed * dt, verticalMovement);
                 headMovement = headMovement.vec3_add(verticalMovement, headMovement);
                 this._myLocomotionRuntimeParams.myIsFlying = true;
             } else if (Globals.getGamepads(this._myParams.myEngine)[this._myParams.myHandedness].getButtonInfo(GamepadButtonID.BOTTOM_BUTTON).isPressed()) {
-                verticalMovement = playerUp.vec3_scale(-this._myParams.myMaxSpeed * dt, verticalMovement);
+                verticalMovement = playerUp.vec3_scale(-maxSpeed * dt, verticalMovement);
                 headMovement = headMovement.vec3_add(verticalMovement, headMovement);
                 this._myLocomotionRuntimeParams.myIsFlying = true;
             }

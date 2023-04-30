@@ -45,7 +45,12 @@
                         "_myPhysicsBlockLayerFlags": "0, 1, 0, 0, 0, 0, 0, 0",
                         "_myMoveThroughCollisionShortcutEnabled": true,
                         "_myFlyEnabled": true,
-                        "_myMaxSpeed": 3.5
+                        "_myMaxSpeed": 2.0,
+                        "_myMinAngleToFlyUpNonVR": 90.0,
+                        "_myMinAngleToFlyDownNonVR": 90.0,
+                        "_myMinAngleToFlyUpVR": 90.0,
+                        "_myMinAngleToFlyDownVR": 90.0,
+                        "_myMinAngleToFlyRight": 90.0
                     }
                 }
             ],
