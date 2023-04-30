@@ -49,6 +49,10 @@ export class GoToTargetComponent extends Component {
         // Implemented outside class definition
     }
 
+    _update(dt) {
+        // Implemented outside class definition
+    }
+
     pp_clone(targetObject) {
         let clonedComponent = CloneUtils.cloneComponentBase(this, targetObject);
 

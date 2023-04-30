@@ -15,6 +15,7 @@
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {DevileryGatewayComponent} from './devilery/cauldron/components/devilery_gateway_component.js';
 import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_in_out_component.js';
+import {FlapComponent} from './devilery/cauldron/components/flap_component.js';
 import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_component.js';
 import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
@@ -90,6 +91,7 @@ if (document.readyState === 'loading') {
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(DevileryGatewayComponent);
 engine.registerComponent(FadeViewInOutComponent);
+engine.registerComponent(FlapComponent);
 engine.registerComponent(GoToTargetComponent);
 engine.registerComponent(SetPositionOnInitComponent);
 engine.registerComponent(ConsoleVRToolComponent);

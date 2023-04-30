@@ -1914,14 +1914,19 @@
                 {
                     "type": "go-to-target",
                     "go-to-target": {
-                        "_myIsPrincess": false
+                        "_myIsPrincess": true
                     }
                 }
             ]
         },
         "267": {
             "name": "Pivot",
-            "parent": "266"
+            "parent": "266",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
         },
         "268": {
             "name": "Body",
@@ -1962,6 +1967,221 @@
         "269": {
             "name": "Nose",
             "parent": "267",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "273": {
+            "name": "Devilery Guy",
+            "parent": "231",
+            "translation": [
+                -40.0,
+                25.0,
+                30.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                }
+            ]
+        },
+        "274": {
+            "name": "Pivot",
+            "parent": "273",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "275": {
+            "name": "Body",
+            "parent": "274",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "276": {
+            "name": "Nose",
+            "parent": "274",
             "components": [
                 {
                     "type": "mesh",
