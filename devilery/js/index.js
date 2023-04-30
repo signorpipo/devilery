@@ -14,13 +14,13 @@
 /* wle:auto-imports:start */
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {DevileryGatewayComponent} from './devilery/cauldron/devilery_gateway.js';
+import {PlayerLocomotionComponent} from './pp/gameplay/experimental/locomotion/legacy/locomotion/player_locomotion_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
 import {GamepadMeshAnimatorComponent} from './pp/index.js';
 import {GrabbableComponent} from './pp/index.js';
 import {GrabberHandComponent} from './pp/index.js';
 import {PPGatewayComponent} from './pp/index.js';
-import {PlayerLocomotionComponent} from './pp/index.js';
 import {SetHandLocalTransformComponent} from './pp/index.js';
 import {SetHeadLocalTransformComponent} from './pp/index.js';
 import {SpatialAudioListenerComponent} from './pp/index.js';
@@ -85,13 +85,13 @@ if (document.readyState === 'loading') {
 /* wle:auto-register:start */
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(DevileryGatewayComponent);
+engine.registerComponent(PlayerLocomotionComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
 engine.registerComponent(GamepadMeshAnimatorComponent);
 engine.registerComponent(GrabbableComponent);
 engine.registerComponent(GrabberHandComponent);
 engine.registerComponent(PPGatewayComponent);
-engine.registerComponent(PlayerLocomotionComponent);
 engine.registerComponent(SetHandLocalTransformComponent);
 engine.registerComponent(SetHeadLocalTransformComponent);
 engine.registerComponent(SpatialAudioListenerComponent);

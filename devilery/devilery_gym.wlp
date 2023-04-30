@@ -933,9 +933,77 @@
                 {
                     "type": "devilery-gateway",
                     "devilery-gateway": {
-                        "_myDebugEnabled": true
+                        "_myDebugEnabled": true,
+                        "_mySkipIntro": true
                     }
                 }
+            ]
+        },
+        "232": {
+            "name": "Black Room",
+            "parent": "237",
+            "translation": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "235"
+                    }
+                }
+            ],
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "233": {
+            "name": "White Room",
+            "parent": "237",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "236"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -10.0,
+                0.0
+            ],
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "237": {
+            "name": "Story Rooms",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -30.0,
+                0.0
             ]
         }
     },
@@ -1371,6 +1439,36 @@
                     1.0
                 ]
             }
+        },
+        "235": {
+            "name": "Black Room",
+            "pipeline": "234",
+            "Phong": {
+                "diffuseColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        "236": {
+            "name": "White Room",
+            "pipeline": "234",
+            "Phong": {
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ambientColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
         }
     },
     "shaders": {
@@ -1586,6 +1684,20 @@
                 "WITH_EMISSIVE": false,
                 "NORMAL_MAPPING": false
             }
+        },
+        "234": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            },
+            "features": {
+                "WITH_FOG": true,
+                "VERTEX_COLORS": false,
+                "WITH_EMISSIVE": false,
+                "NORMAL_MAPPING": false
+            },
+            "name": "Phong Opaque Double",
+            "doubleSided": true
         },
         "14": {
             "link": {
