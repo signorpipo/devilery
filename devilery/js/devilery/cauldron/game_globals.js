@@ -1,3 +1,8 @@
 export let GameGlobals = {
-    myDebugEnabled: false
+    myDebugEnabled: false,
+    mySkipIntro: false,
+
+    myPrincess: null,
+
+    myEnemies: []
 };
