@@ -744,9 +744,9 @@
                         "shape": "box",
                         "box": {
                             "extents": [
-                                20.0,
+                                10.0,
                                 1.0,
-                                20.0
+                                10.0
                             ]
                         },
                         "groups": 2,
@@ -762,9 +762,9 @@
                 0.0
             ],
             "scaling": [
-                20.0,
+                10.0,
                 1.0,
-                20.0
+                10.0
             ],
             "rotation": [
                 0.0,
@@ -1390,7 +1390,520 @@
         },
         "248": {
             "name": "Player Start",
+            "parent": "231",
+            "translation": [
+                0.0,
+                0.0,
+                -10.0
+            ]
+        },
+        "249": {
+            "name": "Princess Tower",
             "parent": "231"
+        },
+        "250": {
+            "name": "Tower",
+            "parent": "249",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.5,
+                                5.0,
+                                0.5
+                            ]
+                        },
+                        "static": true,
+                        "groups": 2,
+                        "block": 6
+                    }
+                },
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                5.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                5.0,
+                0.5
+            ]
+        },
+        "251": {
+            "name": "Princess",
+            "parent": "249",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "gravity": false,
+                        "kinematic": true,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 8,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.5,
+                                1.5,
+                                1.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                11.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.5,
+                1.5,
+                1.5
+            ]
+        },
+        "252": {
+            "name": "Princess Target",
+            "parent": "249",
+            "translation": [
+                0.0,
+                16.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "253": {
+            "name": "Windows Targets",
+            "parent": "231",
+            "translation": [
+                0.0,
+                22.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "254": {
+            "name": "Window Target 1",
+            "parent": "253",
+            "translation": [
+                0.0,
+                0.0,
+                -15.0
+            ]
+        },
+        "255": {
+            "name": "Window Target 2",
+            "parent": "253",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "256": {
+            "name": "Window Target 3",
+            "parent": "253",
+            "translation": [
+                -15.0,
+                0.0,
+                0.0
+            ]
+        },
+        "257": {
+            "name": "Window Target 4",
+            "parent": "253",
+            "translation": [
+                15.0,
+                0.0,
+                0.0
+            ]
+        },
+        "258": {
+            "name": "Devilery Console",
+            "parent": "231",
+            "translation": [
+                -7.5,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.7071068,
+                0.0,
+                0.7071068
+            ],
+            "scaling": [
+                0.9999995,
+                1.0,
+                0.9999995
+            ]
+        },
+        "259": {
+            "name": "Console",
+            "parent": "258",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.0,
+                                0.6,
+                                0.6
+                            ]
+                        },
+                        "static": true,
+                        "groups": 2,
+                        "block": 7
+                    }
+                }
+            ],
+            "scaling": [
+                1.0,
+                0.6,
+                0.6
+            ],
+            "translation": [
+                -2.9802322387695313e-8,
+                0.6,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "260": {
+            "name": "Antenna",
+            "parent": "258",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 2,
+                        "block": 7,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                1.0,
+                                0.1
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                1.0,
+                -0.6999999
+            ],
+            "scaling": [
+                0.1,
+                1.0,
+                0.1
+            ]
+        },
+        "262": {
+            "name": "Evil Target",
+            "parent": "260",
+            "translation": [
+                0.0,
+                1.25,
+                -0.0000152
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                2.4999997,
+                0.25,
+                2.4999997
+            ]
+        },
+        "263": {
+            "name": "Weapon Table",
+            "parent": "258",
+            "translation": [
+                -2.521590545256913e-7,
+                0.5999999,
+                2.499999
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.6,
+                0.5
+            ],
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx"
+                }
+            ]
+        },
+        "264": {
+            "name": "Weapon Target",
+            "parent": "263",
+            "translation": [
+                -4.768325538861973e-7,
+                4.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0000004,
+                1.0000001,
+                1.0000004
+            ]
+        },
+        "265": {
+            "name": "Receiver",
+            "parent": "260",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 2,
+                        "block": 7,
+                        "shape": "box"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                1.25,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                2.4999997,
+                0.25,
+                2.4999997
+            ]
         }
     },
     "meshes": {
@@ -2015,8 +2528,8 @@
                 "0": "Player",
                 "1": "Solid",
                 "2": "Interactable",
-                "3": "Group 3",
-                "4": "Group 4",
+                "3": "Princess",
+                "4": "Enemy",
                 "5": "Group 5",
                 "6": "Group 6",
                 "7": "Group 7"

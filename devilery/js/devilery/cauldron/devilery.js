@@ -44,5 +44,13 @@ export class Devilery {
 
         GameGlobals.myBlackFade = Globals.getScene().pp_getObjectByName("Black Fade").pp_getComponent("fade-view-in-out");
         GameGlobals.myWhiteFade = Globals.getScene().pp_getObjectByName("White Fade").pp_getComponent("fade-view-in-out");
+
+        GameGlobals.myPrincessTarget = Globals.getScene().pp_getObjectByName("Princess Target");
+
+        GameGlobals.myWindowsTargets = Globals.getScene().pp_getObjectByName("Windows Targets").pp_getChildren();
+
+        GameGlobals.myEvilTarget = Globals.getScene().pp_getObjectByName("Evil Target");
+
+        GameGlobals.myWeaponTarget = Globals.getScene().pp_getObjectByName("Weapon Target");
     }
 }

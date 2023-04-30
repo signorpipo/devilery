@@ -8,9 +8,14 @@ export let GameGlobals = {
     myBlackFade: null,
     myWhiteFade: null,
 
+    myPrincessTarget: null,
+    myWindowsTargets: [],
+    myEvilTarget: null,
+    myWeaponTarget: null,
+
     myPrincess: null,
 
-    myEnemies: []
+    myEnemies: [],
 };
 
 window.GameGlobals = GameGlobals;
