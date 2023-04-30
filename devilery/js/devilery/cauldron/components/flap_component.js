@@ -16,6 +16,8 @@ export class FlapComponent extends Component {
 
         this._myFalling = false;
         this._myFlapped = false;
+
+        this._myStarted = false;
     }
 
     update(dt) {

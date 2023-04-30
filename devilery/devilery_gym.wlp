@@ -1694,9 +1694,9 @@
             "name": "Weapon Table",
             "parent": "258",
             "translation": [
-                -2.521590545256913e-7,
+                -1.3740304893872235e-8,
                 0.5999999,
-                2.499999
+                2.499998
             ],
             "rotation": [
                 0.0,
@@ -1718,7 +1718,20 @@
                     }
                 },
                 {
-                    "type": "physx"
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.5,
+                                0.6,
+                                0.5
+                            ]
+                        },
+                        "groups": 2,
+                        "block": 71,
+                        "static": true
+                    }
                 }
             ]
         },
@@ -1886,13 +1899,13 @@
                 }
             ],
             "translation": [
-                0.0,
-                1.25,
+                2.980232238769531e-7,
+                1.2499998,
                 0.0
             ],
             "rotation": [
                 0.0,
-                -0.0,
+                0.0,
                 0.0,
                 1.0
             ],
@@ -1997,9 +2010,9 @@
             "name": "Devilery Guy",
             "parent": "231",
             "translation": [
-                -40.0,
+                -10.0,
                 25.0,
-                30.0
+                10.0
             ],
             "components": [
                 {
@@ -2206,6 +2219,69 @@
                 0.1,
                 0.1,
                 0.1
+            ]
+        },
+        "277": {
+            "name": "Weapon Guy Target",
+            "parent": "274",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "278": {
+            "name": "Weapon",
+            "parent": "277",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.4
+                            ]
+                        },
+                        "kinematic": true,
+                        "groups": 4,
+                        "block": 6
+                    }
+                },
+                {
+                    "type": "weapon"
+                }
+            ]
+        },
+        "279": {
+            "name": "Mesh",
+            "parent": "278",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.4
             ]
         }
     },

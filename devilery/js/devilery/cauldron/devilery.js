@@ -1,8 +1,9 @@
-import { FSM, Globals } from "../../pp";
+import { FSM, Globals, PlayerLocomotionComponent } from "../../pp";
 import { EndingState } from "../states/ending_state";
 import { GameState } from "../states/game_state";
 import { IntroState } from "../states/intro_state";
 import { AudioLoader } from "./audio_loader";
+import { FadeViewInOutComponent } from "./components/fade_view_in_out_component";
 import { GameGlobals } from "./game_globals";
 
 export class Devilery {
@@ -38,12 +39,12 @@ export class Devilery {
     }
 
     _collectSceneObjects() {
-        let playerLocomotionComponent = Globals.getScene().pp_getComponent("pp-player-locomotion");
+        let playerLocomotionComponent = Globals.getScene().pp_getComponent(PlayerLocomotionComponent);
         GameGlobals.myPlayerLocomotion = playerLocomotionComponent._myPlayerLocomotion;
         GameGlobals.myPlayerTransformManager = playerLocomotionComponent._myPlayerLocomotion._myPlayerTransformManager;
 
-        GameGlobals.myBlackFade = Globals.getScene().pp_getObjectByName("Black Fade").pp_getComponent("fade-view-in-out");
-        GameGlobals.myWhiteFade = Globals.getScene().pp_getObjectByName("White Fade").pp_getComponent("fade-view-in-out");
+        GameGlobals.myBlackFade = Globals.getScene().pp_getObjectByName("Black Fade").pp_getComponent(FadeViewInOutComponent);
+        GameGlobals.myWhiteFade = Globals.getScene().pp_getObjectByName("White Fade").pp_getComponent(FadeViewInOutComponent);
 
         GameGlobals.myPrincessTarget = Globals.getScene().pp_getObjectByName("Princess Target");
 

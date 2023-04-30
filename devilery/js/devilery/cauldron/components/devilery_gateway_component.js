@@ -1,7 +1,7 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { initDevilery } from "../init_devilery";
 import { GameGlobals } from "../game_globals";
-import { Globals } from "../../../pp";
+import { Globals, PlayerLocomotionComponent } from "../../../pp";
 import { Devilery } from "../devilery";
 
 let _alreadyRegisteredEngines = [];
@@ -26,7 +26,7 @@ export class DevileryGatewayComponent extends Component {
         GameGlobals.myDebugEnabled = this._myDebugEnabled && Globals.isDebugEnabled();
         GameGlobals.mySkipIntro = this._mySkipIntro && Globals.isDebugEnabled();
 
-        let playerLocomotionComponent = Globals.getScene().pp_getComponent("pp-player-locomotion");
+        let playerLocomotionComponent = Globals.getScene().pp_getComponent(PlayerLocomotionComponent);
 
         this._myDevilery = new Devilery();
 

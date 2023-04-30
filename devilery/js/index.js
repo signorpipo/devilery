@@ -18,6 +18,7 @@ import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_i
 import {FlapComponent} from './devilery/cauldron/components/flap_component.js';
 import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_component.js';
 import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
+import {WeaponComponent} from './devilery/cauldron/components/weapon_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
 import {GamepadMeshAnimatorComponent} from './pp/index.js';
@@ -94,6 +95,7 @@ engine.registerComponent(FadeViewInOutComponent);
 engine.registerComponent(FlapComponent);
 engine.registerComponent(GoToTargetComponent);
 engine.registerComponent(SetPositionOnInitComponent);
+engine.registerComponent(WeaponComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
 engine.registerComponent(GamepadMeshAnimatorComponent);

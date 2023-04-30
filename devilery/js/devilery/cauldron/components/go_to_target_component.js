@@ -1,6 +1,7 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { GameGlobals } from "../game_globals";
 import { NumberOverValue, vec3_create } from "../../../pp";
+import { WeaponComponent } from "./weapon_component";
 
 export class GoToTargetComponent extends Component {
     static TypeName = "go-to-target";
@@ -31,6 +32,8 @@ export class GoToTargetComponent extends Component {
         this._myTimer = 0;
 
         this._myTurnSpeed = 100;
+
+        this._myWeaponReleased = false;
     }
 
     update(dt) {
@@ -107,6 +110,15 @@ GoToTargetComponent.prototype._update = function () {
 
         let nextTargetDistance = this._myTargetPositions[this._myCurrentTargetIndex][1];
         let distanceToTarget = currentPosition.vec3_distance(targetPosition);
+
+
+        if (!this._myWeaponReleased) {
+            if (distanceToTarget < nextTargetDistance && this._myCurrentTargetIndex == 1) {
+                this._myWeaponReleased = true;
+                this.object.pp_getComponent(WeaponComponent)?.release();
+            }
+        }
+
         if (distanceToTarget <= nextTargetDistance) {
             this._myCurrentTargetIndex++;
         } else if (!this._mySlowDown || (this._myCurrentTargetIndex >= 1 && this._myTargetPositions.length > 2 &&
