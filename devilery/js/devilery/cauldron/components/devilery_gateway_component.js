@@ -50,5 +50,7 @@ export class DevileryGatewayComponent extends Component {
         }
 
         this._myDevilery.start();
+
+        GameGlobals.myStarted = true;
     }
 }

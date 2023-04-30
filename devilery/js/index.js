@@ -15,7 +15,8 @@
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {DevileryGatewayComponent} from './devilery/cauldron/components/devilery_gateway_component.js';
 import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_in_out_component.js';
-import {SetPositionOnInit} from './devilery/cauldron/components/set_position_on_init.js';
+import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_component.js';
+import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
 import {PlayerLocomotionComponent} from './pp/gameplay/experimental/locomotion/legacy/locomotion/player_locomotion_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
@@ -26,11 +27,11 @@ import {PPGatewayComponent} from './pp/index.js';
 import {SetActiveComponent} from './pp/index.js';
 import {SetHandLocalTransformComponent} from './pp/index.js';
 import {SetHeadLocalTransformComponent} from './pp/index.js';
+import {ShowFPSComponent} from './pp/index.js';
 import {SpatialAudioListenerComponent} from './pp/index.js';
 import {SwitchHandObjectComponent} from './pp/index.js';
 import {ToolCursorComponent} from './pp/index.js';
 import {TrackedHandDrawAllJointsComponent} from './pp/index.js';
-import {VirtualGamepadComponent} from './pp/index.js';
 /* wle:auto-imports:end */
 
 import { loadRuntime } from '@wonderlandengine/api';
@@ -89,7 +90,8 @@ if (document.readyState === 'loading') {
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(DevileryGatewayComponent);
 engine.registerComponent(FadeViewInOutComponent);
-engine.registerComponent(SetPositionOnInit);
+engine.registerComponent(GoToTargetComponent);
+engine.registerComponent(SetPositionOnInitComponent);
 engine.registerComponent(PlayerLocomotionComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
@@ -100,11 +102,11 @@ engine.registerComponent(PPGatewayComponent);
 engine.registerComponent(SetActiveComponent);
 engine.registerComponent(SetHandLocalTransformComponent);
 engine.registerComponent(SetHeadLocalTransformComponent);
+engine.registerComponent(ShowFPSComponent);
 engine.registerComponent(SpatialAudioListenerComponent);
 engine.registerComponent(SwitchHandObjectComponent);
 engine.registerComponent(ToolCursorComponent);
 engine.registerComponent(TrackedHandDrawAllJointsComponent);
-engine.registerComponent(VirtualGamepadComponent);
 /* wle:auto-register:end */
 
 engine.scene.load(`${Constants.ProjectName}.bin`);

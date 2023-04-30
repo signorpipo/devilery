@@ -1,6 +1,9 @@
+import { vec3_create } from "../../pp";
+
 export let GameGlobals = {
-    myDebugEnabled: false,
-    mySkipIntro: false,
+    myUp: vec3_create(0, 1, 0),
+
+    myStarted: false,
 
     myPlayerLocomotion: null,
     myPlayerTransformManager: null,
@@ -16,6 +19,9 @@ export let GameGlobals = {
     myPrincess: null,
 
     myEnemies: [],
+
+    myDebugEnabled: false,
+    mySkipIntro: false
 };
 
 window.GameGlobals = GameGlobals;

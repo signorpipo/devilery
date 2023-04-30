@@ -1,6 +1,6 @@
 import { Component, Property } from "@wonderlandengine/api";
 
-export class SetPositionOnInit extends Component {
+export class SetPositionOnInitComponent extends Component {
     static TypeName = "set-position-on-init";
     static Properties = {
         _myObjectPosition: Property.object()

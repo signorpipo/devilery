@@ -28,10 +28,7 @@
                     }
                 },
                 {
-                    "type": "pp-virtual-gamepad",
-                    "pp-virtual-gamepad": {
-                        "_myShowOnDesktop": true
-                    }
+                    "type": "pp-show-fps"
                 }
             ]
         },
@@ -1479,7 +1476,7 @@
             "translation": [
                 0.0,
                 11.5,
-                0.0
+                -0.0
             ],
             "rotation": [
                 0.0,
@@ -1498,7 +1495,7 @@
             "parent": "249",
             "translation": [
                 0.0,
-                16.5,
+                11.5,
                 0.0
             ],
             "rotation": [
@@ -1515,10 +1512,10 @@
         },
         "253": {
             "name": "Windows Targets",
-            "parent": "231",
+            "parent": "252",
             "translation": [
                 0.0,
-                22.5,
+                0.0,
                 0.0
             ],
             "rotation": [
@@ -1730,7 +1727,7 @@
             "parent": "263",
             "translation": [
                 -4.768325538861973e-7,
-                4.0,
+                6.0,
                 0.0000019
             ],
             "rotation": [
@@ -1903,6 +1900,92 @@
                 2.4999997,
                 0.25,
                 2.4999997
+            ]
+        },
+        "266": {
+            "name": "Enemy",
+            "parent": "231",
+            "translation": [
+                -20.0,
+                20.0,
+                20.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                }
+            ]
+        },
+        "267": {
+            "name": "Pivot",
+            "parent": "266"
+        },
+        "268": {
+            "name": "Body",
+            "parent": "267",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "269": {
+            "name": "Nose",
+            "parent": "267",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
             ]
         }
     },
