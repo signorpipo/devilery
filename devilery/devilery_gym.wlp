@@ -52,6 +52,12 @@
                         "_myMinAngleToFlyDownVR": 90.0,
                         "_myMinAngleToFlyRight": 90.0
                     }
+                },
+                {
+                    "type": "set-position-on-init",
+                    "set-position-on-init": {
+                        "_myObjectPosition": "232"
+                    }
                 }
             ],
             "translation": [
@@ -934,7 +940,9 @@
                     "type": "devilery-gateway",
                     "devilery-gateway": {
                         "_myDebugEnabled": true,
-                        "_mySkipIntro": true
+                        "_mySkipIntro": false,
+                        "_myClearConsoleOnStart": false,
+                        "_myStartDelayFrames": 30
                     }
                 }
             ]
@@ -947,19 +955,10 @@
                 10.0,
                 0.0
             ],
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "235"
-                    }
-                }
-            ],
             "scaling": [
-                5.0,
-                5.0,
-                5.0
+                1.0,
+                1.0,
+                1.0
             ],
             "rotation": [
                 0.0,
@@ -971,24 +970,15 @@
         "233": {
             "name": "White Room",
             "parent": "237",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "236"
-                    }
-                }
-            ],
             "translation": [
                 0.0,
                 -10.0,
                 0.0
             ],
             "scaling": [
-                5.0,
-                5.0,
-                5.0
+                1.0,
+                1.0,
+                1.0
             ],
             "rotation": [
                 0.0,
@@ -1005,6 +995,402 @@
                 -30.0,
                 0.0
             ]
+        },
+        "238": {
+            "name": "Empty",
+            "parent": "237"
+        },
+        "239": {
+            "name": "Elements",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -80.0,
+                0.0
+            ]
+        },
+        "240": {
+            "name": "Fader",
+            "parent": "239"
+        },
+        "241": {
+            "name": "Black Fade",
+            "parent": "240",
+            "components": [
+                {
+                    "type": "fade-view-in-out",
+                    "fade-view-in-out": {
+                        "_myTimeToFadeIn": 1.0,
+                        "_myTimeToFadeOut": 1.0
+                    }
+                }
+            ]
+        },
+        "242": {
+            "name": "White Fade",
+            "parent": "240",
+            "components": [
+                {
+                    "type": "fade-view-in-out",
+                    "fade-view-in-out": {
+                        "_myColor": "1, 1, 1",
+                        "_myTimeToFadeOut": 1.0,
+                        "_myTimeToFadeIn": 1.0
+                    }
+                }
+            ]
+        },
+        "243": {
+            "name": "Test",
+            "parent": "247",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                2.0,
+                0.1
+            ]
+        },
+        "244": {
+            "name": "Room",
+            "parent": "232",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "235"
+                    }
+                }
+            ],
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ]
+        },
+        "245": {
+            "name": "Room",
+            "parent": "233",
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "236"
+                    }
+                }
+            ]
+        },
+        "246": {
+            "name": "Test",
+            "parent": "243",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.7071068,
+                0.7071068
+            ],
+            "scaling": [
+                0.9999999,
+                1.0,
+                0.9999999
+            ]
+        },
+        "247": {
+            "name": "Test",
+            "parent": "232",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "248": {
+            "name": "Player Start",
+            "parent": "231"
         }
     },
     "meshes": {

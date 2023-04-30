@@ -5,6 +5,9 @@ export let GameGlobals = {
     myPlayerLocomotion: null,
     myPlayerTransformManager: null,
 
+    myBlackFade: null,
+    myWhiteFade: null,
+
     myPrincess: null,
 
     myEnemies: []

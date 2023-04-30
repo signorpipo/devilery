@@ -1,8 +1,8 @@
 import { Component, Property } from "@wonderlandengine/api";
-import { initDevilery } from "./init_devilery";
-import { GameGlobals } from "./game_globals";
-import { Globals } from "../../pp";
-import { Devilery } from "./devilery";
+import { initDevilery } from "../init_devilery";
+import { GameGlobals } from "../game_globals";
+import { Globals } from "../../../pp";
+import { Devilery } from "../devilery";
 
 let _alreadyRegisteredEngines = [];
 
@@ -11,6 +11,8 @@ export class DevileryGatewayComponent extends Component {
     static Properties = {
         _myDebugEnabled: Property.bool(false),
         _mySkipIntro: Property.bool(false),
+        _myClearConsoleOnStart: Property.bool(true),
+        _myStartDelayFrames: Property.int(0)
     };
 
     static onRegister(engine) {
@@ -24,9 +26,11 @@ export class DevileryGatewayComponent extends Component {
         GameGlobals.myDebugEnabled = this._myDebugEnabled && Globals.isDebugEnabled();
         GameGlobals.mySkipIntro = this._mySkipIntro && Globals.isDebugEnabled();
 
+        let playerLocomotionComponent = Globals.getScene().pp_getComponent("pp-player-locomotion");
+
         this._myDevilery = new Devilery();
 
-        this._myStartCounter = 10;
+        this._myStartCounter = this._myStartDelayFrames;
     }
 
     update(dt) {
@@ -41,6 +45,10 @@ export class DevileryGatewayComponent extends Component {
     }
 
     _start() {
+        if (this._myClearConsoleOnStart) {
+            console.clear();
+        }
+
         this._myDevilery.start();
     }
 }

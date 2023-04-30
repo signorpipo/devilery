@@ -13,7 +13,9 @@
 
 /* wle:auto-imports:start */
 import {MouseLookComponent} from '@wonderlandengine/components';
-import {DevileryGatewayComponent} from './devilery/cauldron/devilery_gateway.js';
+import {DevileryGatewayComponent} from './devilery/cauldron/components/devilery_gateway_component.js';
+import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_in_out_component.js';
+import {SetPositionOnInit} from './devilery/cauldron/components/set_position_on_init.js';
 import {PlayerLocomotionComponent} from './pp/gameplay/experimental/locomotion/legacy/locomotion/player_locomotion_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
@@ -21,6 +23,7 @@ import {GamepadMeshAnimatorComponent} from './pp/index.js';
 import {GrabbableComponent} from './pp/index.js';
 import {GrabberHandComponent} from './pp/index.js';
 import {PPGatewayComponent} from './pp/index.js';
+import {SetActiveComponent} from './pp/index.js';
 import {SetHandLocalTransformComponent} from './pp/index.js';
 import {SetHeadLocalTransformComponent} from './pp/index.js';
 import {SpatialAudioListenerComponent} from './pp/index.js';
@@ -85,6 +88,8 @@ if (document.readyState === 'loading') {
 /* wle:auto-register:start */
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(DevileryGatewayComponent);
+engine.registerComponent(FadeViewInOutComponent);
+engine.registerComponent(SetPositionOnInit);
 engine.registerComponent(PlayerLocomotionComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
@@ -92,6 +97,7 @@ engine.registerComponent(GamepadMeshAnimatorComponent);
 engine.registerComponent(GrabbableComponent);
 engine.registerComponent(GrabberHandComponent);
 engine.registerComponent(PPGatewayComponent);
+engine.registerComponent(SetActiveComponent);
 engine.registerComponent(SetHandLocalTransformComponent);
 engine.registerComponent(SetHeadLocalTransformComponent);
 engine.registerComponent(SpatialAudioListenerComponent);

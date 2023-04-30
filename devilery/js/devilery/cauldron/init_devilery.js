@@ -10,7 +10,7 @@ import { SFXOnCollisionComponent } from "../../playground/sfx_on_collision_compo
 import { SFXOnGrabThrowComponent } from "../../playground/sfx_on_grab_throw_component";
 import { TargetHitCheckComponent } from "../../playground/target_hit_check_component";
 import { WaveMovementComponent } from "../../playground/wave_movement_component";
-import { DevileryGatewayComponent } from "./devilery_gateway";
+import { DevileryGatewayComponent } from "./components/devilery_gateway_component";
 
 export function initDevilery(engine) {
     registerPlaygroundComponents(engine);
