@@ -64,7 +64,7 @@ export class FadeViewInOutComponent extends Component {
         }
     }
 
-    fadeIn(instant = false) {
+    fadeIn(instant = false, timeToFadeOverride = null) {
         this._myFadeVisual.setVisible(true);
         this._myFadeOutTimer.reset();
 
@@ -72,11 +72,11 @@ export class FadeViewInOutComponent extends Component {
             this._myFadeInTimer.start(0);
             this.update(0);
         } else {
-            this._myFadeInTimer.start(this._myTimeToFadeIn);
+            this._myFadeInTimer.start(timeToFadeOverride == null ? this._myTimeToFadeIn : timeToFadeOverride);
         }
     }
 
-    fadeOut(instant = false) {
+    fadeOut(instant = false, timeToFadeOverride = null) {
         this._myFadeVisual.setVisible(true);
         this._myFadeInTimer.reset();
 
@@ -84,7 +84,7 @@ export class FadeViewInOutComponent extends Component {
             this._myFadeOutTimer.start(0);
             this.update(0);
         } else {
-            this._myFadeOutTimer.start(this._myTimeToFadeOut);
+            this._myFadeOutTimer.start(timeToFadeOverride == null ? this._myTimeToFadeOut : timeToFadeOverride);
         }
     }
 

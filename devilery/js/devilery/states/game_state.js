@@ -1,4 +1,4 @@
-import { FSM, GamepadButtonID, Globals, quat_create } from "../../pp";
+import { FSM, GamepadButtonID, Globals, quat_create, vec3_create } from "../../pp";
 import { GameGlobals } from "../cauldron/game_globals";
 
 export class GameState {
@@ -33,7 +33,7 @@ export class GameState {
         GameGlobals.myPlayerLocomotion.setIdle(false);
 
         let playerStartPosition = this._myPlayerStart.pp_getPosition();
-        let rotationQuat = quat_create().quat_setForward([0, 0, 1]);
+        let rotationQuat = quat_create().quat_setForward(vec3_create(0, 0, 1));
         GameGlobals.myPlayerTransformManager.teleportAndReset(playerStartPosition, rotationQuat);
 
         GameGlobals.myBlackFade.fadeIn();

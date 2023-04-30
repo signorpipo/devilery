@@ -26,9 +26,6 @@
                         "_myText": "110",
                         "_myScene": "18"
                     }
-                },
-                {
-                    "type": "pp-show-fps"
                 }
             ]
         },
@@ -55,6 +52,9 @@
                     "set-position-on-init": {
                         "_myObjectPosition": "232"
                     }
+                },
+                {
+                    "type": "pp-show-fps"
                 }
             ],
             "translation": [
@@ -1026,8 +1026,8 @@
                 {
                     "type": "fade-view-in-out",
                     "fade-view-in-out": {
-                        "_myTimeToFadeIn": 1.0,
-                        "_myTimeToFadeOut": 1.0
+                        "_myTimeToFadeIn": 1.5,
+                        "_myTimeToFadeOut": 1.5
                     }
                 }
             ]
@@ -1040,39 +1040,10 @@
                     "type": "fade-view-in-out",
                     "fade-view-in-out": {
                         "_myColor": "255, 255, 255",
-                        "_myTimeToFadeOut": 1.0,
-                        "_myTimeToFadeIn": 1.0
+                        "_myTimeToFadeOut": 1.5,
+                        "_myTimeToFadeIn": 1.5
                     }
                 }
-            ]
-        },
-        "243": {
-            "name": "Test",
-            "parent": "247",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                0.1,
-                2.0,
-                0.1
             ]
         },
         "244": {
@@ -1349,47 +1320,6 @@
                     "mesh": {
                         "mesh": "p1",
                         "material": "236"
-                    }
-                }
-            ]
-        },
-        "246": {
-            "name": "Test",
-            "parent": "243",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.7071068,
-                0.7071068
-            ],
-            "scaling": [
-                0.9999999,
-                1.0,
-                0.9999999
-            ]
-        },
-        "247": {
-            "name": "Test",
-            "parent": "232",
-            "components": [
-                {
-                    "type": "pp-set-active",
-                    "pp-set-active": {
-                        "_myActive": false
                     }
                 }
             ]
@@ -3480,6 +3410,687 @@
                 0.05,
                 0.05
             ]
+        },
+        "317": {
+            "name": "Black Room Stories",
+            "parent": "232"
+        },
+        "318": {
+            "name": "Story 1",
+            "parent": "317",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 1"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.371138828673793e-8
+            ]
+        },
+        "319": {
+            "name": "Story 2",
+            "parent": "317",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 2"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.371138828673793e-8
+            ]
+        },
+        "320": {
+            "name": "Story 3",
+            "parent": "317",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 3"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.371138828673793e-8
+            ]
+        },
+        "321": {
+            "name": "White Room Stories",
+            "parent": "233",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "322": {
+            "name": "Story 1",
+            "parent": "321",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 1",
+                        "material": "325"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "323": {
+            "name": "Story 2",
+            "parent": "321",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 2",
+                        "material": "325"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "324": {
+            "name": "Story 3",
+            "parent": "321",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 3",
+                        "material": "325"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
         }
     },
     "meshes": {
@@ -3941,6 +4552,19 @@
                     1.0,
                     1.0,
                     1.0,
+                    1.0
+                ]
+            }
+        },
+        "325": {
+            "name": "White",
+            "pipeline": "82",
+            "Text": {
+                "font": "147",
+                "color": [
+                    0.0,
+                    0.0,
+                    0.0,
                     1.0
                 ]
             }
