@@ -923,7 +923,15 @@
         },
         "231": {
             "name": "Gym",
-            "parent": "18"
+            "parent": "18",
+            "components": [
+                {
+                    "type": "devilery-gateway",
+                    "devilery-gateway": {
+                        "_myDebugEnabled": true
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -1493,7 +1501,9 @@
             "sourcePaths": [
                 "js",
                 "js/pp/index.js",
-                "js/playground"
+                "js/playground",
+                "js/devilery",
+                "js/devilery/cauldron"
             ],
             "bundlingType": "esbuild",
             "libraryPaths": [
