@@ -64,5 +64,6 @@ export class Devilery {
         GameGlobals.myPrincess = Globals.getScene().pp_getComponent(PrincessComponent);
 
         GameGlobals.myHeartsParticlesSpawner = Globals.getScene().pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myEnemyDieParticlesSpawner = Globals.getScene().pp_getObjectByName("Enemy Die Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
     }
 }

@@ -13,6 +13,7 @@ export class DevileryGatewayComponent extends Component {
         _mySkipIntro: Property.bool(false),
         _myClearConsoleOnStart: Property.bool(true),
         _myNeverInLove: Property.bool(false),
+        _myRandomEnemyDie: Property.bool(false),
 
         _myStartDelayFrames: Property.int(0)
     };
@@ -28,6 +29,7 @@ export class DevileryGatewayComponent extends Component {
         GameGlobals.myDebugEnabled = this._myDebugEnabled && Globals.isDebugEnabled();
         GameGlobals.mySkipIntro = this._mySkipIntro && Globals.isDebugEnabled();
         GameGlobals.myNeverInLove = this._myNeverInLove && Globals.isDebugEnabled();
+        GameGlobals.myRandomEnemyDie = this._myRandomEnemyDie && Globals.isDebugEnabled();
 
         this._myDevilery = new Devilery();
 

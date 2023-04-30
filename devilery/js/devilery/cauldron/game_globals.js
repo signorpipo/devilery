@@ -25,7 +25,8 @@ export let GameGlobals = {
 
     myDebugEnabled: false,
     mySkipIntro: false,
-    myNeverInLove: false
+    myNeverInLove: false,
+    myRandomEnemyDie: false,
 };
 
 window.GameGlobals = GameGlobals;
