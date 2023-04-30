@@ -57,13 +57,13 @@
             "translation": [
                 0.0,
                 0.8038156,
-                0.0
+                -1.2794563
             ],
             "rotation": [
                 0.0,
                 1.0,
                 0.0,
-                -4.3711388286737935e-8
+                -4.371138828673793e-8
             ],
             "scaling": [
                 1.0,
@@ -929,6 +929,142 @@
         "231": {
             "name": "Gallery",
             "parent": "18"
+        },
+        "237": {
+            "link": {
+                "name": "interior_walls_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\interior_walls.fbx"
+            },
+            "parent": "18"
+        },
+        "238": {
+            "link": {
+                "name": "interior_walls<interior_walls_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\interior_walls.fbx"
+            },
+            "parent": "237"
+        },
+        "240": {
+            "link": {
+                "name": "interior_walls_mesh<interior_walls<interior_walls_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\interior_walls.fbx"
+            },
+            "parent": "238",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "268"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 3,
+                        "block": 19,
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "235"
+                        }
+                    }
+                }
+            ]
+        },
+        "246": {
+            "link": {
+                "name": "pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "18"
+        },
+        "247": {
+            "link": {
+                "name": "pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "246"
+        },
+        "248": {
+            "link": {
+                "name": "pedestal_mesh<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "247",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "245"
+                        },
+                        "static": true,
+                        "groups": 3,
+                        "block": 3
+                    }
+                }
+            ]
+        },
+        "264": {
+            "link": {
+                "name": "console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "18"
+        },
+        "265": {
+            "link": {
+                "name": "console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "264",
+            "translation": [
+                0.0,
+                4.8853373,
+                5.82377595037542e-7
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "266": {
+            "link": {
+                "name": "console_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "265",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "253"
+                        },
+                        "groups": 35,
+                        "block": 47
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -1086,6 +1222,96 @@
             "link": {
                 "name": "Wondermelon Convex Mesh Fit",
                 "file": "assets\\models\\pp\\wondermelon.fbx"
+            }
+        },
+        "235": {
+            "link": {
+                "name": "interior_walls_physx",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "236": {
+            "link": {
+                "name": "interior_walls_mesh",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "244": {
+            "link": {
+                "name": "pedestal_mesh",
+                "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "245": {
+            "link": {
+                "name": "pedestal_physx",
+                "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "252": {
+            "link": {
+                "name": "console_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "253": {
+            "link": {
+                "name": "console_physx",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "269": {
+            "link": {
+                "name": "pedestal_mesh",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "270": {
+            "link": {
+                "name": "pedestal_physx",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "271": {
+            "link": {
+                "name": "interior_walls_mesh001",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "272": {
+            "link": {
+                "name": "interior_walls_physx001",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "273": {
+            "link": {
+                "name": "dsfsdf",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "274": {
+            "link": {
+                "name": "console_mesh",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "275": {
+            "link": {
+                "name": "console_physx",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "276": {
+            "link": {
+                "name": "interior_walls_mesh002",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "277": {
+            "link": {
+                "name": "interior_walls_mesh003",
+                "file": "assets\\models\\interior_walls.fbx"
             }
         }
     },
@@ -1362,6 +1588,73 @@
                     0.4980392,
                     1.0
                 ]
+            }
+        },
+        "234": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\interior_walls.fbx"
+            },
+            "name": "def1"
+        },
+        "243": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "Phong": {
+                "ambientColor": [
+                    0.9372197,
+                    0.6388224,
+                    0.6388224,
+                    1.0
+                ]
+            },
+            "name": "def2"
+        },
+        "250": {
+            "name": "Phong Specular",
+            "pipeline": "13",
+            "Phong": {
+                "ambientColor": [
+                    0.4980392,
+                    0.4980392,
+                    0.4980392,
+                    1.0
+                ],
+                "specularColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shininess": 2
+            }
+        },
+        "251": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\console.fbx"
+            },
+            "name": "DefaultMaterial"
+        },
+        "268": {
+            "name": "Phong Less Specular",
+            "pipeline": "13",
+            "Phong": {
+                "ambientColor": [
+                    0.4980392,
+                    0.4980392,
+                    0.4980392,
+                    1.0
+                ],
+                "specularColor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "shininess": 2
             }
         }
     },
@@ -1666,7 +1959,10 @@
     "images": {},
     "files": [
         "assets/models/pp/meta_quest_1_gamepads_credits_Jezza3D.fbx",
-        "assets/models/pp/wondermelon.fbx"
+        "assets/models/pp/wondermelon.fbx",
+        "assets/models/interior_walls.fbx",
+        "assets/models/pedestal.fbx",
+        "assets/models/console.fbx"
     ],
     "fonts": {
         "147": {
