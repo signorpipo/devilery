@@ -940,7 +940,7 @@
                     "type": "devilery-gateway",
                     "devilery-gateway": {
                         "_myDebugEnabled": true,
-                        "_mySkipIntro": false,
+                        "_mySkipIntro": true,
                         "_myClearConsoleOnStart": false,
                         "_myStartDelayFrames": 30
                     }

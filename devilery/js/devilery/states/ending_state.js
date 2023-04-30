@@ -18,7 +18,7 @@ export class EndingState {
         this._myFSM.addTransition("ending", "fade_out", "end", this._fadeOutStart.bind(this));
         this._myFSM.addTransition("fade_out", "idle", "end", this._endEnding.bind(this));
 
-        this._myFSM.addTransition("idle", "idle", "skip", this._skipEnding.bind(this));
+        this._myFSM.addTransition("idle", "idle", "skip");
         this._myFSM.addTransition("ending", "idle", "skip", this._skipEnding.bind(this));
         this._myFSM.addTransition("fade_out", "idle", "skip", this._skipEnding.bind(this));
 

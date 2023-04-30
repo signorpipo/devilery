@@ -16,7 +16,7 @@ export class IntroState {
         this._myFSM.addTransition("idle", "intro", "start");
         this._myFSM.addTransition("intro", "idle", "end", this._endIntro.bind(this));
 
-        this._myFSM.addTransition("idle", "idle", "skip", this._skipIntro.bind(this));
+        this._myFSM.addTransition("idle", "idle", "skip");
         this._myFSM.addTransition("intro", "idle", "skip", this._skipIntro.bind(this));
 
         this._myFSM.init("init");
