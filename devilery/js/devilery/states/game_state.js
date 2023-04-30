@@ -50,7 +50,11 @@ export class GameState {
     }
 
     _gameUpdate(dt, fsm) {
-        if (Globals.getLeftGamepad().getButtonInfo(GamepadButtonID.TOP_BUTTON).isPressStart(2)) {
+        if (GameGlobals.myDebugEnabled && Globals.getLeftGamepad().getButtonInfo(GamepadButtonID.TOP_BUTTON).isPressStart(2)) {
+            fsm.perform("end");
+        }
+
+        if (GameGlobals.myPrincess.isInLove()) {
             fsm.perform("end");
         }
     }
@@ -64,6 +68,8 @@ export class GameState {
     _gameStart() {
         GameGlobals.myShip.startShip();
         GameGlobals.myDevileryBoss.startDevileryBoss();
+
+        GameGlobals.myPrincess.startPrincess();
     }
 
     _lostStart() {

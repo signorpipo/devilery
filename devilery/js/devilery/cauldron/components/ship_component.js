@@ -84,6 +84,10 @@ export class ShipComponent extends Component {
         }
     }
 
+    enemyDespawn(enemy) {
+        this._myEnemyPools.releaseObject(enemy);
+    }
+
     _updateTimers(dt) {
         for (let key in EnemyType) {
             let type = EnemyType[key];

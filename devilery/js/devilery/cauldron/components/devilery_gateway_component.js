@@ -12,6 +12,8 @@ export class DevileryGatewayComponent extends Component {
         _myDebugEnabled: Property.bool(false),
         _mySkipIntro: Property.bool(false),
         _myClearConsoleOnStart: Property.bool(true),
+        _myNeverInLove: Property.bool(false),
+
         _myStartDelayFrames: Property.int(0)
     };
 
@@ -25,8 +27,7 @@ export class DevileryGatewayComponent extends Component {
     start() {
         GameGlobals.myDebugEnabled = this._myDebugEnabled && Globals.isDebugEnabled();
         GameGlobals.mySkipIntro = this._mySkipIntro && Globals.isDebugEnabled();
-
-        let playerLocomotionComponent = Globals.getScene().pp_getComponent(PlayerLocomotionComponent);
+        GameGlobals.myNeverInLove = this._myNeverInLove && Globals.isDebugEnabled();
 
         this._myDevilery = new Devilery();
 

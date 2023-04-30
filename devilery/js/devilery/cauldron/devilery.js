@@ -5,6 +5,7 @@ import { IntroState } from "../states/intro_state";
 import { AudioLoader } from "./audio_loader";
 import { DevileryBossComponent } from "./components/devilery_boss_component";
 import { FadeViewInOutComponent } from "./components/fade_view_in_out_component";
+import { PrincessComponent } from "./components/princess_component";
 import { ShipComponent } from "./components/ship_component";
 import { GameGlobals } from "./game_globals";
 
@@ -58,5 +59,7 @@ export class Devilery {
 
         GameGlobals.myShip = Globals.getScene().pp_getObjectByName("Ship").pp_getComponent(ShipComponent);
         GameGlobals.myDevileryBoss = Globals.getScene().pp_getObjectByName("Devilery Boss").pp_getComponent(DevileryBossComponent);
+
+        GameGlobals.myPrincess = Globals.getScene().pp_getComponent(PrincessComponent);
     }
 }

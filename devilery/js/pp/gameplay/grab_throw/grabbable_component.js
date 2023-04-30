@@ -169,7 +169,7 @@ export class GrabbableComponent extends Component {
         return clonedComponent;
     }
 
-    pp_clonePostProcess() {
-        this.start();
+    pp_clonePostProcess(clonedComponent) {
+        clonedComponent.start();
     }
 }

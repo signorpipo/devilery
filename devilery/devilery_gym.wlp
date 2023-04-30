@@ -937,9 +937,10 @@
                     "type": "devilery-gateway",
                     "devilery-gateway": {
                         "_myDebugEnabled": true,
-                        "_mySkipIntro": true,
+                        "_mySkipIntro": false,
                         "_myClearConsoleOnStart": false,
-                        "_myStartDelayFrames": 30
+                        "_myStartDelayFrames": 30,
+                        "_myNeverInLove": true
                     }
                 }
             ]
@@ -1478,6 +1479,9 @@
                             ]
                         }
                     }
+                },
+                {
+                    "type": "princess"
                 }
             ],
             "translation": [
@@ -2472,8 +2476,8 @@
                     "physx": {
                         "kinematic": true,
                         "gravity": false,
-                        "trigger": true,
-                        "allowSimulation": false,
+                        "trigger": false,
+                        "allowSimulation": true,
                         "groups": 16,
                         "shape": "box",
                         "box": {
@@ -2483,6 +2487,12 @@
                                 0.5
                             ]
                         }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "291"
                     }
                 }
             ],
@@ -2586,6 +2596,12 @@
                             ]
                         }
                     }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "295"
+                    }
                 }
             ],
             "scaling": [
@@ -2687,6 +2703,12 @@
                                 0.5
                             ]
                         }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "299"
                     }
                 }
             ],
