@@ -52,6 +52,7 @@ export class IntroState {
         this._myCurrentStoryIndex = -1;
 
         GameGlobals.myBlackFade.fadeOut(true);
+        GameGlobals.myWhiteFade.fadeIn(true);
 
         GameGlobals.myPlayerLocomotion.setIdle(true);
 

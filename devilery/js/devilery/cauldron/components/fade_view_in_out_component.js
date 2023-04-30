@@ -6,7 +6,8 @@ export class FadeViewInOutComponent extends Component {
     static Properties = {
         _myColor: Property.string("0, 0, 0"),
         _myTimeToFadeIn: Property.float(0),
-        _myTimeToFadeOut: Property.float(0)
+        _myTimeToFadeOut: Property.float(0),
+        _myScaleMultiplier: Property.float(1)
     };
 
     start() {
@@ -34,6 +35,7 @@ export class FadeViewInOutComponent extends Component {
 
         this._myFadeParentObject.pp_setParent(Globals.getPlayerObjects(this.engine).myHead, false);
         this._myFadeParentObject.pp_resetTransformLocal();
+        this._myFadeParentObject.pp_scaleObject(this._myScaleMultiplier);
 
         this._myFadeVisual.setVisible(false);
     }

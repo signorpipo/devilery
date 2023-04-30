@@ -1041,7 +1041,8 @@
                     "fade-view-in-out": {
                         "_myColor": "255, 255, 255",
                         "_myTimeToFadeOut": 1.5,
-                        "_myTimeToFadeIn": 1.5
+                        "_myTimeToFadeIn": 1.5,
+                        "_myScaleMultiplier": 1.0
                     }
                 }
             ]
