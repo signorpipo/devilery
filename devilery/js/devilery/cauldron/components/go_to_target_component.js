@@ -1,6 +1,6 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { GameGlobals } from "../game_globals";
-import { NumberOverValue, vec3_create } from "../../../pp";
+import { CloneUtils, NumberOverValue, vec3_create } from "../../../pp";
 import { WeaponComponent } from "./weapon_component";
 
 export class GoToTargetComponent extends Component {
@@ -54,6 +54,10 @@ export class GoToTargetComponent extends Component {
 
     _update(dt) {
         // Implemented outside class definition
+    }
+
+    onActivate() {
+        this._myStarted = false;
     }
 
     pp_clone(targetObject) {

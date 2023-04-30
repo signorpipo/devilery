@@ -14,7 +14,7 @@ export class GameState {
         this._myFSM.addState("lost", this._lostUpdate.bind(this));
 
         this._myFSM.addTransition("init", "idle", "start");
-        this._myFSM.addTransition("idle", "game", "start");
+        this._myFSM.addTransition("idle", "game", "start", this._gameStart.bind(this));
         this._myFSM.addTransition("game", "lost", "end", this._lostStart.bind(this));
         this._myFSM.addTransition("lost", "idle", "end", this._gameEnding.bind(this));
 
@@ -59,6 +59,11 @@ export class GameState {
         if (!GameGlobals.myWhiteFade.isFading()) {
             fsm.perform("end");
         }
+    }
+
+    _gameStart() {
+        GameGlobals.myShip.startShip();
+        GameGlobals.myDevileryBoss.startDevileryBoss();
     }
 
     _lostStart() {

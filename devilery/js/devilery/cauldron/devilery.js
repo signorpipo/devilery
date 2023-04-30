@@ -3,7 +3,9 @@ import { EndingState } from "../states/ending_state";
 import { GameState } from "../states/game_state";
 import { IntroState } from "../states/intro_state";
 import { AudioLoader } from "./audio_loader";
+import { DevileryBossComponent } from "./components/devilery_boss_component";
 import { FadeViewInOutComponent } from "./components/fade_view_in_out_component";
+import { ShipComponent } from "./components/ship_component";
 import { GameGlobals } from "./game_globals";
 
 export class Devilery {
@@ -53,5 +55,8 @@ export class Devilery {
         GameGlobals.myEvilTarget = Globals.getScene().pp_getObjectByName("Evil Target");
 
         GameGlobals.myWeaponTarget = Globals.getScene().pp_getObjectByName("Weapon Target");
+
+        GameGlobals.myShip = Globals.getScene().pp_getObjectByName("Ship").pp_getComponent(ShipComponent);
+        GameGlobals.myDevileryBoss = Globals.getScene().pp_getObjectByName("Devilery Boss").pp_getComponent(DevileryBossComponent);
     }
 }

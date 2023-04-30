@@ -1,5 +1,5 @@
 import { Component, Property } from "@wonderlandengine/api";
-import { NumberOverValue, vec3_create } from "../../../pp";
+import { CloneUtils, NumberOverValue, vec3_create } from "../../../pp";
 
 export class FlapComponent extends Component {
     static TypeName = "flap";

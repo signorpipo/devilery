@@ -18,6 +18,9 @@ export let GameGlobals = {
 
     myPrincess: null,
 
+    myShip: null,
+    myDevileryBoss: null,
+
     myEnemies: [],
 
     myDebugEnabled: false,

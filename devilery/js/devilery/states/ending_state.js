@@ -29,6 +29,9 @@ export class EndingState {
     }
 
     start(fsm) {
+        GameGlobals.myShip.stopShip();
+        GameGlobals.myDevileryBoss.stopDevileryBoss();
+
         GameGlobals.myWhiteFade.fadeIn(true);
 
         GameGlobals.myPlayerLocomotion.setIdle(true);
