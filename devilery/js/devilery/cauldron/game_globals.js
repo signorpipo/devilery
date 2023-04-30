@@ -12,3 +12,5 @@ export let GameGlobals = {
 
     myEnemies: []
 };
+
+window.GameGlobals = GameGlobals;

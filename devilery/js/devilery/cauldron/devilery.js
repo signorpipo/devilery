@@ -8,7 +8,7 @@ import { GameGlobals } from "./game_globals";
 export class Devilery {
     constructor() {
         this._myFSM = new FSM();
-        this._myFSM.setLogEnabled(true, "Devilery");
+        //this._myFSM.setLogEnabled(true, "Devilery");
 
         this._myFSM.addState("init");
         this._myFSM.addState("intro", new IntroState());

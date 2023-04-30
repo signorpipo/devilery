@@ -1033,7 +1033,7 @@
                 {
                     "type": "fade-view-in-out",
                     "fade-view-in-out": {
-                        "_myColor": "1, 1, 1",
+                        "_myColor": "255, 255, 255",
                         "_myTimeToFadeOut": 1.0,
                         "_myTimeToFadeIn": 1.0
                     }

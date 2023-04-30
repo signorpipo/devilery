@@ -88,6 +88,10 @@ export class FadeViewInOutComponent extends Component {
         }
     }
 
+    isFading() {
+        return this._myFadeOutTimer.isRunning() || this._myFadeInTimer.isRunning();
+    }
+
     onDeactivate() {
         this._myFadeInTimer.reset();
         this._myFadeOutTimer.reset();
