@@ -10,6 +10,7 @@ export class EnemyComponent extends Component {
 
     delovery() {
         GameGlobals.myShip.enemyDespawn(this._myEnemy);
+        GameGlobals.myHeartsParticlesSpawner.spawn(this.object.pp_getPosition());
     }
 
     pp_clone(targetObject) {

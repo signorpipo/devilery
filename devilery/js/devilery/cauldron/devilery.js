@@ -1,3 +1,4 @@
+import { ParticlesSpawnerComponent } from "../../playground/particles_spawner_component";
 import { FSM, Globals, PlayerLocomotionComponent } from "../../pp";
 import { EndingState } from "../states/ending_state";
 import { GameState } from "../states/game_state";
@@ -61,5 +62,7 @@ export class Devilery {
         GameGlobals.myDevileryBoss = Globals.getScene().pp_getObjectByName("Devilery Boss").pp_getComponent(DevileryBossComponent);
 
         GameGlobals.myPrincess = Globals.getScene().pp_getComponent(PrincessComponent);
+
+        GameGlobals.myHeartsParticlesSpawner = Globals.getScene().pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
     }
 }

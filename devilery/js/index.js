@@ -23,6 +23,7 @@ import {PrincessComponent} from './devilery/cauldron/components/princess_compone
 import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
 import {ShipComponent} from './devilery/cauldron/components/ship_component.js';
 import {WeaponComponent} from './devilery/cauldron/components/weapon_component.js';
+import {ParticlesSpawnerComponent} from './playground/particles_spawner_component.js';
 import {GrabbableComponent} from './pp/gameplay/grab_throw/grabbable_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
@@ -104,6 +105,7 @@ engine.registerComponent(PrincessComponent);
 engine.registerComponent(SetPositionOnInitComponent);
 engine.registerComponent(ShipComponent);
 engine.registerComponent(WeaponComponent);
+engine.registerComponent(ParticlesSpawnerComponent);
 engine.registerComponent(GrabbableComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
