@@ -2588,7 +2588,8 @@
                 "js/pp/index.js",
                 "js/playground",
                 "js/devilery",
-                "js/devilery/cauldron"
+                "js/devilery/cauldron",
+                "js/devilery/cauldron/components"
             ],
             "bundlingType": "esbuild",
             "libraryPaths": [

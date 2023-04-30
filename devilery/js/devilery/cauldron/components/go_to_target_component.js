@@ -1,6 +1,6 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { GameGlobals } from "../game_globals";
-import { vec3_create } from "../../../pp";
+import { NumberOverValue, vec3_create } from "../../../pp";
 
 export class GoToTargetComponent extends Component {
     static TypeName = "go-to-target";
@@ -17,6 +17,7 @@ export class GoToTargetComponent extends Component {
         this._myCurrentForward = vec3_create(0, 0, 1);
         this._myTargetForward = vec3_create(0, 0, 1);
 
+        this._myTargetSpeed = 0;
         this._myTargetPositions = [];
         this._myCurrentTargetIndex = 0;
 
@@ -24,6 +25,10 @@ export class GoToTargetComponent extends Component {
 
         this._myMaxSpeed = 5;
         this._myCurrentSpeed = this._myMaxSpeed;
+        this._mySlowDown = true;
+        this._mySpeedUp = true;
+
+        this._myTimer = 0;
 
         this._myTurnSpeed = 100;
     }
@@ -65,6 +70,8 @@ GoToTargetComponent.prototype._update = function () {
     return function _update(dt) {
         if (this._myCurrentTargetIndex == this._myTargetPositions.length) return;
 
+        this._myTimer += dt;
+
         this.object.pp_getPosition(currentPosition);
 
         targetPosition.vec3_copy(this._myTargetPositions[this._myCurrentTargetIndex][0]);
@@ -89,14 +96,31 @@ GoToTargetComponent.prototype._update = function () {
 
         this.object.pp_setUp(GameGlobals.myUp, this._myCurrentForward);
 
-        let movement = this._myCurrentSpeed * dt;
+        let movement = this._myCurrentSpeed.get(this._myTimer) * dt;
         this.object.pp_translate(this._myCurrentForward.vec3_scale(movement, movementVector));
 
         this.object.pp_getPosition(currentPosition);
 
         let nextTargetDistance = this._myTargetPositions[this._myCurrentTargetIndex][1];
-        if (currentPosition.vec3_distance(targetPosition) <= nextTargetDistance) {
+        let distanceToTarget = currentPosition.vec3_distance(targetPosition);
+        if (distanceToTarget <= nextTargetDistance) {
             this._myCurrentTargetIndex++;
+        } else if (!this._mySlowDown || (this._myCurrentTargetIndex >= 1 && this._myTargetPositions.length > 2 &&
+            distanceToTarget <= this._myTargetPositions[this._myCurrentTargetIndex - 1][1] * 1.5)) {
+            if (this._mySlowDown) {
+                this._mySlowDown = false;
+
+                this._myTargetSpeed = this._myMaxSpeed / 3;
+                this._myCurrentSpeed = new NumberOverValue(this._myCurrentSpeed.get(this._myTimer), this._myTargetSpeed, 0, 0.75);
+                this._myTimer = 0;
+            } else if (this._mySpeedUp && this._myCurrentSpeed.get(this._myTimer) == this._myTargetSpeed &&
+                this._myCurrentTargetIndex >= 2) {
+                this._mySpeedUp = false;
+
+                this._myTargetSpeed = this._myMaxSpeed;
+                this._myCurrentSpeed = new NumberOverValue(this._myCurrentSpeed.get(this._myTimer), this._myTargetSpeed, 0, 1);
+                this._myTimer = 0;
+            }
         }
     };
 }();
@@ -169,5 +193,8 @@ GoToTargetComponent.prototype._start = function () {
         }
 
         this.object.pp_setUp(GameGlobals.myUp, this._myCurrentForward);
+
+        this._myCurrentSpeed = this._myMaxSpeed;
+        this._myTargetSpeed = this._myCurrentSpeed;
     };
 }();
