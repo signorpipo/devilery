@@ -69,7 +69,7 @@ export class ShipComponent extends Component {
         this._myEnemyTimers[EnemyType.SHIELD_BIRD] = new Timer(0);
 
         this._myEnemyTimersDurations = [];
-        this._myEnemyTimersDurations[EnemyType.NORMAL_BIRD] = new NumberRangeOverValue([6, 10], [4, 8], 0, 100);
+        this._myEnemyTimersDurations[EnemyType.NORMAL_BIRD] = new NumberRangeOverValue([6, 10], [3, 6], 0, 80);
         this._myEnemyTimersDurations[EnemyType.STRONG_BIRD] = new NumberRangeOverValue([16, 20], [8, 12], 0, 150);
         this._myEnemyTimersDurations[EnemyType.SHIELD_BIRD] = new NumberRangeOverValue([18, 22], [12, 16], 0, 200);
 
@@ -120,8 +120,8 @@ export class ShipComponent extends Component {
         let enemy = this._myEnemyPools.getObject(type);
 
         let randomPosition = this._mySpawnObject.pp_getPosition();
-        randomPosition.vec3_add(this._mySpawnObject.pp_getForward().vec3_scale(Math.pp_random(-5, 5)), randomPosition);
-        randomPosition.vec3_add(this._mySpawnObject.pp_getUp().vec3_scale(Math.pp_random(-5, 5)), randomPosition);
+        //randomPosition.vec3_add(this._mySpawnObject.pp_getForward().vec3_scale(Math.pp_random(-5, 5)), randomPosition);
+        //randomPosition.vec3_add(this._mySpawnObject.pp_getUp().vec3_scale(Math.pp_random(-5, 5)), randomPosition);
 
         enemy.pp_setPosition(randomPosition);
         enemy.pp_setActive(true);
