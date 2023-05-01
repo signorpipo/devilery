@@ -1,6 +1,13 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { CloneUtils, Globals, vec3_create } from "../../../pp";
 
+export let WeaponType = {
+    APPLE: 0,
+    BAT: 1,
+    SKULL: 2,
+    VOICE: 3
+};
+
 export class WeaponComponent extends Component {
     static TypeName = "weapon";
     static Properties = {

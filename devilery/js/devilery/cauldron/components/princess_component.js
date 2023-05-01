@@ -31,6 +31,10 @@ export class PrincessComponent extends Component {
         this._myDelovery = 0;
     }
 
+    stopPrincess() {
+
+    }
+
     delovery(enemy) {
         enemy.delovery();
 

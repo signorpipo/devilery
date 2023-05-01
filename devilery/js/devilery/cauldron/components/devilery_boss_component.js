@@ -42,4 +42,8 @@ export class DevileryBossComponent extends Component {
 
         // reset all enemies to pool
     }
+
+    deviler(itemType) {
+
+    }
 }

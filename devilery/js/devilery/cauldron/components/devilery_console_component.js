@@ -1,6 +1,7 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { EvilPointComponent } from "./evil_point_component";
 import { PhysicsCollisionCollector } from "../../../pp";
+import { WeaponType } from "./weapon_component";
 
 export class DevileryConsoleComponent extends Component {
     static TypeName = "devilery-console";
@@ -53,16 +54,36 @@ export class DevileryConsoleComponent extends Component {
 
     _increaseEvil(evilPoint) {
         evilPoint.die();
-        this._myEvilTotal = Math.min(this._myEvilTotal + 1, 100);
+        this._myEvilTotal = Math.min(this._myEvilTotal + 0.1, 10);
 
         // increase evil visually
     }
 
     buy(itemType) {
-        // check total
-        // remove total
-        // update total
-        // heart broken
-        // call devilery boss
+        let ok = false;
+
+        let cost = 0;
+        switch (itemType) {
+            case WeaponType.BAT:
+                cost = 2;
+            case WeaponType.SKULL:
+                cost = 4;
+            case WeaponType.VOICE:
+                cost = 8;
+            default:
+                cost = 0;
+        }
+
+        if (cost < this._myEvilTotal) {
+            this._myEvilTotal -= cost;
+            // decrease evil visually
+
+            ok = true;
+
+            GameGlobals.myDevileryBoss.deviler(itemType);
+            // heart broken se lo fa da solo
+        }
+
+        return ok;
     }
 }
