@@ -24,7 +24,9 @@
                         "_myFlatTransparentNoDepth": "90",
                         "_myPhongOpaque": "32",
                         "_myText": "110",
-                        "_myScene": "18"
+                        "_myScene": "18",
+                        "_myEnableDebugs": false,
+                        "_myEnableTools": false
                     }
                 },
                 {
@@ -47,7 +49,7 @@
                     "pp-player-locomotion": {
                         "_myPhysicsBlockLayerFlags": "0, 1, 0, 0, 0, 0, 0, 0",
                         "_myMoveThroughCollisionShortcutEnabled": true,
-                        "_myFlyEnabled": true,
+                        "_myFlyEnabled": false,
                         "_myMaxSpeed": 2.0,
                         "_myMinAngleToFlyUpNonVR": 90.0,
                         "_myMinAngleToFlyDownNonVR": 90.0,
@@ -61,9 +63,6 @@
                     "set-position-on-init": {
                         "_myObjectPosition": "232"
                     }
-                },
-                {
-                    "type": "pp-show-fps"
                 }
             ],
             "translation": [
@@ -6049,7 +6048,7 @@
             "name": "Exit Target",
             "parent": "885",
             "translation": [
-                -2.9802362178088515e-7,
+                -2.980236217808852e-7,
                 -0.3639397,
                 0.7012302
             ],
@@ -7527,7 +7526,7 @@
             },
             "parent": "710",
             "translation": [
-                -5.960464477539063e-8,
+                -5.960464477539064e-8,
                 -0.0000113,
                 0.0
             ],
