@@ -9902,7 +9902,8 @@
                 {
                     "mesh": {
                         "material": "537"
-                    }
+                    },
+                    "active": true
                 },
                 {
                     "type": "physx",
@@ -9913,7 +9914,7 @@
                             "scaling": [
                                 1.0,
                                 1.0,
-                                1.0
+                                1.8999999
                             ]
                         },
                         "gravity": false,
@@ -10117,21 +10118,76 @@
                 "name": "love_end_target<pedestal<pedestal_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\pedestal.fbx"
             },
-            "parent": "561"
+            "parent": "736",
+            "translation": [
+                0.0,
+                0.6420235,
+                -2.384185791015625e-7
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0499999,
+                1.0499856,
+                13.6999998
+            ]
         },
         "566": {
             "link": {
                 "name": "love_start_target<pedestal<pedestal_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\pedestal.fbx"
             },
-            "parent": "561"
+            "parent": "736",
+            "translation": [
+                0.0,
+                0.6420235,
+                -2.384185791015625e-7
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0499999,
+                1.0499858,
+                1.5
+            ]
         },
         "567": {
             "link": {
                 "name": "pedestal_bar_mesh<pedestal<pedestal_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\pedestal.fbx"
             },
-            "parent": "561"
+            "parent": "736",
+            "translation": [
+                0.0,
+                0.6499999,
+                -2.682209014892578e-7
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0499999,
+                1.049986,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
         },
         "568": {
             "name": "Princess Pedestal",
@@ -13699,6 +13755,10 @@
                     }
                 }
             ]
+        },
+        "736": {
+            "name": "Princess Bar",
+            "parent": "560"
         }
     },
     "meshes": {
