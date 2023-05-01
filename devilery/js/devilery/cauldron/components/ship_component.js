@@ -36,7 +36,7 @@ export class ShipComponent extends Component {
 
             this._myStarted = true;
         } else {
-            this._update(dt * 10);
+            this._update(dt * 0.10);
         }
     }
 

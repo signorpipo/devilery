@@ -2,6 +2,7 @@ import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { EvilPointComponent } from "./evil_point_component";
 import { PhysicsCollisionCollector } from "../../../pp";
 import { WeaponType } from "./weapon_component";
+import { GameGlobals } from "../game_globals";
 
 export class DevileryConsoleComponent extends Component {
     static TypeName = "devilery-console";
@@ -66,15 +67,18 @@ export class DevileryConsoleComponent extends Component {
         switch (itemType) {
             case WeaponType.BAT:
                 cost = 2;
+                break;
             case WeaponType.SKULL:
                 cost = 4;
+                break;
             case WeaponType.VOICE:
                 cost = 8;
+                break;
             default:
                 cost = 0;
         }
 
-        if (cost < this._myEvilTotal) {
+        if (cost <= this._myEvilTotal || GameGlobals.myAllFree) {
             this._myEvilTotal -= cost;
             // decrease evil visually
 

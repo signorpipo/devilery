@@ -1,6 +1,7 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { GamepadButtonID, Globals, InputUtils, PhysicsCollisionCollector, Timer } from "../../../pp";
 import { BuyHandComponent } from "./buy_hand_component";
+import { GameGlobals } from "../game_globals";
 
 export class BuyButtonComponent extends Component {
     static TypeName = "buy-button";
@@ -75,7 +76,8 @@ export class BuyButtonComponent extends Component {
                 this._myDisabledObject.pp_setActive(true);
 
                 this._myTimerEnable.start();
-                // particles
+
+                GameGlobals.myBuyParticlesSpawner.spawn(this.object.pp_getPosition());
             }
         }
     }
