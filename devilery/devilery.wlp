@@ -851,7 +851,7 @@
                 -0.6733807
             ],
             "rotation": [
-                -2.5236797540628686e-8,
+                -2.523679754062869e-8,
                 0.8660254,
                 -5.161913918527716e-8,
                 0.4999999
@@ -864,333 +864,44 @@
         },
         "317": {
             "name": "Black Room Stories",
-            "parent": "232"
+            "parent": "232",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_mySetActiveOn": "Children",
+                        "_myActive": false
+                    }
+                }
+            ]
         },
         "318": {
             "name": "Story 1",
             "parent": "317",
             "components": [
                 {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 1"
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "894"
                     }
                 }
             ],
             "translation": [
                 0.0,
                 0.0,
-                1.0
+                3.0
             ],
             "rotation": [
                 0.0,
                 1.0,
                 0.0,
                 -4.3711388286737935e-8
-            ]
-        },
-        "319": {
-            "name": "Story 2",
-            "parent": "317",
-            "translation": [
-                0.0,
-                0.0,
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
                 1.0
-            ],
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 2"
-                    }
-                }
-            ],
-            "rotation": [
-                0.0,
-                1.0,
-                0.0,
-                -4.3711388286737935e-8
-            ]
-        },
-        "320": {
-            "name": "Story 3",
-            "parent": "317",
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 3"
-                    }
-                }
-            ],
-            "rotation": [
-                0.0,
-                1.0,
-                0.0,
-                -4.3711388286737935e-8
             ]
         },
         "321": {
@@ -1211,6 +922,15 @@
                 1.0,
                 1.0,
                 1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_mySetActiveOn": "Children",
+                        "_myActive": false
+                    }
+                }
             ]
         },
         "322": {
@@ -1769,7 +1489,7 @@
                     "type": "devilery-gateway",
                     "devilery-gateway": {
                         "_myDebugEnabled": true,
-                        "_mySkipIntro": true,
+                        "_mySkipIntro": false,
                         "_myClearConsoleOnStart": false,
                         "_myStartDelayFrames": 30,
                         "_myNeverInLove": false,
@@ -9081,6 +8801,64 @@
                 2.0,
                 12.5
             ]
+        },
+        "902": {
+            "name": "Story 2",
+            "parent": "317",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "897"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                3.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
+                1.0
+            ]
+        },
+        "903": {
+            "name": "Story 3",
+            "parent": "317",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "898"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                3.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
+                1.0
+            ]
         }
     },
     "meshes": {
@@ -10138,6 +9916,48 @@
                     0.5
                 ]
             }
+        },
+        "894": {
+            "name": "Story 1",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
+        },
+        "897": {
+            "name": "Story 2",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
+        },
+        "898": {
+            "name": "Story 3",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
+        },
+        "899": {
+            "name": "Story 4",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
+        },
+        "900": {
+            "name": "Story 5",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
+        },
+        "901": {
+            "name": "Story 6",
+            "pipeline": "8",
+            "Flat": {
+                "flatTexture": "896"
+            }
         }
     },
     "shaders": {
@@ -10519,6 +10339,12 @@
                 "name": "skybox_basecolor.png",
                 "file": "assets\\textures\\skybox_basecolor.png"
             }
+        },
+        "896": {
+            "link": {
+                "name": "story01.jpg",
+                "file": "assets\\marketing\\story01.jpg"
+            }
         }
     },
     "images": {
@@ -10529,6 +10355,13 @@
             },
             "compression": "none",
             "stream": false
+        },
+        "895": {
+            "link": {
+                "name": "story01.jpg",
+                "file": "assets\\marketing\\story01.jpg"
+            },
+            "compression": "none"
         }
     },
     "files": [
@@ -10563,7 +10396,8 @@
         "assets/models/hands/hand_open_L.fbx",
         "assets/models/hands/hand_closed_L.fbx",
         "assets/models/hands/hand_open_R.fbx",
-        "assets/models/hands/hand_closed_R.fbx"
+        "assets/models/hands/hand_closed_R.fbx",
+        "assets/marketing/story01.jpg"
     ],
     "fonts": {
         "147": {

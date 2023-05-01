@@ -1,4 +1,4 @@
-import { FSM, GamepadButtonID, Globals, TimerState, quat_create, vec3_create } from "../../pp";
+import { FSM, GamepadButtonID, Globals, TimerState, XRUtils, quat_create, vec3_create } from "../../pp";
 import { GameGlobals } from "../cauldron/game_globals";
 
 export class EndingState {
@@ -71,6 +71,17 @@ export class EndingState {
         this._myParentFSM = fsm;
 
         this._myFSM.perform("start");
+
+        this._myResetPositionCounter = 0;
+        XRUtils.registerSessionStartEndEventListeners(this, this._onXRSessionStart.bind(this), this._onXRSessionEnd.bind(this), true, false);
+    }
+
+    _onXRSessionStart() {
+        this._myResetPositionCounter = 5;
+    }
+
+    _onXRSessionEnd() {
+
     }
 
     end() {
@@ -81,6 +92,15 @@ export class EndingState {
     update(dt, fsm) {
         if (GameGlobals.mySkipEnding) {
             this._myFSM.perform("skip");
+        }
+
+        if (this._myResetPositionCounter > 0) {
+            this._myResetPositionCounter--;
+            if (this._myResetPositionCounter == 0) {
+                let whiteRoomPosition = this._myWhiteRoom.pp_getPosition();
+                let rotationQuat = quat_create().quat_setForward(vec3_create(0, 0, 1));
+                GameGlobals.myPlayerTransformManager.teleportAndReset(whiteRoomPosition.vec3_sub(vec3_create(0, GameGlobals.myPlayerTransformManager.getHeight(), 0)), rotationQuat);
+            }
         }
 
         if (Globals.getLeftGamepad().getButtonInfo(GamepadButtonID.SELECT).isPressStart(3) ||
