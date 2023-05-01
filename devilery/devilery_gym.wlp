@@ -1648,9 +1648,9 @@
             "name": "Weapon Table",
             "parent": "258",
             "translation": [
-                0.0000011,
+                -2.449100406920479e-7,
                 0.5999999,
-                -7.1754899
+                4.5
             ],
             "rotation": [
                 0.0,
@@ -6082,6 +6082,212 @@
         "406": {
             "name": "Voice Target",
             "parent": "402"
+        },
+        "407": {
+            "name": "Apple Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "408",
+                        "_myDisabledObject": "410"
+                    }
+                }
+            ],
+            "translation": [
+                -0.6499999,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "408": {
+            "name": "On",
+            "parent": "407",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "409": {
+            "name": "Handles",
+            "parent": "258",
+            "translation": [
+                0.0,
+                1.4339462,
+                0.2838792
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "410": {
+            "name": "Off",
+            "parent": "407",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -0.895053,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "411": {
+            "name": "Trigger",
+            "parent": "99",
+            "translation": [
+                0.0,
+                -0.0367964,
+                0.0715703
+            ],
+            "rotation": [
+                0.2649303,
+                3.5521853192221897e-7,
+                2.279618911416037e-7,
+                0.9642675
+            ],
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.05
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 128,
+                        "block": 128,
+                        "trigger": false,
+                        "allowSimulation": true
+                    }
+                },
+                {
+                    "type": "buy-hand"
+                }
+            ],
+            "scaling": [
+                0.9999923,
+                0.9999998,
+                0.9999997
+            ]
+        },
+        "412": {
+            "name": "Trigger",
+            "parent": "107",
+            "translation": [
+                -0.0,
+                -0.0367964,
+                0.0715703
+            ],
+            "rotation": [
+                0.2649303,
+                3.5521853192221897e-7,
+                2.2796190535245842e-7,
+                0.9642675
+            ],
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.05
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 128,
+                        "block": 128,
+                        "trigger": false,
+                        "allowSimulation": true
+                    }
+                },
+                {
+                    "type": "buy-hand",
+                    "buy-hand": {
+                        "_myHandedness": "Right"
+                    }
+                }
+            ],
+            "scaling": [
+                0.9999925,
+                0.9999998,
+                0.9999998
+            ]
         }
     },
     "meshes": {
@@ -6725,7 +6931,7 @@
                 "4": "Enemy",
                 "5": "Evil Point",
                 "6": "Bullet",
-                "7": "Group 7"
+                "7": "Buy"
             }
         }
     },
