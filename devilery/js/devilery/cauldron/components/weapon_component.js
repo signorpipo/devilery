@@ -36,10 +36,22 @@ export class WeaponComponent extends Component {
     }
 
     shot() {
-        if (this._myCurrentAmmo > 0 || this._myAmmo < 0) {
-            GameGlobals.myBulletSpawners[this._myWeapon].shot(this._myExitTarget);
-            this._myCurrentAmmo--;
-            GameGlobals.myShotParticlesSpawner.spawn(this._myExitTarget.pp_getPosition());
+        let shotOk = true;
+
+        if (this._myWeapon == 3) {
+            shotOk = false
+            if (this.object.pp_getUp().vec3_angle(GameGlobals.myUp) &&
+                this.object.pp_getPosition().vec3_distance(Globals.getPlayerObjects().myHead.pp_getPosition()) < 0.4) {
+                shotOk = true;
+            }
+        }
+
+        if (shotOk) {
+            if (this._myCurrentAmmo > 0 || this._myAmmo < 0) {
+                GameGlobals.myBulletSpawners[this._myWeapon].shot(this._myExitTarget);
+                this._myCurrentAmmo--;
+                GameGlobals.myShotParticlesSpawner.spawn(this._myExitTarget.pp_getPosition());
+            }
         }
     }
 

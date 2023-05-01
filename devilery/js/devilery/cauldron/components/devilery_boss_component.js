@@ -3,6 +3,7 @@ import { GamepadButtonID, Globals, ObjectPoolParams, ObjectPoolsManager } from "
 import { DevilerSkullComponent } from "./devilery_skull_component";
 import { WeaponType } from "./weapon_component";
 import { GameGlobals } from "../game_globals";
+import { EnemyComponent } from "./enemy_component";
 
 export class DevileryBossComponent extends Component {
     static TypeName = "devilery-boss";
@@ -117,5 +118,12 @@ export class DevileryBossComponent extends Component {
 
         this._myDevilerySkulls.push(randomSkull);
         this._myWeapons.push(weapon);
+    }
+
+    killAllSkulls() {
+        let skulls = this._myDevilerySkulls.pp_clone();
+        for (let skull of skulls) {
+            skull.pp_getComponent(EnemyComponent).die();
+        }
     }
 }

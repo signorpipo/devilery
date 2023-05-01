@@ -5537,7 +5537,10 @@
                     }
                 },
                 {
-                    "type": "weapon"
+                    "type": "weapon",
+                    "weapon": {
+                        "_myWeapon": "Bat"
+                    }
                 },
                 {
                     "type": "pp-grabbable"
@@ -5592,7 +5595,10 @@
                     }
                 },
                 {
-                    "type": "weapon"
+                    "type": "weapon",
+                    "weapon": {
+                        "_myWeapon": "Skull"
+                    }
                 },
                 {
                     "type": "pp-grabbable"
@@ -5647,7 +5653,11 @@
                     }
                 },
                 {
-                    "type": "weapon"
+                    "type": "weapon",
+                    "weapon": {
+                        "_myAmmo": 100,
+                        "_myWeapon": "Voice"
+                    }
                 },
                 {
                     "type": "pp-grabbable"
