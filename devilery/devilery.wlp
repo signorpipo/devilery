@@ -10267,7 +10267,7 @@
             "parent": "597",
             "translation": [
                 0.0,
-                -50.0,
+                0.0,
                 0.0
             ],
             "components": [
@@ -11161,6 +11161,11 @@
                         "_myActive": false
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                -50.0,
+                0.0
             ]
         },
         "598": {
@@ -11401,6 +11406,929 @@
                 {
                     "mesh": {
                         "material": "537"
+                    }
+                }
+            ]
+        },
+        "607": {
+            "name": "Enemies",
+            "parent": "597",
+            "translation": [
+                0.0,
+                -2.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "608": {
+            "name": "Normal Bird",
+            "parent": "607",
+            "translation": [
+                -1.5,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "609": {
+            "name": "Pivot",
+            "parent": "608",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "610": {
+            "name": "Enemy",
+            "parent": "609",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.4499999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "291",
+                        "_myAmountEvil": 5
+                    }
+                }
+            ]
+        },
+        "611": {
+            "name": "Normal",
+            "parent": "610"
+        },
+        "618": {
+            "link": {
+                "name": "enemy_bird_01_mesh<enemy_bird_01<enemy_bird_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            },
+            "parent": "611",
+            "translation": [
+                0.0560525,
+                -0.0000076,
+                0.3499999
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                0.9999954,
+                0.9999954
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "619": {
+            "name": "Strong Bird",
+            "parent": "607",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "620": {
+            "name": "Pivot",
+            "parent": "619",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "621": {
+            "name": "Enemy",
+            "parent": "620",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "295",
+                        "_myType": "Strong",
+                        "_myHits": 2
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.4499999
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "622": {
+            "name": "Normal",
+            "parent": "621"
+        },
+        "625": {
+            "name": "Hurt",
+            "parent": "621",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "633": {
+            "link": {
+                "name": "enemy_bird_02_mesh<enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "622",
+            "translation": [
+                0.0560525,
+                -0.0000076,
+                0.3499999
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "634": {
+            "link": {
+                "name": "enemy_bird_hit_02_mesh<enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "625",
+            "translation": [
+                0.0560525,
+                1.4901161193847656e-8,
+                0.3499999
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                0.9999989,
+                0.9999989
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "635": {
+            "name": "Shield Bird",
+            "parent": "607",
+            "translation": [
+                1.5,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "636": {
+            "name": "Pivot",
+            "parent": "635",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "637": {
+            "name": "Enemy",
+            "parent": "636",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "299",
+                        "_myType": "Shield"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.4499999
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "638": {
+            "name": "Normal",
+            "parent": "637"
+        },
+        "641": {
+            "name": "Shield",
+            "parent": "637",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "644": {
+            "name": "Shield Block",
+            "parent": "641",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.8999999
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 2,
+                        "block": 79,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.6999999,
+                                0.5,
+                                0.6999999
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.05
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "650": {
+            "link": {
+                "name": "enemy_bird_03_mesh<enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "638",
+            "translation": [
+                0.0560528,
+                -0.0000076,
+                0.3499999
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "651": {
+            "link": {
+                "name": "enemy_bird_invulnerable_03_mesh<enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "641",
+            "translation": [
+                0.0560528,
+                1.4901161193847656e-8,
+                0.3499999
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
                     }
                 }
             ]
@@ -11747,6 +12675,36 @@
             "link": {
                 "name": "prince_airship_propeller_mesh",
                 "file": "assets\\models\\prince_airship.fbx"
+            }
+        },
+        "615": {
+            "link": {
+                "name": "enemy_bird_01_mesh",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            }
+        },
+        "629": {
+            "link": {
+                "name": "enemy_bird_02_mesh",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "630": {
+            "link": {
+                "name": "enemy_bird_hit_02_mesh",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "646": {
+            "link": {
+                "name": "enemy_bird_03_mesh",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            }
+        },
+        "647": {
+            "link": {
+                "name": "enemy_bird_invulnerable_03_mesh",
+                "file": "assets\\models\\enemy_bird_03.fbx"
             }
         }
     },
@@ -12173,6 +13131,24 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\prince_airship.fbx"
             }
+        },
+        "614": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            }
+        },
+        "628": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "645": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            }
         }
     },
     "shaders": {
@@ -12576,7 +13552,10 @@
         "assets/models/table.fbx",
         "assets/models/landing_spot.fbx",
         "assets/models/ally_01.fbx",
-        "assets/models/prince_airship.fbx"
+        "assets/models/prince_airship.fbx",
+        "assets/models/enemy_bird_01.fbx",
+        "assets/models/enemy_bird_02.fbx",
+        "assets/models/enemy_bird_03.fbx"
     ],
     "fonts": {
         "147": {
