@@ -1,6 +1,7 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { Globals, ObjectPoolParams, ObjectPoolsManager } from "../../../pp";
-import { WeaponType } from "./weapon_component";
+import { WeaponComponent, WeaponType } from "./weapon_component";
+import { DevilerSkullComponent } from "./devilery_skull_component";
 
 export class DevileryBossComponent extends Component {
     static TypeName = "devilery-boss";
@@ -56,6 +57,12 @@ export class DevileryBossComponent extends Component {
         }
     }
 
+    devilerySkullDespawn(skull) {
+        skull.pp_getComponent(DevilerSkullComponent).release();
+        this._myDevilerySkullPools.releaseObject(skull);
+        this._myDevilerySkulls.pp_removeEqual(skull);
+    }
+
     startDevileryBoss() {
         this._myDevileryBossStarted = true;
     }
@@ -64,6 +71,7 @@ export class DevileryBossComponent extends Component {
         this._myDevileryBossStarted = false;
 
         for (let skull of this._myDevilerySkulls) {
+            skull.pp_getComponent(DevilerSkullComponent).release();
             this._myDevilerySkullPools.releaseObject(skull);
         }
 
@@ -81,8 +89,10 @@ export class DevileryBossComponent extends Component {
 
         let weapon = this._myWeaponPools.getObject(weaponType);
 
-        randomSkull.deviler(weapon);
         randomSkull.pp_setActive(true);
+        weapon.pp_setActive(true);
+
+        randomSkull.pp_getComponent(DevilerSkullComponent).deviler(weapon, weaponType);
 
         this._myDevilerySkulls.push(randomSkull);
         this._myWeapons.push(weapon);

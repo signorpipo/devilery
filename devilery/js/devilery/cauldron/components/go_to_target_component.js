@@ -2,6 +2,7 @@ import { Component, Property } from "@wonderlandengine/api";
 import { GameGlobals } from "../game_globals";
 import { CloneUtils, NumberOverValue, vec3_create } from "../../../pp";
 import { WeaponComponent } from "./weapon_component";
+import { DevilerSkullComponent } from "./devilery_skull_component";
 
 export class GoToTargetComponent extends Component {
     static TypeName = "go-to-target";
@@ -120,10 +121,10 @@ GoToTargetComponent.prototype._update = function () {
         let distanceToTarget = currentPosition.vec3_distance(targetPosition);
 
 
-        if (!this._myWeaponReleased) {
+        if (!this._myWeaponReleased && !this._myIsPrincess && !this._myIsEvilPoint) {
             if (distanceToTarget < nextTargetDistance && this._myCurrentTargetIndex == 1) {
                 this._myWeaponReleased = true;
-                this.object.pp_getComponent(WeaponComponent)?.release();
+                this.object.pp_getComponent(DevilerSkullComponent).release();
             }
         }
 
@@ -154,6 +155,16 @@ GoToTargetComponent.prototype._update = function () {
         if (this._mySpeedTurn || (this._myIsEvilPoint && this._myCurrentTargetIndex >= 1 && distanceToTarget < 0.1) || this._myTimerSecond > 3) {
             this._mySpeedTurn = true;
             this._myTurnSpeed += 250 * dt;
+        }
+
+        if (!this._myIsPrincess && !this._myIsEvilPoint) {
+            if (this._myCurrentTargetIndex >= 3) {
+                targetPosition.vec3_copy(this._myTargetPositions[this._myCurrentTargetIndex - 1][0]);
+                let distanceToPrevious = currentPosition.vec3_distance(targetPosition);
+                if (distanceToPrevious > 10) {
+                    this.object.pp_getComponent(DevilerSkullComponent).despawn();
+                }
+            }
         }
     };
 }();

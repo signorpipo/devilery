@@ -21,7 +21,7 @@ export class PrincessComponent extends Component {
         let collisionsStart = this._myCollisionsCollector.getCollisionsStart();
         for (let collisionStart of collisionsStart) {
             let enemy = collisionStart.pp_getComponent(EnemyComponent);
-            if (enemy != null) {
+            if (enemy != null && enemy._myType != 3) {
                 this.delovery(enemy);
             }
         }

@@ -1890,6 +1890,9 @@
                     "go-to-target": {
                         "_myIsPrincess": false
                     }
+                },
+                {
+                    "type": "deviler-skull"
                 }
             ]
         },
@@ -5824,7 +5827,7 @@
             ]
         },
         "378": {
-            "name": "Bat Gun",
+            "name": "Voice Gun",
             "parent": "371",
             "components": [
                 {

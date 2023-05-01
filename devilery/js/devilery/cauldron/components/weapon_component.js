@@ -27,12 +27,16 @@ export class WeaponComponent extends Component {
 
             this._myStarted = true;
         } else {
-            //this._update(dt);
+            this._update(dt);
         }
     }
 
     _start() {
         this._myPhysX = this.object.pp_getComponent(PhysXComponent);
+    }
+
+    _update(dt) {
+        // if going down despawn
     }
 
     release() {

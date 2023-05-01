@@ -2,13 +2,14 @@ import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { CloneUtils, PhysicsCollisionCollector, Timer } from "../../../pp";
 import { GameGlobals } from "../game_globals";
 import { BulletComponent } from "./bullet_component";
+import { GoToTargetComponent } from "./go_to_target_component";
 
 export class EnemyComponent extends Component {
     static TypeName = "enemy";
     static Properties = {
         _myEnemy: Property.object(),
         _myHits: Property.int(1),
-        _myType: Property.enum(["Normal", "Strong", "Shield"], "Normal"),
+        _myType: Property.enum(["Normal", "Strong", "Shield", "Devilery Skull"], "Normal"),
         _myShieldActiveTime: Property.float(1),
         _myShieldInactiveTime: Property.float(1),
         _myAmountEvil: Property.int(0)
@@ -105,8 +106,13 @@ export class EnemyComponent extends Component {
     }
 
     die() {
-        GameGlobals.myShip.enemyDespawn(this._myEnemy);
-        GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
+        if (this._myType != 3) {
+            GameGlobals.myShip.enemyDespawn(this._myEnemy);
+            GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
+        } else {
+            GameGlobals.myDevileryBoss.devilerySkullDespawn(this._myEnemy);
+            GameGlobals.myDevilerySkullDieParticlesSpawner.spawn(this.object.pp_getPosition());
+        }
 
         GameGlobals.myEvilPointSpawner.spawnEvilPoints(this._myAmountEvil, this.object.pp_getPosition());
     }
@@ -119,7 +125,7 @@ export class EnemyComponent extends Component {
 
     pp_clonePostProcess(clonedComponent) {
         let parent = clonedComponent.object.pp_getParent();
-        while (parent != null && !parent.pp_getName().includes("Bird")) {
+        while (parent != null && parent.pp_getComponent(GoToTargetComponent) != null) {
             parent = parent.pp_getParent();
         }
 
@@ -134,12 +140,12 @@ export class EnemyComponent extends Component {
             let bullet = collisionStart.pp_getComponent(BulletComponent);
             if (bullet != null) {
                 bullet.die();
-                this._hit();
+                this._hit(bullet.object.pp_getPosition());
             }
         }
     }
 
-    _hit() {
+    _hit(bulletPosition) {
         if (!this._myShieldActive) {
             this._myCurrentHits--;
             if (this._myCurrentHits == 0) {
@@ -152,4 +158,6 @@ export class EnemyComponent extends Component {
             }
         }
     }
+
+    // spawn bullet particles
 }
