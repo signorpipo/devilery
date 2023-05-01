@@ -52,6 +52,9 @@
                         "_myMinAngleToFlyDownVR": 90.0,
                         "_myMinAngleToFlyRight": 90.0
                     }
+                },
+                {
+                    "type": "pp-show-fps"
                 }
             ],
             "translation": [
@@ -63,7 +66,7 @@
                 0.0,
                 1.0,
                 0.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ],
             "scaling": [
                 1.0,
@@ -730,7 +733,8 @@
                     "mesh": {
                         "mesh": "p1",
                         "material": "148"
-                    }
+                    },
+                    "active": false
                 },
                 {
                     "type": "physx",
@@ -1010,23 +1014,279 @@
                 }
             ]
         },
-        "264": {
+        "289": {
+            "link": {
+                "name": "ground_star_mesh<interior_walls<interior_walls_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\interior_walls.fbx"
+            },
+            "parent": "238",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "268"
+                    }
+                }
+            ]
+        },
+        "306": {
+            "link": {
+                "name": "skybox_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skybox.fbx"
+            },
+            "parent": "18"
+        },
+        "307": {
+            "link": {
+                "name": "skybox<skybox_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skybox.fbx"
+            },
+            "parent": "306"
+        },
+        "308": {
+            "link": {
+                "name": "skybox_mesh<skybox<skybox_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skybox.fbx"
+            },
+            "parent": "307",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "234",
+                        "mesh": "291"
+                    }
+                }
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "357": {
             "link": {
                 "name": "console_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\console.fbx"
             },
             "parent": "18"
         },
-        "265": {
+        "358": {
             "link": {
                 "name": "console<console_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\console.fbx"
             },
-            "parent": "264",
+            "parent": "357",
             "translation": [
                 0.0,
-                4.8853373,
-                5.82377595037542e-7
+                4.8850002,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "359": {
+            "link": {
+                "name": "console_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "253"
+                        },
+                        "static": true,
+                        "groups": 3,
+                        "block": 1
+                    }
+                }
+            ]
+        },
+        "361": {
+            "link": {
+                "name": "weapon_buy_01_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "active": false
+                }
+            ]
+        },
+        "362": {
+            "link": {
+                "name": "weapon_buy_01_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "363": {
+            "link": {
+                "name": "weapon_buy_02_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "active": false
+                }
+            ]
+        },
+        "364": {
+            "link": {
+                "name": "weapon_buy_02_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "active": true
+                }
+            ]
+        },
+        "365": {
+            "link": {
+                "name": "weapon_buy_03_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "366": {
+            "link": {
+                "name": "weapon_buy_03_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "active": false
+                }
+            ]
+        },
+        "367": {
+            "link": {
+                "name": "weapon_buy_04_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "368": {
+            "link": {
+                "name": "weapon_buy_04_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358",
+            "components": [
+                {
+                    "active": false
+                }
+            ]
+        },
+        "369": {
+            "link": {
+                "name": "weapon_buy_target_01<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "370": {
+            "link": {
+                "name": "weapon_buy_target_02<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "371": {
+            "link": {
+                "name": "weapon_buy_target_03<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "372": {
+            "link": {
+                "name": "weapon_buy_target_04<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "373": {
+            "link": {
+                "name": "evilness_target<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "358"
+        },
+        "386": {
+            "link": {
+                "name": "poison_apple_gun_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                -3.0,
+                2.0,
+                0.0
+            ]
+        },
+        "387": {
+            "link": {
+                "name": "poison_apple_gun<poison_apple_gun_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            },
+            "parent": "386"
+        },
+        "388": {
+            "link": {
+                "name": "poison_apple_gun_mesh<poison_apple_gun<poison_apple_gun_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            },
+            "parent": "387",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -1.4089777,
+                3.5577692,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -1040,12 +1300,597 @@
                 1.0
             ]
         },
-        "266": {
+        "391": {
             "link": {
-                "name": "console_mesh<console<console_$AssimpFbx$_PreRotation",
-                "file": "assets\\models\\console.fbx"
+                "name": "poison_apple_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
             },
-            "parent": "265",
+            "parent": "18"
+        },
+        "392": {
+            "link": {
+                "name": "poison_apple_bullet<poison_apple_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            },
+            "parent": "391"
+        },
+        "393": {
+            "link": {
+                "name": "poison_apple_bullet<poison_apple_bullet<poison_apple_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            },
+            "parent": "392",
+            "translation": [
+                -4.754024,
+                1.8694487,
+                2.2435934
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ]
+        },
+        "396": {
+            "link": {
+                "name": "skull_wand_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                3.0,
+                2.0,
+                0.0
+            ]
+        },
+        "397": {
+            "link": {
+                "name": "skull_wand<skull_wand_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand.fbx"
+            },
+            "parent": "396"
+        },
+        "398": {
+            "link": {
+                "name": "skull_wand_mesh<skull_wand<skull_wand_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand.fbx"
+            },
+            "parent": "397",
+            "translation": [
+                3.3776054,
+                6.7369894,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ]
+        },
+        "401": {
+            "link": {
+                "name": "skull_wand_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                3.0,
+                1.9999997,
+                -1.9999997
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "402": {
+            "link": {
+                "name": "skull_wand_bullet<skull_wand_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            },
+            "parent": "401"
+        },
+        "403": {
+            "link": {
+                "name": "skull_wand_bullet_mesh<skull_wand_bullet<skull_wand_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            },
+            "parent": "402",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                5.6715974,
+                6.9605054,
+                0.000037
+            ],
+            "rotation": [
+                -0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "406": {
+            "link": {
+                "name": "scary_megaphone_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\scary_megaphone.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                -3.0,
+                2.0,
+                -2.0
+            ]
+        },
+        "407": {
+            "link": {
+                "name": "scary_megaphone<scary_megaphone_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\scary_megaphone.fbx"
+            },
+            "parent": "406"
+        },
+        "408": {
+            "link": {
+                "name": "scary_megaphone<scary_megaphone<scary_megaphone_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\scary_megaphone.fbx"
+            },
+            "parent": "407",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -5.5560207,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "411": {
+            "link": {
+                "name": "bat_storm_spell_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                -2.0,
+                2.0,
+                2.0
+            ]
+        },
+        "412": {
+            "link": {
+                "name": "bat_storm_spell<bat_storm_spell_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell.fbx"
+            },
+            "parent": "411"
+        },
+        "413": {
+            "link": {
+                "name": "bat_storm_spell_mesh<bat_storm_spell<bat_storm_spell_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell.fbx"
+            },
+            "parent": "412",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                2.2750113,
+                -4.8712821,
+                -7.606470262544462e-7
+            ],
+            "rotation": [
+                0.0,
+                -1.1880123906848894e-7,
+                0.9965689,
+                -0.0827675
+            ],
+            "scaling": [
+                1.0000008,
+                1.0000008,
+                1.0
+            ]
+        },
+        "416": {
+            "link": {
+                "name": "bat_storm_spell_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                -2.0,
+                2.0000002,
+                3.0
+            ]
+        },
+        "417": {
+            "link": {
+                "name": "bat_storm_spell_bullet<bat_storm_spell_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            },
+            "parent": "416"
+        },
+        "418": {
+            "link": {
+                "name": "bat_storm_spell_bullet_mesh<bat_storm_spell_bullet<bat_storm_spell_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            },
+            "parent": "417",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                1.010388,
+                -4.0209951,
+                0.00002
+            ],
+            "rotation": [
+                0.0,
+                -1.1920920428565296e-7,
+                1.0,
+                1.49011640360186e-7
+            ],
+            "scaling": [
+                0.9999998,
+                0.9999998,
+                1.0
+            ]
+        },
+        "421": {
+            "link": {
+                "name": "enemy_bird_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                -1.3878483,
+                1.3630645,
+                1.6035076
+            ],
+            "rotation": [
+                -0.7071066,
+                0.0,
+                0.0,
+                0.7071068
+            ],
+            "scaling": [
+                1.0,
+                0.9999864,
+                0.9999864
+            ]
+        },
+        "422": {
+            "link": {
+                "name": "enemy_bird_01<enemy_bird_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            },
+            "parent": "421"
+        },
+        "423": {
+            "link": {
+                "name": "enemy_bird_01_mesh<enemy_bird_01<enemy_bird_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            },
+            "parent": "422",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -4.2689614,
+                7.2998347,
+                0.0000225
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "426": {
+            "link": {
+                "name": "enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "18"
+        },
+        "427": {
+            "link": {
+                "name": "enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "426",
+            "translation": [
+                0.0,
+                -1.8109514,
+                0.9752581
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "428": {
+            "link": {
+                "name": "enemy_bird_02_mesh<enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "427",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -6.01932,
+                5.3531475,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "430": {
+            "link": {
+                "name": "enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                0.0,
+                1.1920928955078125e-7,
+                2.0535087
+            ],
+            "rotation": [
+                -0.7071066,
+                0.0,
+                0.0,
+                0.7071068
+            ],
+            "scaling": [
+                1.0,
+                0.999994,
+                0.999994
+            ]
+        },
+        "431": {
+            "link": {
+                "name": "enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "430"
+        },
+        "433": {
+            "link": {
+                "name": "enemy_bird_hit_02_mesh<enemy_bird_02<enemy_bird_02_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            },
+            "parent": "431",
+            "translation": [
+                -7.2914443,
+                7.8750343,
+                0.622812
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ]
+        },
+        "437": {
+            "link": {
+                "name": "enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "18",
+            "translation": [
+                1.0877736,
+                1.2384594,
+                0.914654
+            ],
+            "rotation": [
+                -0.7071066,
+                0.0,
+                0.0,
+                0.7071068
+            ],
+            "scaling": [
+                1.0,
+                0.9999734,
+                0.9999734
+            ]
+        },
+        "438": {
+            "link": {
+                "name": "enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "437"
+        },
+        "439": {
+            "link": {
+                "name": "enemy_bird_03_mesh<enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "438",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                7.692584,
+                3.4575762,
+                -1.1920928955078125e-7
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "440": {
+            "link": {
+                "name": "enemy_bird_invulnerable_03_mesh<enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "438",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    },
+                    "active": true
+                }
+            ],
+            "translation": [
+                9.65594,
+                5.9726724,
+                -1.1920928955078125e-7
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "452": {
+            "link": {
+                "name": "table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "18"
+        },
+        "453": {
+            "link": {
+                "name": "table<table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "452"
+        },
+        "454": {
+            "link": {
+                "name": "table_mesh<table<table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "453",
             "components": [
                 {
                     "mesh": {
@@ -1055,15 +1900,119 @@
                 {
                     "type": "physx",
                     "physx": {
-                        "static": true,
                         "shape": "triangleMesh",
                         "triangleMesh": {
-                            "mesh": "253"
+                            "mesh": "451"
                         },
-                        "groups": 35,
-                        "block": 47
+                        "static": true,
+                        "groups": 3,
+                        "block": 3
                     }
                 }
+            ],
+            "translation": [
+                4.0323457,
+                -2.4243185,
+                -2.890007806399808e-7
+            ],
+            "rotation": [
+                -0.0,
+                -1.0323821442170811e-7,
+                0.8660253,
+                -0.4999999
+            ],
+            "scaling": [
+                0.9999998,
+                0.9999998,
+                1.0
+            ]
+        },
+        "458": {
+            "link": {
+                "name": "landing_spot_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\landing_spot.fbx"
+            },
+            "parent": "18"
+        },
+        "459": {
+            "link": {
+                "name": "landing_spot<landing_spot_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\landing_spot.fbx"
+            },
+            "parent": "458"
+        },
+        "460": {
+            "link": {
+                "name": "landing_spot<landing_spot<landing_spot_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\landing_spot.fbx"
+            },
+            "parent": "459",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                4.7472553,
+                -2.858551,
+                1.4480813
+            ],
+            "rotation": [
+                -0.0,
+                -1.0424559349075935e-7,
+                0.8744825,
+                -0.4850569
+            ],
+            "scaling": [
+                0.9999989,
+                0.9999989,
+                1.0
+            ]
+        },
+        "464": {
+            "link": {
+                "name": "ally_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\ally_01.fbx"
+            },
+            "parent": "18"
+        },
+        "465": {
+            "link": {
+                "name": "ally_01<ally_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\ally_01.fbx"
+            },
+            "parent": "464"
+        },
+        "466": {
+            "link": {
+                "name": "ally_01_mesh<ally_01<ally_01_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\ally_01.fbx"
+            },
+            "parent": "465",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -9.5367431640625e-7,
+                -5.5223679,
+                1.041457
+            ],
+            "rotation": [
+                0.0,
+                -1.1920920428565296e-7,
+                1.0,
+                1.49011640360186e-7
+            ],
+            "scaling": [
+                0.9999998,
+                0.9999998,
+                1.0
             ]
         }
     },
@@ -1312,6 +2261,276 @@
             "link": {
                 "name": "interior_walls_mesh003",
                 "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "278": {
+            "link": {
+                "name": "ground_star\u001F_mesh",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "279": {
+            "link": {
+                "name": "ground_star_mesh",
+                "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "291": {
+            "link": {
+                "name": "skybox_mesh",
+                "file": "assets\\models\\skybox.fbx"
+            }
+        },
+        "317": {
+            "link": {
+                "name": "button_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "318": {
+            "link": {
+                "name": "button_broken_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "319": {
+            "link": {
+                "name": "button_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "320": {
+            "link": {
+                "name": "button_broken_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "321": {
+            "link": {
+                "name": "button_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "322": {
+            "link": {
+                "name": "button_broken_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "323": {
+            "link": {
+                "name": "button_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "324": {
+            "link": {
+                "name": "button_broken_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "337": {
+            "link": {
+                "name": "weapon_buy_01_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "338": {
+            "link": {
+                "name": "weapon_buy_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "351": {
+            "link": {
+                "name": "weapon_buy_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "352": {
+            "link": {
+                "name": "weapon_buy_02_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "353": {
+            "link": {
+                "name": "weapon_buy_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "354": {
+            "link": {
+                "name": "weapon_buy_03_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "355": {
+            "link": {
+                "name": "weapon_buy_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "356": {
+            "link": {
+                "name": "weapon_buy_04_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "375": {
+            "link": {
+                "name": "poison_apple_gun_mesh",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            }
+        },
+        "376": {
+            "link": {
+                "name": "poison_apple_gun_physx",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            }
+        },
+        "390": {
+            "link": {
+                "name": "poison_apple_bullet",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            }
+        },
+        "395": {
+            "link": {
+                "name": "skull_wand_mesh",
+                "file": "assets\\models\\skull_wand.fbx"
+            }
+        },
+        "400": {
+            "link": {
+                "name": "skull_wand_bullet_mesh",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            }
+        },
+        "405": {
+            "link": {
+                "name": "scary_megaphone",
+                "file": "assets\\models\\scary_megaphone.fbx"
+            }
+        },
+        "410": {
+            "link": {
+                "name": "bat_storm_spell_mesh",
+                "file": "assets\\models\\bat_storm_spell.fbx"
+            }
+        },
+        "415": {
+            "link": {
+                "name": "bat_storm_spell_bullet_mesh",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            }
+        },
+        "420": {
+            "link": {
+                "name": "enemy_bird_01_mesh",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            }
+        },
+        "425": {
+            "link": {
+                "name": "enemy_bird_02_mesh",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "429": {
+            "link": {
+                "name": "enemy_bird_hit_02_mesh",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "435": {
+            "link": {
+                "name": "enemy_bird_03_mesh",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            }
+        },
+        "436": {
+            "link": {
+                "name": "enemy_bird_invulnerable_03_mesh",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            }
+        },
+        "441": {
+            "link": {
+                "name": "console_notch_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "442": {
+            "link": {
+                "name": "console_notch_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "443": {
+            "link": {
+                "name": "console_notch_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "444": {
+            "link": {
+                "name": "console_notch_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "445": {
+            "link": {
+                "name": "console_notch_05_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "446": {
+            "link": {
+                "name": "console_notch_06_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "447": {
+            "link": {
+                "name": "console_notch_07_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "448": {
+            "link": {
+                "name": "console_notch_08_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "450": {
+            "link": {
+                "name": "table_mesh",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "451": {
+            "link": {
+                "name": "table_physx",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "457": {
+            "link": {
+                "name": "landing_spot",
+                "file": "assets\\models\\landing_spot.fbx"
+            }
+        },
+        "461": {
+            "link": {
+                "name": "pedestal_bar_mesh",
+                "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "463": {
+            "link": {
+                "name": "ally_01_mesh",
+                "file": "assets\\models\\ally_01.fbx"
             }
         }
     },
@@ -1595,7 +2814,45 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\interior_walls.fbx"
             },
-            "name": "def1"
+            "name": "def1",
+            "pipeline": "312",
+            "Flat": {
+                "flatTexture": "310",
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "Phong": {
+                "diffuseTexture": "316",
+                "ambientColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "emissiveColor": [
+                    0.2001648,
+                    0.2165262,
+                    0.5650224,
+                    1.0
+                ],
+                "specularColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "emissiveTexture": null
+            }
         },
         "243": {
             "link": {
@@ -1617,9 +2874,9 @@
             "pipeline": "13",
             "Phong": {
                 "ambientColor": [
-                    0.4980392,
-                    0.4980392,
-                    0.4980392,
+                    0.9955157,
+                    0.9865873,
+                    0.9865873,
                     1.0
                 ],
                 "specularColor": [
@@ -1636,7 +2893,27 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\console.fbx"
             },
-            "name": "DefaultMaterial"
+            "name": "DefaultMaterial",
+            "Phong": {
+                "ambientColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "specularColor": [
+                    0.8609865,
+                    0.2509602,
+                    0.2509602,
+                    0.0
+                ]
+            }
         },
         "268": {
             "name": "Phong Less Specular",
@@ -1655,6 +2932,96 @@
                     0.5
                 ],
                 "shininess": 2
+            }
+        },
+        "290": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\skybox.fbx"
+            }
+        },
+        "314": {
+            "link": {
+                "name": "08 - Default",
+                "file": "assets\\models\\skybox.fbx"
+            }
+        },
+        "374": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\poison_apple_gun.fbx"
+            }
+        },
+        "389": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            }
+        },
+        "394": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\skull_wand.fbx"
+            }
+        },
+        "399": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            }
+        },
+        "404": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\scary_megaphone.fbx"
+            }
+        },
+        "409": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\bat_storm_spell.fbx"
+            }
+        },
+        "414": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            }
+        },
+        "419": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_01.fbx"
+            }
+        },
+        "424": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_02.fbx"
+            }
+        },
+        "434": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            }
+        },
+        "449": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "456": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\landing_spot.fbx"
+            }
+        },
+        "462": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\ally_01.fbx"
             }
         }
     },
@@ -1936,6 +3303,30 @@
                 "file": "default"
             }
         },
+        "311": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": true
+            },
+            "name": "SkyBox"
+        },
+        "312": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": true,
+                "VERTEX_COLORS": false,
+                "NORMAL_MAPPING": false,
+                "WITH_EMISSIVE": true
+            },
+            "name": "SkyB 2",
+            "doubleSided": true
+        },
         "89": {
             "link": {
                 "name": "Flat Opaque",
@@ -1955,14 +3346,71 @@
             "blendEqAlpha": "max"
         }
     },
-    "textures": {},
-    "images": {},
+    "textures": {
+        "310": {
+            "link": {
+                "name": "skybox_basecolor.webp",
+                "file": "assets\\textures\\skybox_basecolor.webp"
+            }
+        },
+        "313": {
+            "link": {
+                "name": "texture_0",
+                "file": "assets\\models\\skybox.fbx"
+            }
+        },
+        "316": {
+            "link": {
+                "name": "skybox_basecolor.png",
+                "file": "assets\\textures\\skybox_basecolor.png"
+            },
+            "image": "315"
+        }
+    },
+    "images": {
+        "309": {
+            "link": {
+                "name": "skybox_basecolor.webp",
+                "file": "assets\\textures\\skybox_basecolor.webp"
+            },
+            "compression": "none",
+            "stream": false,
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "315": {
+            "link": {
+                "name": "skybox_basecolor.png",
+                "file": "assets\\textures\\skybox_basecolor.png"
+            },
+            "compression": "none",
+            "stream": false
+        }
+    },
     "files": [
         "assets/models/pp/meta_quest_1_gamepads_credits_Jezza3D.fbx",
         "assets/models/pp/wondermelon.fbx",
         "assets/models/interior_walls.fbx",
         "assets/models/pedestal.fbx",
-        "assets/models/console.fbx"
+        "assets/models/console.fbx",
+        "assets/models/skybox.fbx",
+        "assets/textures/skybox_basecolor.webp",
+        "assets/textures/skybox_basecolor.png",
+        "assets/models/poison_apple_gun.fbx",
+        "assets/models/poison_apple_bullet.fbx",
+        "assets/models/skull_wand.fbx",
+        "assets/models/skull_wand_bullet.fbx",
+        "assets/models/scary_megaphone.fbx",
+        "assets/models/bat_storm_spell.fbx",
+        "assets/models/bat_storm_spell_bullet.fbx",
+        "assets/models/enemy_bird_01.fbx",
+        "assets/models/enemy_bird_02.fbx",
+        "assets/models/enemy_bird_03.fbx",
+        "assets/models/table.fbx",
+        "assets/models/landing_spot.fbx",
+        "assets/models/ally_01.fbx"
     ],
     "fonts": {
         "147": {
