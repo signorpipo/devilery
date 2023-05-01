@@ -158,7 +158,7 @@ GoToTargetComponent.prototype._update = function () {
             if (this._myCurrentTargetIndex >= 3) {
                 targetPosition.vec3_copy(this._myTargetPositions[this._myCurrentTargetIndex - 1][0]);
                 let distanceToPrevious = currentPosition.vec3_distance(targetPosition);
-                if (distanceToPrevious > 50) {
+                if (distanceToPrevious > 100) {
                     this.object.pp_getComponent(DevilerSkullComponent).despawn();
                 }
             }

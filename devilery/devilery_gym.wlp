@@ -1957,6 +1957,12 @@
                     "go-to-target": {
                         "_myIsPrincess": true
                     }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
                 }
             ],
             "rotation": [
@@ -2052,6 +2058,12 @@
                     "go-to-target": {
                         "_myIsPrincess": true
                     }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
                 }
             ],
             "rotation": [
@@ -2146,6 +2158,12 @@
                     "type": "go-to-target",
                     "go-to-target": {
                         "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
                     }
                 }
             ],
@@ -4930,6 +4948,12 @@
                 },
                 {
                     "type": "deviler-skull"
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
                 }
             ],
             "rotation": [
@@ -5185,6 +5209,12 @@
                 },
                 {
                     "type": "deviler-skull"
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
                 }
             ],
             "rotation": [
