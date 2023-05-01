@@ -39,6 +39,7 @@ import {WeaponComponent} from './devilery/cauldron/components/weapon_component.j
 import {ParticlesSpawnerComponent} from './playground/particles_spawner_component.js';
 import {ScaleOnSpawnComponent} from './playground/scale_on_spawn_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
+import {EasyTransformComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
 import {GrabbableComponent} from './pp/index.js';
 import {GrabberHandComponent} from './pp/index.js';
@@ -133,6 +134,7 @@ engine.registerComponent(WeaponComponent);
 engine.registerComponent(ParticlesSpawnerComponent);
 engine.registerComponent(ScaleOnSpawnComponent);
 engine.registerComponent(ConsoleVRToolComponent);
+engine.registerComponent(EasyTransformComponent);
 engine.registerComponent(EasyTuneToolComponent);
 engine.registerComponent(GrabbableComponent);
 engine.registerComponent(GrabberHandComponent);
