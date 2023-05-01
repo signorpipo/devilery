@@ -34,7 +34,7 @@ export class EvilPointSpawnerComponent extends Component {
 
         this._myEvilPointsTypes = GameGlobals.myScene.pp_getObjectByName("Evil Points").pp_getChildren();
 
-        for (let i = 0; i < this._myDevilerySkullsTypes.length; i++) {
+        for (let i = 0; i < this._myEvilPointsTypes.length; i++) {
             this._myEvilPointPools.addPool(i, this._myEvilPointsTypes[i], poolParams);
         }
     }
