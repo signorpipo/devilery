@@ -52,9 +52,6 @@
                         "_myMinAngleToFlyDownVR": 90.0,
                         "_myMinAngleToFlyRight": 90.0
                     }
-                },
-                {
-                    "type": "pp-show-fps"
                 }
             ],
             "translation": [
@@ -278,42 +275,6 @@
                 }
             ]
         },
-        "102": {
-            "name": "Gamepad Left",
-            "parent": "23",
-            "components": [
-                {
-                    "type": "pp-set-hand-local-transform"
-                },
-                {
-                    "type": "pp-gamepad-mesh-animator",
-                    "pp-gamepad-mesh-animator": {
-                        "_mySelect": "132",
-                        "_mySqueeze": "133",
-                        "_myThumbstick": "134",
-                        "_myTopButton": "135",
-                        "_myBottomButton": "130",
-                        "_myUsePressForSqueeze": true
-                    }
-                }
-            ],
-            "translation": [
-                -0.1,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "104": {
             "name": "Tool Hand Left",
             "parent": "23",
@@ -346,46 +307,6 @@
                         "_myJointMaterial": "148"
                     }
                 }
-            ]
-        },
-        "106": {
-            "name": "Gamepad Right",
-            "parent": "24",
-            "components": [
-                {
-                    "type": "pp-set-hand-local-transform",
-                    "pp-set-hand-local-transform": {
-                        "_myHandedness": "Right"
-                    }
-                },
-                {
-                    "type": "pp-gamepad-mesh-animator",
-                    "pp-gamepad-mesh-animator": {
-                        "_mySelect": "140",
-                        "_mySqueeze": "141",
-                        "_myThumbstick": "142",
-                        "_myTopButton": "143",
-                        "_myBottomButton": "138",
-                        "_myUsePressForSqueeze": true,
-                        "_myHandedness": "Right"
-                    }
-                }
-            ],
-            "translation": [
-                0.1,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
             ]
         },
         "107": {
@@ -430,298 +351,11 @@
                         "_myHandedness": "Right"
                     }
                 }
-            ]
-        },
-        "128": {
-            "link": {
-                "name": "Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "102",
-            "name": "Gamepad Left Mesh",
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
             ],
             "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "129": {
-            "link": {
-                "name": "Gamepad Body Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "148"
-                    }
-                }
-            ]
-        },
-        "130": {
-            "link": {
-                "name": "Gamepad Bottom Button Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "131": {
-            "link": {
-                "name": "Gamepad Option Button Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "132": {
-            "link": {
-                "name": "Gamepad Select Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "133": {
-            "link": {
-                "name": "Gamepad Squeeze Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "134": {
-            "link": {
-                "name": "Gamepad Thumbstick Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "translation": [
-                0.0179095,
-                -0.0037004,
-                0.039634
-            ],
-            "rotation": [
-                0.2649303,
-                3.5521475183486473e-7,
-                2.279547572925367e-7,
-                0.9642675
-            ],
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "135": {
-            "link": {
-                "name": "Gamepad Top Button Left<Gamepad Left<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "128",
-            "translation": [
-                -0.0025218,
-                -0.0069525,
-                0.0371638
-            ],
-            "rotation": [
-                0.2649303,
-                3.5521475183486473e-7,
-                2.279547572925367e-7,
-                0.9642675
-            ],
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "136": {
-            "link": {
-                "name": "Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "106",
-            "name": "Gamepad Right Mesh",
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "137": {
-            "link": {
-                "name": "Gamepad Body Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "148"
-                    }
-                }
-            ]
-        },
-        "138": {
-            "link": {
-                "name": "Gamepad Bottom Button Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "139": {
-            "link": {
-                "name": "Gamepad Option Button Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "140": {
-            "link": {
-                "name": "Gamepad Select Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "141": {
-            "link": {
-                "name": "Gamepad Squeeze Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "142": {
-            "link": {
-                "name": "Gamepad Thumbstick Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ]
-        },
-        "143": {
-            "link": {
-                "name": "Gamepad Top Button Right<Gamepad Right<Gamepads",
-                "file": "assets\\models\\pp\\meta_quest_1_gamepads_credits_Jezza3D.fbx"
-            },
-            "parent": "136",
-            "translation": [
-                0.0025218,
-                -0.0069525,
-                0.0371638
-            ],
-            "rotation": [
-                0.2649301,
-                1.818885664306436e-7,
-                3.209071337550995e-7,
-                0.9642676
-            ],
-            "components": [
-                {
-                    "mesh": {
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
+                0.0149999,
+                0.0149999,
+                0.0149999
             ]
         },
         "151": {
@@ -998,7 +632,8 @@
                 {
                     "mesh": {
                         "material": "250"
-                    }
+                    },
+                    "active": true
                 },
                 {
                     "type": "physx",
@@ -1284,20 +919,20 @@
                 }
             ],
             "translation": [
-                -1.4089777,
-                3.5577692,
-                0.0
+                2.1628513,
+                -3.9521136,
+                -2.1708986
             ],
             "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
+                -0.1228701,
+                -0.0015589,
+                -0.0125889,
+                0.9923416
             ],
             "scaling": [
-                1.0,
-                1.0,
-                1.0
+                0.9999849,
+                0.9999931,
+                0.9999928
             ]
         },
         "391": {
@@ -1321,20 +956,20 @@
             },
             "parent": "392",
             "translation": [
-                -4.754024,
-                1.8694487,
-                2.2435934
+                -0.9114592,
+                -4.6313104,
+                0.5866695
             ],
             "rotation": [
                 0.0,
-                0.0,
-                0.0,
-                1.0
+                0.1812273,
+                2.3078108313256962e-8,
+                0.9834412
             ],
             "scaling": [
+                0.9999989,
                 1.0,
-                1.0,
-                1.0
+                0.9999989
             ],
             "components": [
                 {
@@ -1370,8 +1005,8 @@
             },
             "parent": "397",
             "translation": [
-                3.3776054,
-                6.7369894,
+                3.3775877,
+                -2.1211054,
                 0.0
             ],
             "rotation": [
@@ -1438,8 +1073,8 @@
             ],
             "translation": [
                 5.6715974,
-                6.9605054,
-                0.000037
+                -3.9486153,
+                0.0000434
             ],
             "rotation": [
                 -0.0,
@@ -1486,20 +1121,20 @@
                 }
             ],
             "translation": [
-                -5.5560207,
-                0.0,
-                0.0
+                7.0998845,
+                -4.6189327,
+                -0.2654652
             ],
             "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
+                0.0620024,
+                0.3087072,
+                0.9305509,
+                -0.1868969
             ],
             "scaling": [
-                1.0,
-                1.0,
-                1.0
+                0.8188005,
+                0.8188002,
+                0.8187998
             ]
         },
         "411": {
@@ -1535,19 +1170,19 @@
                 }
             ],
             "translation": [
-                2.2750113,
-                -4.8712821,
-                -7.606470262544462e-7
+                8.7016172,
+                -4.8713016,
+                -5.222308914198948e-7
             ],
             "rotation": [
-                0.0,
-                -1.1880123906848894e-7,
+                -0.0,
+                -1.1880101880024085e-7,
                 0.9965689,
-                -0.0827675
+                -0.0827672
             ],
             "scaling": [
-                1.0000008,
-                1.0000008,
+                1.0000022,
+                1.0000022,
                 1.0
             ]
         },
@@ -1584,13 +1219,13 @@
                 }
             ],
             "translation": [
-                1.010388,
+                -4.4446744,
                 -4.0209951,
-                0.00002
+                0.0000357
             ],
             "rotation": [
-                0.0,
-                -1.1920920428565296e-7,
+                -0.0,
+                -1.1920928955078125e-7,
                 1.0,
                 1.49011640360186e-7
             ],
@@ -1644,19 +1279,19 @@
                 }
             ],
             "translation": [
-                -4.2689614,
-                7.2998347,
-                0.0000225
+                -1.9838519,
+                -9.0553541,
+                0.078288
             ],
             "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
+                -0.0,
+                3.454644854627986e-7,
+                0.9660083,
+                0.2585108
             ],
             "scaling": [
-                1.0,
-                1.0,
+                0.9999967,
+                0.9999967,
                 1.0
             ]
         },
@@ -1704,19 +1339,19 @@
                 }
             ],
             "translation": [
-                -6.01932,
-                5.3531475,
-                0.0
+                1.7107216,
+                -6.8139009,
+                0.6149764
             ],
             "rotation": [
                 0.0,
-                0.0,
-                0.0,
-                1.0
+                -1.1828809221015035e-7,
+                0.9922592,
+                -0.1241837
             ],
             "scaling": [
-                1.0,
-                1.0,
+                0.9999997,
+                0.9999997,
                 1.0
             ]
         },
@@ -1757,19 +1392,19 @@
             },
             "parent": "431",
             "translation": [
-                -7.2914443,
-                7.8750343,
-                0.622812
+                -7.2914419,
+                7.8750348,
+                0.6228119
             ],
             "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
+                -0.0,
+                1.5523633578595766e-7,
+                0.434075,
+                0.9008767
             ],
             "scaling": [
-                1.0,
-                1.0,
+                0.9999995,
+                0.9999995,
                 1.0
             ],
             "components": [
@@ -1825,8 +1460,8 @@
             ],
             "translation": [
                 7.692584,
-                3.4575762,
-                -1.1920928955078125e-7
+                -2.5319936,
+                0.0000017
             ],
             "rotation": [
                 0.0,
@@ -1856,8 +1491,8 @@
             ],
             "translation": [
                 9.65594,
-                5.9726724,
-                -1.1920928955078125e-7
+                -2.8257322,
+                0.0000029
             ],
             "rotation": [
                 0.0,
@@ -1917,7 +1552,7 @@
             ],
             "rotation": [
                 -0.0,
-                -1.0323821442170811e-7,
+                -1.0323821442170813e-7,
                 0.8660253,
                 -0.4999999
             ],
@@ -1961,7 +1596,7 @@
             ],
             "rotation": [
                 -0.0,
-                -1.0424559349075935e-7,
+                -1.0424559349075937e-7,
                 0.8744825,
                 -0.4850569
             ],
@@ -1999,19 +1634,184 @@
                 }
             ],
             "translation": [
-                -9.5367431640625e-7,
-                -5.5223679,
-                1.041457
+                -4.5485749,
+                -2.5564877,
+                2.0481219
+            ],
+            "rotation": [
+                0.0410081,
+                0.0832597,
+                0.9036947,
+                0.4179975
+            ],
+            "scaling": [
+                1.3199964,
+                1.3200014,
+                1.3199976
+            ]
+        },
+        "477": {
+            "link": {
+                "name": "prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "18"
+        },
+        "478": {
+            "link": {
+                "name": "prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "477"
+        },
+        "479": {
+            "link": {
+                "name": "prince_airship_mesh<prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "478",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                -0.9949219,
+                -24.6872768,
+                3.2810652
             ],
             "rotation": [
                 0.0,
-                -1.1920920428565296e-7,
+                -1.1920927533992653e-7,
                 1.0,
-                1.49011640360186e-7
+                1.7233355720236434e-7
             ],
             "scaling": [
-                0.9999998,
-                0.9999998,
+                0.0864669,
+                0.0864669,
+                0.0864669
+            ]
+        },
+        "480": {
+            "link": {
+                "name": "airship_enemy_spawn_target<prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "478"
+        },
+        "497": {
+            "link": {
+                "name": "Hand_open_L_mesh<Hand_open_L<Hand_open_L_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            },
+            "parent": "498",
+            "translation": [
+                0.0,
+                5.960464477539065e-8,
+                -0.035
+            ],
+            "rotation": [
+                0.9238795,
+                0.0,
+                0.0,
+                0.3826834
+            ],
+            "scaling": [
+                0.0149999,
+                0.0149999,
+                0.0149999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "268"
+                    },
+                    "active": false
+                }
+            ]
+        },
+        "498": {
+            "name": "Empty",
+            "parent": "99"
+        },
+        "507": {
+            "link": {
+                "name": "Hand_open_R_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            },
+            "parent": "18"
+        },
+        "508": {
+            "link": {
+                "name": "Hand_open_R<Hand_open_R_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            },
+            "parent": "507"
+        },
+        "509": {
+            "link": {
+                "name": "Hand_open_R_mesh<Hand_open_R<Hand_open_R_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            },
+            "parent": "511",
+            "translation": [
+                1.118536232525003e-7,
+                0.0,
+                -0.035
+            ],
+            "rotation": [
+                0.4617486,
+                3.8772483890170406e-8,
+                -2.0183675175644573e-8,
+                0.8870108
+            ],
+            "scaling": [
+                0.039,
+                0.039,
+                0.039
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "268"
+                    },
+                    "active": false
+                }
+            ]
+        },
+        "511": {
+            "name": "Empty",
+            "parent": "107"
+        },
+        "513": {
+            "link": {
+                "name": "enemy_bird_03_mesh<enemy_bird_03<enemy_bird_03_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_bird_03.fbx"
+            },
+            "parent": "438",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "250"
+                    }
+                }
+            ],
+            "translation": [
+                5.9449057,
+                -17.4029884,
+                4.339529
+            ],
+            "rotation": [
+                0.0,
+                3.422238989969628e-7,
+                0.9569336,
+                -0.2903066
+            ],
+            "scaling": [
+                0.9999988,
+                0.9999988,
                 1.0
             ]
         }
@@ -2532,6 +2332,30 @@
                 "name": "ally_01_mesh",
                 "file": "assets\\models\\ally_01.fbx"
             }
+        },
+        "468": {
+            "link": {
+                "name": "prince_airship_mesh",
+                "file": "assets\\models\\prince_airship.fbx"
+            }
+        },
+        "481": {
+            "link": {
+                "name": "prince_airship_propeller_mesh",
+                "file": "assets\\models\\prince_airship.fbx"
+            }
+        },
+        "483": {
+            "link": {
+                "name": "Hand_open_L_mesh",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            }
+        },
+        "500": {
+            "link": {
+                "name": "Hand_open_R_mesh",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            }
         }
     },
     "materials": {
@@ -3023,6 +2847,24 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\ally_01.fbx"
             }
+        },
+        "467": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\prince_airship.fbx"
+            }
+        },
+        "482": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            }
+        },
+        "499": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            }
         }
     },
     "shaders": {
@@ -3141,7 +2983,7 @@
             ]
         },
         "runtime": {
-            "xrButtonColor": "white",
+            "xrButtonColor": "#FFFFFFFF",
             "webxr": {
                 "optionalFeatures": {
                     "hand-tracking": true,
@@ -3410,7 +3252,10 @@
         "assets/models/enemy_bird_03.fbx",
         "assets/models/table.fbx",
         "assets/models/landing_spot.fbx",
-        "assets/models/ally_01.fbx"
+        "assets/models/ally_01.fbx",
+        "assets/models/prince_airship.fbx",
+        "assets/models/hands/hand_open_L.fbx",
+        "assets/models/hands/hand_open_R.fbx"
     ],
     "fonts": {
         "147": {
