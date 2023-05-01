@@ -1648,9 +1648,9 @@
             "name": "Weapon Table",
             "parent": "258",
             "translation": [
-                -1.3740304893872235e-8,
+                0.0000011,
                 0.5999999,
-                2.499998
+                -7.1754899
             ],
             "rotation": [
                 0.0,
@@ -5771,6 +5771,14 @@
                 0.0,
                 -140.0,
                 0.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
             ]
         },
         "372": {

@@ -77,6 +77,11 @@ export class DevileryBossComponent extends Component {
         this._myDevilerySkulls.pp_removeEqual(skull);
     }
 
+    weaponDespawn(weapon) {
+        this._myWeaponPools.releaseObject(weapon);
+        this._myWeapons.pp_removeEqual(weapon);
+    }
+
     startDevileryBoss() {
         this._myDevileryBossStarted = true;
 

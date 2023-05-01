@@ -1,5 +1,6 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { CloneUtils, Globals, vec3_create } from "../../../pp";
+import { GameGlobals } from "../game_globals";
 
 export let WeaponType = {
     APPLE: 0,
@@ -15,6 +16,7 @@ export class WeaponComponent extends Component {
 
     start() {
         this._myStarted = false;
+        this._myPosition = vec3_create();
 
         this._myReleaseVelocity = vec3_create(0, 2.5, 0);
     }
@@ -36,7 +38,9 @@ export class WeaponComponent extends Component {
     }
 
     _update(dt) {
-        // if going down despawn
+        if (this.object.pp_getPosition(this._myPosition)[1] < -100) {
+            GameGlobals.myDevileryBoss.weaponDespawn(this.object);
+        }
     }
 
     release() {
