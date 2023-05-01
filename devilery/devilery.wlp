@@ -1792,22 +1792,6 @@
                         "mesh": "p1",
                         "material": "148"
                     }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "static": true,
-                        "groups": 2,
-                        "block": 39,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.1,
-                                0.1,
-                                0.1
-                            ]
-                        }
-                    }
                 }
             ],
             "translation": [
@@ -8435,6 +8419,19 @@
                         "_myAllFree": true,
                         "_myFastDevilery": true
                     }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "474"
+                        },
+                        "gravity": false,
+                        "static": true,
+                        "groups": 2,
+                        "block": 71
+                    }
                 }
             ]
         },
@@ -8774,6 +8771,1086 @@
         "489": {
             "name": "Windows Targets",
             "parent": "476"
+        },
+        "492": {
+            "name": "Devilery Console",
+            "parent": "457",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "devilery-console",
+                    "devilery-console": {
+                        "_myEvilTargetReceiver": "528"
+                    }
+                }
+            ]
+        },
+        "512": {
+            "link": {
+                "name": "console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "492",
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850016
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Console"
+        },
+        "513": {
+            "link": {
+                "name": "console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "512",
+            "name": "Pivot",
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071068
+            ]
+        },
+        "514": {
+            "link": {
+                "name": "console_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "513",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "495",
+                            "scaling": [
+                                1.0,
+                                1.1499999,
+                                1.1499999
+                            ]
+                        },
+                        "gravity": false,
+                        "static": true,
+                        "groups": 2,
+                        "block": 71
+                    }
+                }
+            ]
+        },
+        "516": {
+            "link": {
+                "name": "weapon_buy_01_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "541",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                1.211351,
+                0.6515226,
+                -1.2875225
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0000007,
+                1.0000003,
+                1.0000004
+            ]
+        },
+        "517": {
+            "link": {
+                "name": "weapon_buy_01_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "541",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    },
+                    "active": true
+                }
+            ],
+            "translation": [
+                1.211351,
+                0.6515226,
+                -1.2875225
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0000007,
+                1.0000003,
+                1.0000004
+            ]
+        },
+        "518": {
+            "link": {
+                "name": "weapon_buy_02_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "553",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.2654329,
+                0.6746516,
+                -1.2533423
+            ],
+            "rotation": [
+                8.87607001232027e-8,
+                -2.155517186963607e-8,
+                0.0855327,
+                0.9963353
+            ],
+            "scaling": [
+                1.0000007,
+                0.9999997,
+                1.0000002
+            ]
+        },
+        "519": {
+            "link": {
+                "name": "weapon_buy_02_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "553",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.2654329,
+                0.6746516,
+                -1.2533423
+            ],
+            "rotation": [
+                8.87607001232027e-8,
+                -2.155517186963607e-8,
+                0.0855327,
+                0.9963353
+            ],
+            "scaling": [
+                1.0000007,
+                0.9999997,
+                1.0000002
+            ]
+        },
+        "520": {
+            "link": {
+                "name": "weapon_buy_03_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "547",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                -0.5438302,
+                0.4572567,
+                -1.2875223
+            ],
+            "rotation": [
+                6.075626401980116e-8,
+                -1.881536491055158e-7,
+                0.1329908,
+                0.9911172
+            ],
+            "scaling": [
+                1.0000005,
+                1.0,
+                1.0000003
+            ]
+        },
+        "521": {
+            "link": {
+                "name": "weapon_buy_03_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "547",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                -0.5438302,
+                0.4572567,
+                -1.2875223
+            ],
+            "rotation": [
+                6.075626401980116e-8,
+                -1.881536491055158e-7,
+                0.1329908,
+                0.9911172
+            ],
+            "scaling": [
+                1.0000005,
+                1.0,
+                1.0000003
+            ]
+        },
+        "522": {
+            "link": {
+                "name": "weapon_buy_04_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "550",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                -1.3770229,
+                0.1610569,
+                -1.2875225
+            ],
+            "rotation": [
+                0.0000347,
+                0.0000073,
+                0.1956184,
+                0.9806801
+            ],
+            "scaling": [
+                1.0000008,
+                1.0000001,
+                1.0000002
+            ]
+        },
+        "523": {
+            "link": {
+                "name": "weapon_buy_04_broken_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "550",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                -1.3770229,
+                0.1610569,
+                -1.2875225
+            ],
+            "rotation": [
+                0.0000347,
+                0.0000073,
+                0.1956184,
+                0.9806801
+            ],
+            "scaling": [
+                1.0000008,
+                1.0000001,
+                1.0000002
+            ]
+        },
+        "528": {
+            "link": {
+                "name": "evilness_target<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "492",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 2,
+                        "block": 39,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        }
+                    }
+                }
+            ],
+            "name": "Evil Target",
+            "translation": [
+                0.0,
+                3.4159855,
+                -5.3381581
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                0.7476919,
+                0.7653061,
+                0.747692
+            ]
+        },
+        "529": {
+            "link": {
+                "name": "console_notch_01_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "530": {
+            "link": {
+                "name": "console_notch_02_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "531": {
+            "link": {
+                "name": "console_notch_03_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "532": {
+            "link": {
+                "name": "console_notch_04_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "533": {
+            "link": {
+                "name": "console_notch_05_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "534": {
+            "link": {
+                "name": "console_notch_06_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "535": {
+            "link": {
+                "name": "console_notch_07_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "536": {
+            "link": {
+                "name": "console_notch_08_mesh<console<console_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\console.fbx"
+            },
+            "parent": "538",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                -4.8850026
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "538": {
+            "name": "Evil Points",
+            "parent": "492"
+        },
+        "539": {
+            "name": "Handles",
+            "parent": "492"
+        },
+        "541": {
+            "name": "Apple Handle",
+            "parent": "539",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "517",
+                        "_myDisabledObject": "516",
+                        "_myTimeDisabled": 2.0
+                    }
+                }
+            ],
+            "translation": [
+                -1.2080764,
+                1.2197054,
+                -4.1951298
+            ],
+            "rotation": [
+                -0.7071365,
+                0.0163996,
+                0.0114933,
+                0.7067933
+            ],
+            "scaling": [
+                0.9999992,
+                0.9999998,
+                0.9999998
+            ]
+        },
+        "547": {
+            "name": "Skull Handle",
+            "parent": "539",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "520",
+                        "_myDisabledObject": "521",
+                        "_myWeapon": "Skull",
+                        "_myCost": 4,
+                        "_myTimeDisabled": 2.0
+                    }
+                }
+            ],
+            "translation": [
+                0.4019874,
+                1.1682733,
+                -4.2266349
+            ],
+            "rotation": [
+                -0.699915,
+                -0.1008531,
+                -0.0987155,
+                0.7001448
+            ],
+            "scaling": [
+                0.9999993,
+                1.0,
+                0.9999995
+            ]
+        },
+        "550": {
+            "name": "Voice Handle",
+            "parent": "539",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "522",
+                        "_myDisabledObject": "523",
+                        "_myWeapon": "Voice",
+                        "_myCost": 8,
+                        "_myTimeDisabled": 2.0
+                    }
+                }
+            ],
+            "translation": [
+                1.1858084,
+                1.1725467,
+                -4.1468648
+            ],
+            "rotation": [
+                -0.701305,
+                -0.1459586,
+                -0.1327168,
+                0.6850207
+            ],
+            "scaling": [
+                0.999999,
+                1.0,
+                0.9999998
+            ]
+        },
+        "553": {
+            "name": "Bat Handle",
+            "parent": "539",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "518",
+                        "_myDisabledObject": "519",
+                        "_myWeapon": "Bat",
+                        "_myCost": 2,
+                        "_myTimeDisabled": 2.0
+                    }
+                }
+            ],
+            "translation": [
+                -0.3849702,
+                1.1825414,
+                -4.2191362
+            ],
+            "rotation": [
+                -0.7045155,
+                -0.0604808,
+                -0.0604808,
+                0.7045153
+            ],
+            "scaling": [
+                0.9999991,
+                1.0000001,
+                0.9999997
+            ]
         }
     },
     "meshes": {
@@ -8955,6 +10032,114 @@
             "link": {
                 "name": "interior_walls_physx",
                 "file": "assets\\models\\interior_walls.fbx"
+            }
+        },
+        "494": {
+            "link": {
+                "name": "console_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "495": {
+            "link": {
+                "name": "console_physx",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "496": {
+            "link": {
+                "name": "weapon_buy_01_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "497": {
+            "link": {
+                "name": "weapon_buy_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "498": {
+            "link": {
+                "name": "weapon_buy_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "499": {
+            "link": {
+                "name": "weapon_buy_02_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "500": {
+            "link": {
+                "name": "weapon_buy_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "501": {
+            "link": {
+                "name": "weapon_buy_03_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "502": {
+            "link": {
+                "name": "weapon_buy_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "503": {
+            "link": {
+                "name": "weapon_buy_04_broken_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "504": {
+            "link": {
+                "name": "console_notch_01_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "505": {
+            "link": {
+                "name": "console_notch_02_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "506": {
+            "link": {
+                "name": "console_notch_03_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "507": {
+            "link": {
+                "name": "console_notch_04_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "508": {
+            "link": {
+                "name": "console_notch_05_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "509": {
+            "link": {
+                "name": "console_notch_06_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "510": {
+            "link": {
+                "name": "console_notch_07_mesh",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "511": {
+            "link": {
+                "name": "console_notch_08_mesh",
+                "file": "assets\\models\\console.fbx"
             }
         }
     },
@@ -9327,6 +10512,30 @@
                     0.5
                 ]
             }
+        },
+        "493": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\console.fbx"
+            }
+        },
+        "537": {
+            "name": "Phong Specular",
+            "pipeline": "491",
+            "Phong": {
+                "ambientColor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "specularColor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ]
+            }
         }
     },
     "shaders": {
@@ -9673,7 +10882,7 @@
                 "SHADOW_NORMAL_OFFSET_UV_ONLY": false,
                 "SHADOW_NORMAL_OFFSET_SLOPE_SCALE": false
             },
-            "name": "Phong Less Specular",
+            "name": "Phong Opaque Devilery",
             "castShadows": false
         },
         "89": {
@@ -9724,7 +10933,8 @@
         "assets/models/pp/wondermelon.fbx",
         "assets/models/skybox.fbx",
         "assets/textures/skybox_basecolor.png",
-        "assets/models/interior_walls.fbx"
+        "assets/models/interior_walls.fbx",
+        "assets/models/console.fbx"
     ],
     "fonts": {
         "147": {
