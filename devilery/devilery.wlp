@@ -50,7 +50,7 @@
                         "_myPhysicsBlockLayerFlags": "0, 1, 0, 0, 0, 0, 0, 0",
                         "_myMoveThroughCollisionShortcutEnabled": true,
                         "_myFlyEnabled": false,
-                        "_myMaxSpeed": 2.0,
+                        "_myMaxSpeed": 2.5,
                         "_myMinAngleToFlyUpNonVR": 90.0,
                         "_myMinAngleToFlyDownNonVR": 90.0,
                         "_myMinAngleToFlyUpVR": 90.0,
@@ -3474,7 +3474,12 @@
                     }
                 },
                 {
-                    "type": "princess"
+                    "type": "princess",
+                    "princess": {
+                        "_myBar": "887",
+                        "_myMinBar": "566",
+                        "_myMaxBar": "565"
+                    }
                 }
             ]
         },
@@ -3520,8 +3525,8 @@
             ],
             "scaling": [
                 1.0499999,
-                1.0499858,
-                1.5
+                1.0499857,
+                1.45
             ]
         },
         "567": {
@@ -3529,10 +3534,10 @@
                 "name": "pedestal_bar_mesh<pedestal<pedestal_$AssimpFbx$_PreRotation",
                 "file": "assets\\models\\pedestal.fbx"
             },
-            "parent": "736",
+            "parent": "887",
             "translation": [
                 0.0,
-                0.6499999,
+                0.6499998,
                 -2.682209014892578e-7
             ],
             "rotation": [
@@ -3543,8 +3548,8 @@
             ],
             "scaling": [
                 1.0499999,
-                1.049986,
-                1.0
+                1.0499858,
+                0.9999999
             ],
             "components": [
                 {
@@ -7526,7 +7531,7 @@
             },
             "parent": "710",
             "translation": [
-                -5.960464477539064e-8,
+                -5.960464477539065e-8,
                 -0.0000113,
                 0.0
             ],
@@ -9029,6 +9034,15 @@
                 0.5,
                 0.5,
                 0.5
+            ]
+        },
+        "887": {
+            "name": "bar",
+            "parent": "736",
+            "scaling": [
+                1.0,
+                1.0,
+                13.6999998
             ]
         }
     },

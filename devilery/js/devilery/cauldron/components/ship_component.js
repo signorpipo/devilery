@@ -67,7 +67,7 @@ export class ShipComponent extends Component {
         this._myEnemyTimers[EnemyType.SHIELD_BIRD] = new Timer(0);
 
         this._myEnemyTimersDurations = [];
-        this._myEnemyTimersDurations[EnemyType.NORMAL_BIRD] = new NumberRangeOverValue([8, 12], [4, 8], 0, 200);
+        this._myEnemyTimersDurations[EnemyType.NORMAL_BIRD] = new NumberRangeOverValue([6, 10], [4, 8], 0, 100);
         this._myEnemyTimersDurations[EnemyType.STRONG_BIRD] = new NumberRangeOverValue([20, 24], [8, 12], 0, 200);
         this._myEnemyTimersDurations[EnemyType.SHIELD_BIRD] = new NumberRangeOverValue([20, 24], [14, 18], 0, 200);
 
