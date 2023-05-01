@@ -9052,6 +9052,35 @@
                 1.0,
                 13.6999998
             ]
+        },
+        "891": {
+            "name": "Cloud",
+            "parent": "457",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "892"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -2.2993457,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                12.5,
+                2.0,
+                12.5
+            ]
         }
     },
     "meshes": {
@@ -10090,6 +10119,24 @@
             "link": {
                 "name": "lambert1",
                 "file": "assets\\models\\hands\\hand_closed_R.fbx"
+            }
+        },
+        "892": {
+            "name": "Cloud",
+            "pipeline": "13",
+            "Phong": {
+                "ambientColor": [
+                    0.6999999,
+                    0.6999999,
+                    0.6999999,
+                    1.0
+                ],
+                "specularColor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ]
             }
         }
     },

@@ -234,7 +234,7 @@ export class CleanedPlayerLocomotion {
                 params.myHandedness = this._myParams.myMainHand;
 
                 params.myDetectionParams.myMaxDistance = 3;
-                params.myDetectionParams.myMaxHeightDifference = 4;
+                params.myDetectionParams.myMaxHeightDifference = 0.1;
                 params.myDetectionParams.myGroundAngleToIgnoreUpward = this._myCollisionCheckParamsMovement.myGroundAngleToIgnore;
                 params.myDetectionParams.myMustBeOnGround = true;
 
