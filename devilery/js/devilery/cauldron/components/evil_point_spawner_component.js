@@ -32,8 +32,11 @@ export class EvilPointSpawnerComponent extends Component {
         poolParams.myInitialPoolSize = 10;
         poolParams.myPercentageToAddWhenEmpty = 1;
 
-        let evilPoint = GameGlobals.myScene.pp_getObjectByName("Evil Point");
-        this._myEvilPointPools.addPool(0, evilPoint, poolParams);
+        this._myEvilPointsTypes = GameGlobals.myScene.pp_getObjectByName("Evil Points").pp_getChildren();
+
+        for (let i = 0; i < this._myDevilerySkullsTypes.length; i++) {
+            this._myEvilPointPools.addPool(i, this._myEvilPointsTypes[i], poolParams);
+        }
     }
 
     _update(dt) {
@@ -59,7 +62,7 @@ export class EvilPointSpawnerComponent extends Component {
 
     spawnEvilPoints(amount, position) {
         for (let i = 0; i < amount; i++) {
-            let evilPoint = this._myEvilPointPools.getObject(0);
+            let evilPoint = this._myEvilPointPools.getObject(Math.pp_randomInt(0, this._myEvilPointsTypes.length - 1));
 
             let radius = 1;
             let randomPosition = position.vec3_clone();

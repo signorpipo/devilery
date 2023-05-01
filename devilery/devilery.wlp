@@ -13544,6 +13544,161 @@
                     }
                 }
             ]
+        },
+        "726": {
+            "name": "Evil Point Spawner",
+            "parent": "457",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "evil-point-spawner"
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "727": {
+            "name": "Evil Points",
+            "parent": "597",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -7.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "728": {
+            "name": "Evil Point 1",
+            "parent": "727",
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false,
+                        "_myIsEvilPoint": true,
+                        "_myMaxSpeed": 10.0
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 32,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.15,
+                                0.1
+                            ]
+                        },
+                        "block": 2
+                    }
+                },
+                {
+                    "type": "evil-point"
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "729": {
+            "name": "Pivot",
+            "parent": "728",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "735": {
+            "link": {
+                "name": "evilness_01_part_mesh<evilness_01_part<evilness_01_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\evilness_01_part.fbx"
+            },
+            "parent": "729",
+            "translation": [
+                0.0,
+                -0.0000038,
+                0.0000038
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                0.9999999,
+                0.9999999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -13965,6 +14120,12 @@
             "link": {
                 "name": "skull_wand_bullet_mesh",
                 "file": "assets\\models\\skull_wand_bullet.fbx"
+            }
+        },
+        "732": {
+            "link": {
+                "name": "evilness_01_part_mesh",
+                "file": "assets\\models\\evilness_01_part.fbx"
             }
         }
     },
@@ -14451,6 +14612,12 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\skull_wand_bullet.fbx"
             }
+        },
+        "731": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\evilness_01_part.fbx"
+            }
         }
     },
     "shaders": {
@@ -14864,7 +15031,8 @@
         "assets/models/scary_megaphone.fbx",
         "assets/models/poison_apple_bullet.fbx",
         "assets/models/bat_storm_spell_bullet.fbx",
-        "assets/models/skull_wand_bullet.fbx"
+        "assets/models/skull_wand_bullet.fbx",
+        "assets/models/evilness_01_part.fbx"
     ],
     "fonts": {
         "147": {
