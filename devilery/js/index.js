@@ -15,6 +15,8 @@
 import {FixedFoveation} from '@wonderlandengine/components';
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {TargetFramerate} from '@wonderlandengine/components';
+import {VoiceBulletComponent} from './devilery/bullets/voice_bullet_component.js';
+import {BulletComponent} from './devilery/cauldron/components/bullet_component.js';
 import {BulletSpawnerComponent} from './devilery/cauldron/components/bullet_spawner_component.js';
 import {BuyButtonComponent} from './devilery/cauldron/components/buy_button_component.js';
 import {BuyHandComponent} from './devilery/cauldron/components/buy_hand_component.js';
@@ -107,6 +109,8 @@ if (document.readyState === 'loading') {
 engine.registerComponent(FixedFoveation);
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(TargetFramerate);
+engine.registerComponent(VoiceBulletComponent);
+engine.registerComponent(BulletComponent);
 engine.registerComponent(BulletSpawnerComponent);
 engine.registerComponent(BuyButtonComponent);
 engine.registerComponent(BuyHandComponent);

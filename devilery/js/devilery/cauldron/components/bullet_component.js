@@ -1,7 +1,8 @@
 import { Component, Property } from "@wonderlandengine/api";
+import { CloneUtils } from "../../../pp";
 
 export class BulletComponent extends Component {
-    static TypeName = "bullet-component";
+    static TypeName = "bullet";
     static Properties = {
     };
 
@@ -11,5 +12,11 @@ export class BulletComponent extends Component {
         for (let bulletSpawner of GameGlobals.myBulletSpawners) {
             bulletSpawner.despawnBullet(this.object);
         }
+    }
+
+    pp_clone(targetObject) {
+        let clonedComponent = CloneUtils.cloneComponentBase(this, targetObject);
+
+        return clonedComponent;
     }
 }

@@ -8,7 +8,13 @@ export class BulletSpawnerComponent extends Component {
     };
 
     shot(referenceObject) {
-
+        let bullet = this._myBulletPools.getObject(0);
+        for (let component of bullet.pp_getComponentsSelf()) {
+            if (component.shot != null) {
+                component.shot(referenceObject);
+            }
+        }
+        this._myBullets.push(bullet);
     }
 
     start() {
