@@ -12,6 +12,8 @@ export let WeaponType = {
 export class WeaponComponent extends Component {
     static TypeName = "weapon";
     static Properties = {
+        _myWeapon: Property.enum(["Apple", "Bat", "Skull", "Voice"], "Apple"),
+        _myAmmo: Property.int(0)
     };
 
     start() {
@@ -31,6 +33,10 @@ export class WeaponComponent extends Component {
         } else {
             this._update(dt);
         }
+    }
+
+    shot() {
+        console.error("shot");
     }
 
     _start() {

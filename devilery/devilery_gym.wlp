@@ -873,7 +873,8 @@
                         "_myStartDelayFrames": 30,
                         "_myNeverInLove": true,
                         "_myRandomEnemyDie": true,
-                        "_myAllFree": true
+                        "_myAllFree": true,
+                        "_myFastDevilery": true
                     }
                 }
             ]
@@ -5473,6 +5474,9 @@
                 },
                 {
                     "type": "weapon"
+                },
+                {
+                    "type": "pp-grabbable"
                 }
             ],
             "translation": [
@@ -5522,6 +5526,9 @@
                 },
                 {
                     "type": "weapon"
+                },
+                {
+                    "type": "pp-grabbable"
                 }
             ],
             "translation": [
@@ -5574,6 +5581,9 @@
                 },
                 {
                     "type": "weapon"
+                },
+                {
+                    "type": "pp-grabbable"
                 }
             ],
             "translation": [
@@ -5626,6 +5636,9 @@
                 },
                 {
                     "type": "weapon"
+                },
+                {
+                    "type": "pp-grabbable"
                 }
             ],
             "translation": [

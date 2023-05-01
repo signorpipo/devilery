@@ -251,6 +251,9 @@ GoToTargetComponent.prototype._start = function () {
         this.object.pp_setUp(GameGlobals.myUp, this._myCurrentForward);
 
         this._myCurrentSpeed = this._myMaxSpeed;
+        if (GameGlobals.myFastDevilery && !this._myIsPrincess && !this._myIsEvilPoint) {
+            this._myCurrentSpeed *= 3;
+        }
         this._myTargetSpeed = this._myCurrentSpeed;
     };
 }();
