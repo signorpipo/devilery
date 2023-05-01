@@ -1,7 +1,8 @@
-import { Component, Property } from "@wonderlandengine/api";
-import { Globals, ObjectPoolParams, ObjectPoolsManager } from "../../../pp";
-import { WeaponComponent, WeaponType } from "./weapon_component";
+import { Component } from "@wonderlandengine/api";
+import { GamepadButtonID, Globals, ObjectPoolParams, ObjectPoolsManager } from "../../../pp";
 import { DevilerSkullComponent } from "./devilery_skull_component";
+import { WeaponType } from "./weapon_component";
+import { GameGlobals } from "../game_globals";
 
 export class DevileryBossComponent extends Component {
     static TypeName = "devilery-boss";
@@ -53,7 +54,20 @@ export class DevileryBossComponent extends Component {
 
     _update(dt) {
         if (this._myDevileryBossStarted) {
-
+            if (GameGlobals.myDebugEnabled) {
+                if (Globals.getRightGamepad().getButtonInfo(GamepadButtonID.TOP_BUTTON).isPressStart(2)) {
+                    this.deviler(0);
+                }
+                if (Globals.getRightGamepad().getButtonInfo(GamepadButtonID.TOP_BUTTON).isPressStart(3)) {
+                    this.deviler(1);
+                }
+                if (Globals.getRightGamepad().getButtonInfo(GamepadButtonID.BOTTOM_BUTTON).isPressStart(2)) {
+                    this.deviler(2);
+                }
+                if (Globals.getRightGamepad().getButtonInfo(GamepadButtonID.BOTTOM_BUTTON).isPressStart(3)) {
+                    this.deviler(3);
+                }
+            }
         }
     }
 
@@ -65,6 +79,8 @@ export class DevileryBossComponent extends Component {
 
     startDevileryBoss() {
         this._myDevileryBossStarted = true;
+
+        this.deviler(0);
     }
 
     stopDevileryBoss() {
@@ -92,7 +108,7 @@ export class DevileryBossComponent extends Component {
         randomSkull.pp_setActive(true);
         weapon.pp_setActive(true);
 
-        randomSkull.pp_getComponent(DevilerSkullComponent).deviler(weapon, weaponType);
+        randomSkull.pp_getComponent(DevilerSkullComponent).deviler(weapon, weaponType, this.object.pp_getPosition());
 
         this._myDevilerySkulls.push(randomSkull);
         this._myWeapons.push(weapon);

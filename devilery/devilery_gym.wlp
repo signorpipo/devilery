@@ -1648,7 +1648,7 @@
             "name": "Weapon Table",
             "parent": "258",
             "translation": [
-                -1.3740304893872237e-8,
+                -1.3740304893872235e-8,
                 0.5999999,
                 2.499998
             ],
@@ -1893,6 +1893,12 @@
                 },
                 {
                     "type": "deviler-skull"
+                },
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
                 }
             ]
         },
@@ -2101,29 +2107,9 @@
                 0.1
             ]
         },
-        "277": {
-            "name": "Weapon Guy Target",
-            "parent": "274",
-            "translation": [
-                0.0,
-                -0.75,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "278": {
             "name": "Weapon",
-            "parent": "277",
+            "parent": "402",
             "components": [
                 {
                     "type": "physx",
@@ -2144,6 +2130,22 @@
                 {
                     "type": "weapon"
                 }
+            ],
+            "translation": [
+                -9.0,
+                145.0,
+                10.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "279": {
@@ -2269,9 +2271,20 @@
                 }
             ],
             "translation": [
-                0.0,
-                -120.0,
+                -50.0,
+                15.0,
                 0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "286": {
@@ -5235,7 +5248,7 @@
         },
         "357": {
             "name": "Devilery Skulls",
-            "parent": "285",
+            "parent": "231",
             "components": [
                 {
                     "type": "pp-set-active",
@@ -5243,6 +5256,22 @@
                         "_myActive": false
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                -120.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "359": {
@@ -5481,7 +5510,7 @@
             ]
         },
         "363": {
-            "name": "Weapon Guy Target",
+            "name": "Weapon Skull Targets",
             "parent": "360",
             "translation": [
                 0.0,
@@ -5735,26 +5764,6 @@
                 0.1
             ]
         },
-        "370": {
-            "name": "Weapon Guy Target",
-            "parent": "367",
-            "translation": [
-                0.0,
-                -0.75,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "371": {
             "name": "Weapons",
             "parent": "231",
@@ -5780,8 +5789,13 @@
                             ]
                         },
                         "block": 22,
-                        "groups": 4
+                        "groups": 4,
+                        "kinematic": true,
+                        "gravity": true
                     }
+                },
+                {
+                    "type": "weapon"
                 }
             ],
             "translation": [
@@ -5824,8 +5838,13 @@
                             ]
                         },
                         "groups": 4,
-                        "block": 22
+                        "block": 22,
+                        "kinematic": true,
+                        "gravity": true
                     }
+                },
+                {
+                    "type": "weapon"
                 }
             ],
             "translation": [
@@ -5871,8 +5890,13 @@
                         "block": 22,
                         "sphere": {
                             "radius": 0.15
-                        }
+                        },
+                        "kinematic": true,
+                        "gravity": true
                     }
+                },
+                {
+                    "type": "weapon"
                 }
             ],
             "translation": [
@@ -5918,8 +5942,13 @@
                         "groups": 4,
                         "sphere": {
                             "radius": 0.15
-                        }
+                        },
+                        "kinematic": true,
+                        "gravity": true
                     }
+                },
+                {
+                    "type": "weapon"
                 }
             ],
             "translation": [
@@ -5957,6 +5986,94 @@
         "382": {
             "name": "Enemy Die",
             "parent": "303"
+        },
+        "383": {
+            "name": "Apple Target",
+            "parent": "363"
+        },
+        "384": {
+            "name": "Bat Target",
+            "parent": "363"
+        },
+        "385": {
+            "name": "Skull Target",
+            "parent": "363"
+        },
+        "386": {
+            "name": "Voice Target",
+            "parent": "363"
+        },
+        "397": {
+            "name": "Weapon Skull Targets",
+            "parent": "367",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "398": {
+            "name": "Apple Target",
+            "parent": "397"
+        },
+        "399": {
+            "name": "Bat Target",
+            "parent": "397"
+        },
+        "400": {
+            "name": "Skull Target",
+            "parent": "397"
+        },
+        "401": {
+            "name": "Voice Target",
+            "parent": "397"
+        },
+        "402": {
+            "name": "Weapon Skull Targets",
+            "parent": "274",
+            "translation": [
+                9.0,
+                -145.75,
+                -10.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "403": {
+            "name": "Apple Target",
+            "parent": "402"
+        },
+        "404": {
+            "name": "Bat Target",
+            "parent": "402"
+        },
+        "405": {
+            "name": "Skull Target",
+            "parent": "402"
+        },
+        "406": {
+            "name": "Voice Target",
+            "parent": "402"
         }
     },
     "meshes": {

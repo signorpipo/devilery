@@ -32,7 +32,7 @@ export class EnemyComponent extends Component {
     }
 
     _start() {
-        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 0) == 0);
+        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 0) == 0 && this._myType != 3);
 
         this._myPhysX = this.object.pp_getComponent(PhysXComponent);
         this._myCollisionsCollector = new PhysicsCollisionCollector(this._myPhysX);
@@ -125,7 +125,7 @@ export class EnemyComponent extends Component {
 
     pp_clonePostProcess(clonedComponent) {
         let parent = clonedComponent.object.pp_getParent();
-        while (parent != null && parent.pp_getComponent(GoToTargetComponent) != null) {
+        while (parent != null && parent.pp_getComponent(GoToTargetComponent) == null) {
             parent = parent.pp_getParent();
         }
 

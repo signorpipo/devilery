@@ -1,19 +1,24 @@
 import { Component } from "@wonderlandengine/api";
-import { CloneUtils } from "../../../pp";
+import { CloneUtils, vec3_create } from "../../../pp";
 import { GameGlobals } from "../game_globals";
-import { WeaponComponent } from "./weapon_component";
+import { WeaponComponent, WeaponType } from "./weapon_component";
 
 export class DevilerSkullComponent extends Component {
     static TypeName = "deviler-skull";
     static Properties = {
     };
 
-    deviler(weapon, weaponType) {
+    deviler(weapon, weaponType, devilerBossPosition) {
         this._myWeapon = weapon;
         this._myReleased = false;
 
-        // set parent as pivot
+        this._myWeapon.pp_setParent(this._myWeaponTargets[weaponType]);
         this._myWeapon.pp_resetTransformLocal();
+
+        this.object.pp_setPosition(devilerBossPosition);
+        this.object.pp_rotateAroundAxis(Math.pp_random(0, 360), GameGlobals.myUp, this._myZero);
+
+        GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
     }
 
     release() {
@@ -21,24 +26,19 @@ export class DevilerSkullComponent extends Component {
 
         if (!this._myReleased) {
             this._myReleased = true;
-            if (this._myWeapon == null && GameGlobals.myDebugEnabled) {
-                this._myWeapon = this.object.pp_getComponent(WeaponComponent)?.object;
-            }
-
-            if (this._myWeapon != null) {
-                this._myWeapon.pp_getComponent(WeaponComponent)?.release();
-
-                this._myWeapon = null;
-            }
+            this._myWeapon.pp_getComponent(WeaponComponent).release();
+            this._myWeapon = null;
         }
     }
 
     despawn() {
+        GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
         GameGlobals.myDevileryBoss.devilerySkullDespawn(this.object);
     }
 
     start() {
         this._myStarted = false;
+        this._myZero = vec3_create();
     }
 
     update(dt) {
@@ -61,6 +61,7 @@ export class DevilerSkullComponent extends Component {
     }
 
     _update(dt) {
+
     }
 
     onActivate() {
@@ -68,12 +69,24 @@ export class DevilerSkullComponent extends Component {
     }
 
     onDeactivate() {
-        this.release();
+        if (this._myStarted) {
+            this.release();
+        }
     }
 
     pp_clone(targetObject) {
         let clonedComponent = CloneUtils.cloneComponentBase(this, targetObject);
 
         return clonedComponent;
+    }
+
+    pp_clonePostProcess(clonedComponent) {
+        clonedComponent._myWeaponTargets = [];
+        let targets = clonedComponent.object.pp_getObjectByName("Weapon Skull Targets");
+
+        clonedComponent._myWeaponTargets[WeaponType.APPLE] = targets.pp_getObjectByName("Apple Target");
+        clonedComponent._myWeaponTargets[WeaponType.BAT] = targets.pp_getObjectByName("Bat Target");
+        clonedComponent._myWeaponTargets[WeaponType.SKULL] = targets.pp_getObjectByName("Skull Target");
+        clonedComponent._myWeaponTargets[WeaponType.VOICE] = targets.pp_getObjectByName("Voice Target");
     }
 }

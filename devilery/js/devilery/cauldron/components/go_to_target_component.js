@@ -1,7 +1,6 @@
 import { Component, Property } from "@wonderlandengine/api";
-import { GameGlobals } from "../game_globals";
 import { CloneUtils, NumberOverValue, vec3_create } from "../../../pp";
-import { WeaponComponent } from "./weapon_component";
+import { GameGlobals } from "../game_globals";
 import { DevilerSkullComponent } from "./devilery_skull_component";
 
 export class GoToTargetComponent extends Component {
@@ -24,8 +23,6 @@ export class GoToTargetComponent extends Component {
         this._myTargetSpeed = 0;
         this._myTargetPositions = [];
         this._myCurrentTargetIndex = 0;
-
-        this._myNextTargetDistance = 0;
 
         this._myCurrentSpeed = this._myMaxSpeed;
         this._mySlowDown = true;
@@ -122,7 +119,7 @@ GoToTargetComponent.prototype._update = function () {
 
 
         if (!this._myWeaponReleased && !this._myIsPrincess && !this._myIsEvilPoint) {
-            if (distanceToTarget < nextTargetDistance && this._myCurrentTargetIndex == 1) {
+            if ((distanceToTarget < nextTargetDistance && this._myCurrentTargetIndex == 1) || this._myCurrentTargetIndex == 2) {
                 this._myWeaponReleased = true;
                 this.object.pp_getComponent(DevilerSkullComponent).release();
             }
@@ -161,7 +158,7 @@ GoToTargetComponent.prototype._update = function () {
             if (this._myCurrentTargetIndex >= 3) {
                 targetPosition.vec3_copy(this._myTargetPositions[this._myCurrentTargetIndex - 1][0]);
                 let distanceToPrevious = currentPosition.vec3_distance(targetPosition);
-                if (distanceToPrevious > 10) {
+                if (distanceToPrevious > 50) {
                     this.object.pp_getComponent(DevilerSkullComponent).despawn();
                 }
             }
@@ -182,8 +179,15 @@ GoToTargetComponent.prototype._start = function () {
     let toWorstFlat = vec3_create();
     let toWorstRotationAxis = vec3_create();
     return function _start() {
+        this._myCurrentTargetIndex = 0;
+        this._myWeaponReleased = false;
+
+        this._mySlowDown = true;
+        this._mySpeedUp = true;
+
         this._myTurnSpeed = 100;
         this._mySpeedTurn = false;
+        this._myTimer = 0;
         this._myTimerSecond = 0;
 
         this.object.pp_getPosition(currentPosition);
@@ -224,6 +228,8 @@ GoToTargetComponent.prototype._start = function () {
 
         this._myTargetForward.vec3_copy(startForward);
         this._myCurrentForward.vec3_copy(startForward);
+
+        this._myTargetPositions.pp_clear();
 
         this._myTargetPositions.push([bestTargetObject.pp_getPosition(), nextTargetDistance]);
         if (this._myIsPrincess) {
