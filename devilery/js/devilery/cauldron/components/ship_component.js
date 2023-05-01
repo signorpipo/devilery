@@ -26,6 +26,8 @@ export class ShipComponent extends Component {
         this._myEnemies = [];
 
         this._myTimers = [];
+
+        this._myInitialTransform = this.object.pp_getTransformQuat();
     }
 
     update(dt) {
@@ -52,7 +54,7 @@ export class ShipComponent extends Component {
     startShip() {
         this._myShipStarted = true;
 
-        this.object.pp_rotateAroundAxis(Math.pp_random(0, 360), GameGlobals.myUp, this._myZero);
+        this.object.pp_setTransformQuat(this._myInitialTransform);
 
         this._myTimer = 0;
 
@@ -68,8 +70,8 @@ export class ShipComponent extends Component {
 
         this._myEnemyTimersDurations = [];
         this._myEnemyTimersDurations[EnemyType.NORMAL_BIRD] = new NumberRangeOverValue([6, 10], [4, 8], 0, 100);
-        this._myEnemyTimersDurations[EnemyType.STRONG_BIRD] = new NumberRangeOverValue([20, 24], [8, 12], 0, 200);
-        this._myEnemyTimersDurations[EnemyType.SHIELD_BIRD] = new NumberRangeOverValue([20, 24], [14, 18], 0, 200);
+        this._myEnemyTimersDurations[EnemyType.STRONG_BIRD] = new NumberRangeOverValue([16, 20], [8, 12], 0, 150);
+        this._myEnemyTimersDurations[EnemyType.SHIELD_BIRD] = new NumberRangeOverValue([18, 22], [12, 16], 0, 200);
 
         this._myTimers = [];
         this._myTimers[EnemyType.NORMAL_BIRD] = 0;

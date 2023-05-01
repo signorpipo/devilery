@@ -8,7 +8,7 @@ export class DevilerSkullComponent extends Component {
     static Properties = {
     };
 
-    deviler(weapon, weaponType, devilerBossPosition) {
+    deviler(weapon, weaponType, devilerBossPosition, first = false) {
         this._myWeapon = weapon;
         this._myReleased = false;
 
@@ -16,9 +16,13 @@ export class DevilerSkullComponent extends Component {
         this._myWeapon.pp_resetTransformLocal();
         this._myWeapon.pp_setRotationLocal(vec3_create(Math.pp_random(-180, 180), Math.pp_random(-180, 180), Math.pp_random(-180, 180)));
 
-        this.object.pp_setPosition(devilerBossPosition.vec3_add(
-            vec3_create(Math.pp_random(-5, 5), Math.pp_random(-5, 5), Math.pp_random(-5, 5))));
-        this.object.pp_rotateAroundAxis(Math.pp_random(0, 360), GameGlobals.myUp, this._myZero);
+        if (first) {
+            this.object.pp_setPosition(devilerBossPosition);
+        } else {
+            this.object.pp_setPosition(devilerBossPosition.vec3_add(
+                vec3_create(Math.pp_random(-5, 5), Math.pp_random(-5, 5), Math.pp_random(-5, 5))));
+            this.object.pp_rotateAroundAxis(Math.pp_random(0, 360), GameGlobals.myUp, this._myZero);
+        }
 
         //GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
     }

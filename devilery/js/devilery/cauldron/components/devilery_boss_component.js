@@ -86,7 +86,7 @@ export class DevileryBossComponent extends Component {
     startDevileryBoss() {
         this._myDevileryBossStarted = true;
 
-        this.deviler(0);
+        this.deviler(0, true);
     }
 
     stopDevileryBoss() {
@@ -106,7 +106,7 @@ export class DevileryBossComponent extends Component {
         this._myWeapons.pp_clear();
     }
 
-    deviler(weaponType) {
+    deviler(weaponType, first = false) {
         let randomSkull = this._myDevilerySkullPools.getObject(Math.pp_randomInt(0, this._myDevilerySkullsTypes.length - 1));
 
         let weapon = this._myWeaponPools.getObject(weaponType);
@@ -114,7 +114,7 @@ export class DevileryBossComponent extends Component {
         randomSkull.pp_setActive(true);
         weapon.pp_setActive(true);
 
-        randomSkull.pp_getComponent(DevilerSkullComponent).deviler(weapon, weaponType, this.object.pp_getPosition());
+        randomSkull.pp_getComponent(DevilerSkullComponent).deviler(weapon, weaponType, this.object.pp_getPosition(), first);
 
         this._myDevilerySkulls.push(randomSkull);
         this._myWeapons.push(weapon);
