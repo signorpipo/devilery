@@ -41,7 +41,7 @@ export class FlapComponent extends Component {
         this._myTimer += dt * this._myMultiplier.get(this._myRealTimer);
         this.object.pp_resetPositionLocal();
 
-        let flap = Math.sin(this._myTimer);
+        let flap = Math.sin(this._myTimer) * 0.75;
         this._myTranslation.vec3_set(0, flap, 0);
         this.object.pp_setPositionLocal(this._myTranslation);
 

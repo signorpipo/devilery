@@ -14,6 +14,7 @@ export class DevilerSkullComponent extends Component {
 
         this._myWeapon.pp_setParent(this._myWeaponTargets[weaponType]);
         this._myWeapon.pp_resetTransformLocal();
+        this._myWeapon.pp_setRotationLocal(vec3_create(Math.pp_random(-180, 180), Math.pp_random(-180, 180), Math.pp_random(-180, 180)));
 
         this.object.pp_setPosition(devilerBossPosition.vec3_add(
             vec3_create(Math.pp_random(-5, 5), Math.pp_random(-5, 5), Math.pp_random(-5, 5))));
