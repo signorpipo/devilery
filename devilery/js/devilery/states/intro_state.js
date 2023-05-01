@@ -47,7 +47,7 @@ export class IntroState {
 
         this._myParentFSM = null;
 
-        this._myStoryTimers = [12, 12, 12];
+        this._myStoryTimers = [12, 14, 7];
     }
 
     start(fsm) {

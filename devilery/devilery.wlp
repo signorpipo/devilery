@@ -933,336 +933,6 @@
                 }
             ]
         },
-        "322": {
-            "name": "Story 1",
-            "parent": "321",
-            "components": [
-                {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 1",
-                        "material": "325"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "rotation": [
-                0.0,
-                1.0,
-                0.0,
-                -4.3711388286737935e-8
-            ]
-        },
-        "323": {
-            "name": "Story 2",
-            "parent": "321",
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 2",
-                        "material": "325"
-                    }
-                }
-            ],
-            "rotation": [
-                0.0,
-                1.0,
-                0.0,
-                -4.3711388286737935e-8
-            ]
-        },
-        "324": {
-            "name": "Story 3",
-            "parent": "321",
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "text",
-                    "text": {
-                        "text": "Story 3",
-                        "material": "325"
-                    }
-                }
-            ],
-            "rotation": [
-                0.0,
-                1.0,
-                0.0,
-                -4.3711388286737935e-8
-            ]
-        },
         "411": {
             "name": "Trigger",
             "parent": "99",
@@ -8859,6 +8529,93 @@
                 0.8999999,
                 1.0
             ]
+        },
+        "904": {
+            "name": "Story 1",
+            "parent": "321",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "899"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                3.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
+                1.0
+            ]
+        },
+        "905": {
+            "name": "Story 2",
+            "parent": "321",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "900"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                3.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
+                1.0
+            ]
+        },
+        "906": {
+            "name": "Story 3",
+            "parent": "321",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p0",
+                        "material": "901"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                3.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ],
+            "scaling": [
+                1.6,
+                0.8999999,
+                1.0
+            ]
         }
     },
     "meshes": {
@@ -9928,35 +9685,35 @@
             "name": "Story 2",
             "pipeline": "8",
             "Flat": {
-                "flatTexture": "896"
+                "flatTexture": "908"
             }
         },
         "898": {
             "name": "Story 3",
             "pipeline": "8",
             "Flat": {
-                "flatTexture": "896"
+                "flatTexture": "910"
             }
         },
         "899": {
             "name": "Story 4",
             "pipeline": "8",
             "Flat": {
-                "flatTexture": "896"
+                "flatTexture": "912"
             }
         },
         "900": {
             "name": "Story 5",
             "pipeline": "8",
             "Flat": {
-                "flatTexture": "896"
+                "flatTexture": "914"
             }
         },
         "901": {
             "name": "Story 6",
             "pipeline": "8",
             "Flat": {
-                "flatTexture": "896"
+                "flatTexture": "916"
             }
         }
     },
@@ -10073,6 +9830,14 @@
                 0.436888,
                 0.9551569,
                 1.0
+            ],
+            "textureAtlasSize": [
+                8192,
+                8192
+            ],
+            "compressedTextureAtlasSize": [
+                32768,
+                16384
             ]
         },
         "runtime": {
@@ -10345,6 +10110,36 @@
                 "name": "story01.jpg",
                 "file": "assets\\marketing\\story01.jpg"
             }
+        },
+        "908": {
+            "link": {
+                "name": "story02.jpg",
+                "file": "assets\\marketing\\story02.jpg"
+            }
+        },
+        "910": {
+            "link": {
+                "name": "story03.jpg",
+                "file": "assets\\marketing\\story03.jpg"
+            }
+        },
+        "912": {
+            "link": {
+                "name": "story04.jpg",
+                "file": "assets\\marketing\\story04.jpg"
+            }
+        },
+        "914": {
+            "link": {
+                "name": "story05.jpg",
+                "file": "assets\\marketing\\story05.jpg"
+            }
+        },
+        "916": {
+            "link": {
+                "name": "story06.jpg",
+                "file": "assets\\marketing\\story06.jpg"
+            }
         }
     },
     "images": {
@@ -10361,7 +10156,48 @@
                 "name": "story01.jpg",
                 "file": "assets\\marketing\\story01.jpg"
             },
-            "compression": "none"
+            "compression": "none",
+            "stream": false
+        },
+        "907": {
+            "link": {
+                "name": "story02.jpg",
+                "file": "assets\\marketing\\story02.jpg"
+            },
+            "compression": "none",
+            "stream": false
+        },
+        "909": {
+            "link": {
+                "name": "story03.jpg",
+                "file": "assets\\marketing\\story03.jpg"
+            },
+            "compression": "none",
+            "stream": false
+        },
+        "911": {
+            "link": {
+                "name": "story04.jpg",
+                "file": "assets\\marketing\\story04.jpg"
+            },
+            "compression": "none",
+            "stream": false
+        },
+        "913": {
+            "link": {
+                "name": "story05.jpg",
+                "file": "assets\\marketing\\story05.jpg"
+            },
+            "compression": "none",
+            "stream": false
+        },
+        "915": {
+            "link": {
+                "name": "story06.jpg",
+                "file": "assets\\marketing\\story06.jpg"
+            },
+            "compression": "none",
+            "stream": false
         }
     },
     "files": [
@@ -10397,7 +10233,12 @@
         "assets/models/hands/hand_closed_L.fbx",
         "assets/models/hands/hand_open_R.fbx",
         "assets/models/hands/hand_closed_R.fbx",
-        "assets/marketing/story01.jpg"
+        "assets/marketing/story01.jpg",
+        "assets/marketing/story02.jpg",
+        "assets/marketing/story03.jpg",
+        "assets/marketing/story04.jpg",
+        "assets/marketing/story05.jpg",
+        "assets/marketing/story06.jpg"
     ],
     "fonts": {
         "147": {

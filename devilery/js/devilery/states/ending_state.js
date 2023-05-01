@@ -52,7 +52,7 @@ export class EndingState {
 
         this._myParentFSM = null;
 
-        this._myStoryTimers = [4, 4, 4];
+        this._myStoryTimers = [8, 8, 8];
     }
 
     start(fsm) {
