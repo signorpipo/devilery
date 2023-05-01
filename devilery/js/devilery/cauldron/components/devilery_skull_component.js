@@ -56,10 +56,7 @@ export class DevilerSkullComponent extends Component {
     }
 
     _start() {
-        this._myReleased = true;
-        if (GameGlobals.myDebugEnabled) {
-            this._myReleased = false;
-        }
+        this._myReleased = false;
     }
 
     _update(dt) {
