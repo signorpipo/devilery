@@ -26,6 +26,15 @@
                         "_myText": "110",
                         "_myScene": "18"
                     }
+                },
+                {
+                    "type": "fixed-foveation"
+                },
+                {
+                    "type": "target-framerate",
+                    "target-framerate": {
+                        "framerate": 72.0
+                    }
                 }
             ]
         },
@@ -5473,7 +5482,10 @@
                     }
                 },
                 {
-                    "type": "weapon"
+                    "type": "weapon",
+                    "weapon": {
+                        "_myAmmo": -1
+                    }
                 },
                 {
                     "type": "pp-grabbable"

@@ -192,6 +192,9 @@ export class GrabberHandComponent extends Component {
                     if (grabbableToGrab.object.pp_getComponent(WeaponComponent) || this._mySnapOnPivot) {
                         grabbableToGrab.object.pp_resetPositionLocal();
                     }
+                    if (grabbableToGrab.object.pp_getComponent(WeaponComponent)) {
+                        grabbableToGrab.object.pp_resetRotationLocal();
+                    }
 
                     this._myGrabEmitter.notify(this, grabbableToGrab);
                 }

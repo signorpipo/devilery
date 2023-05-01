@@ -36,7 +36,7 @@ export class WeaponComponent extends Component {
     }
 
     shot() {
-        if (this._myCurrentAmmo > 0) {
+        if (this._myCurrentAmmo > 0 || this._myAmmo < 0) {
             GameGlobals.myBulletSpawners[this._myWeapon].shot(this._myExitTarget);
             this._myCurrentAmmo--;
             GameGlobals.myShotParticlesSpawner.spawn(this._myExitTarget.pp_getPosition());

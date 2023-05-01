@@ -1,4 +1,5 @@
 import { Component, Property } from "@wonderlandengine/api";
+import { ObjectPoolParams, ObjectPoolsManager, vec3_create } from "../../../pp";
 
 export class BulletSpawnerComponent extends Component {
     static TypeName = "bullet-spawner";
@@ -58,6 +59,6 @@ export class BulletSpawnerComponent extends Component {
         poolParams.myInitialPoolSize = 10;
         poolParams.myPercentageToAddWhenEmpty = 1;
 
-        this._myEnemyPools.addPool(0, this._myBullet, poolParams);
+        this._myBulletPools.addPool(0, this._myBullet, poolParams);
     }
 }
