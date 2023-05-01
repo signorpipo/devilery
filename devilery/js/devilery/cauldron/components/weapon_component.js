@@ -36,11 +36,18 @@ export class WeaponComponent extends Component {
     }
 
     shot() {
-        console.error("shot");
+        if (this._myCurrentAmmo > 0) {
+            GameGlobals.myBulletSpawners[this._myWeapon].shot(this._myExitTarget);
+            this._myCurrentAmmo--;
+            GameGlobals.myShotParticlesSpawner.spawn(this._myExitTarget.pp_getPosition());
+        }
     }
 
     _start() {
+        this._myCurrentAmmo = this._myAmmo;
         this._myPhysX = this.object.pp_getComponent(PhysXComponent);
+
+        this._myExitTarget = this.object.pp_getObjectByName("Exit Target");
     }
 
     _update(dt) {
@@ -53,6 +60,10 @@ export class WeaponComponent extends Component {
         this.object.pp_setParent(Globals.getSceneObjects().myDynamics);
         this._myPhysX.kinematic = false;
         this._myPhysX.linearVelocity = this._myReleaseVelocity;
+    }
+
+    onActivate() {
+        this._myStarted = false;
     }
 
     pp_clone(targetObject) {

@@ -51,6 +51,10 @@ export class GameState {
         GameGlobals.myEvilPointSpawner.stopEvilPointSpawner();
 
         GameGlobals.myDevileryConsole.stopDevileryConsole();
+
+        for (let bulletSpawner of GameGlobals.myBulletSpawners) {
+            bulletSpawner.stopBulletSpawner();
+        }
     }
 
     update(dt, fsm) {
@@ -81,6 +85,10 @@ export class GameState {
         GameGlobals.myEvilPointSpawner.startEvilPointSpawner();
 
         GameGlobals.myDevileryConsole.startDevileryConsole();
+
+        for (let bulletSpawner of GameGlobals.myBulletSpawners) {
+            bulletSpawner.startBulletSpawner();
+        }
     }
 
     _lostStart() {

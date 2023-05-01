@@ -13,6 +13,7 @@
 
 /* wle:auto-imports:start */
 import {MouseLookComponent} from '@wonderlandengine/components';
+import {BulletSpawnerComponent} from './devilery/cauldron/components/bullet_spawner_component.js';
 import {BuyButtonComponent} from './devilery/cauldron/components/buy_button_component.js';
 import {BuyHandComponent} from './devilery/cauldron/components/buy_hand_component.js';
 import {DevileryBossComponent} from './devilery/cauldron/components/devilery_boss_component.js';
@@ -102,6 +103,7 @@ if (document.readyState === 'loading') {
 
 /* wle:auto-register:start */
 engine.registerComponent(MouseLookComponent);
+engine.registerComponent(BulletSpawnerComponent);
 engine.registerComponent(BuyButtonComponent);
 engine.registerComponent(BuyHandComponent);
 engine.registerComponent(DevileryBossComponent);
