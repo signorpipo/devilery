@@ -153,7 +153,7 @@ GoToTargetComponent.prototype._update = function () {
 
         if (this._mySpeedTurn || (this._myIsEvilPoint && this._myCurrentTargetIndex >= 1 && distanceToTarget < 0.1) || this._myTimerSecond > 3) {
             this._mySpeedTurn = true;
-            this._myTurnSpeed += 100 * dt;
+            this._myTurnSpeed += 250 * dt;
         }
     };
 }();

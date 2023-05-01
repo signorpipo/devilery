@@ -56,12 +56,6 @@ export class EndingState {
     }
 
     start(fsm) {
-        GameGlobals.myShip.stopShip();
-        GameGlobals.myDevileryBoss.stopDevileryBoss();
-
-        GameGlobals.myPrincess.stopPrincess();
-        GameGlobals.myEvilPointSpawner.stopEvilPointSpawner();
-
         this._myWhiteRoomStories[0].pp_getParent().pp_setActive(false);
         this._myCurrentStoryIndex = -1;
 

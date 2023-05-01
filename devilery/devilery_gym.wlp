@@ -1530,6 +1530,14 @@
                 0.9999995,
                 1.0,
                 0.9999995
+            ],
+            "components": [
+                {
+                    "type": "devilery-console",
+                    "devilery-console": {
+                        "_myEvilTargetReceiver": "265"
+                    }
+                }
             ]
         },
         "259": {
@@ -1839,8 +1847,15 @@
                     "physx": {
                         "static": true,
                         "groups": 2,
-                        "block": 7,
-                        "shape": "box"
+                        "block": 39,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        }
                     }
                 }
             ],
@@ -4122,6 +4137,28 @@
                         "_myIsEvilPoint": true,
                         "_myMaxSpeed": 10.0
                     }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 32,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "block": 2
+                    }
+                },
+                {
+                    "type": "evil-point"
                 }
             ],
             "translation": [
@@ -4171,25 +4208,6 @@
                         "mesh": "p1",
                         "material": "148"
                     }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": false,
-                        "allowSimulation": true,
-                        "groups": 32,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.1,
-                                0.1,
-                                0.1
-                            ]
-                        },
-                        "block": 0
-                    }
                 }
             ],
             "scaling": [
@@ -4208,6 +4226,369 @@
                         "_myActive": false
                     }
                 }
+            ]
+        },
+        "333": {
+            "name": "Skull Particles Spawner",
+            "parent": "303",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myRadius": 0.1,
+                        "_myParticlesContainer": "334"
+                    }
+                }
+            ]
+        },
+        "334": {
+            "name": "Skull",
+            "parent": "303",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "335": {
+            "name": "Heart 1",
+            "parent": "334",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "336": {
+            "name": "Mesh",
+            "parent": "335",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "337": {
+            "name": "Heart 2",
+            "parent": "334",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "338": {
+            "name": "Mesh",
+            "parent": "337",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
             ]
         }
     },

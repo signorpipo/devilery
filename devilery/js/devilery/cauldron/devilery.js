@@ -5,6 +5,7 @@ import { GameState } from "../states/game_state";
 import { IntroState } from "../states/intro_state";
 import { AudioLoader } from "./audio_loader";
 import { DevileryBossComponent } from "./components/devilery_boss_component";
+import { DevileryConsoleComponent } from "./components/devilery_console_component";
 import { EvilPointSpawnerComponent } from "./components/evil_point_spawner_component";
 import { FadeViewInOutComponent } from "./components/fade_view_in_out_component";
 import { PrincessComponent } from "./components/princess_component";
@@ -66,7 +67,10 @@ export class Devilery {
 
         GameGlobals.myHeartsParticlesSpawner = Globals.getScene().pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
         GameGlobals.myEnemyDieParticlesSpawner = Globals.getScene().pp_getObjectByName("Enemy Die Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.mySkullParticlesSpawner = Globals.getScene().pp_getObjectByName("Skull Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
 
         GameGlobals.myEvilPointSpawner = Globals.getScene().pp_getObjectByName("Evil Point Spawner").pp_getComponent(EvilPointSpawnerComponent);
+
+        GameGlobals.myDevileryConsole = Globals.getScene().pp_getObjectByName("Devilery Console").pp_getComponent(DevileryConsoleComponent);
     }
 }

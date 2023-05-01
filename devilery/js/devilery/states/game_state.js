@@ -43,6 +43,14 @@ export class GameState {
 
     end() {
         GameGlobals.myWhiteFade.fadeOut(true);
+
+        GameGlobals.myShip.stopShip();
+        GameGlobals.myDevileryBoss.stopDevileryBoss();
+
+        GameGlobals.myPrincess.stopPrincess();
+        GameGlobals.myEvilPointSpawner.stopEvilPointSpawner();
+
+        GameGlobals.myDevileryConsole.stopDevileryConsole();
     }
 
     update(dt, fsm) {
@@ -71,6 +79,8 @@ export class GameState {
 
         GameGlobals.myPrincess.startPrincess();
         GameGlobals.myEvilPointSpawner.startEvilPointSpawner();
+
+        GameGlobals.myDevileryConsole.startDevileryConsole();
     }
 
     _lostStart() {

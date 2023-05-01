@@ -14,8 +14,10 @@
 /* wle:auto-imports:start */
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {DevileryBossComponent} from './devilery/cauldron/components/devilery_boss_component.js';
+import {DevileryConsoleComponent} from './devilery/cauldron/components/devilery_console_component.js';
 import {DevileryGatewayComponent} from './devilery/cauldron/components/devilery_gateway_component.js';
 import {EnemyComponent} from './devilery/cauldron/components/enemy_component.js';
+import {EvilPointComponent} from './devilery/cauldron/components/evil_point_component.js';
 import {EvilPointSpawnerComponent} from './devilery/cauldron/components/evil_point_spawner_component.js';
 import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_in_out_component.js';
 import {FlapComponent} from './devilery/cauldron/components/flap_component.js';
@@ -97,8 +99,10 @@ if (document.readyState === 'loading') {
 /* wle:auto-register:start */
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(DevileryBossComponent);
+engine.registerComponent(DevileryConsoleComponent);
 engine.registerComponent(DevileryGatewayComponent);
 engine.registerComponent(EnemyComponent);
+engine.registerComponent(EvilPointComponent);
 engine.registerComponent(EvilPointSpawnerComponent);
 engine.registerComponent(FadeViewInOutComponent);
 engine.registerComponent(FlapComponent);
