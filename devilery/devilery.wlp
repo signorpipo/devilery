@@ -68,7 +68,7 @@
             ],
             "translation": [
                 0.0,
-                0.0,
+                -5.0,
                 0.0
             ],
             "rotation": [
@@ -294,6 +294,11 @@
                 {
                     "type": "pp-set-hand-local-transform"
                 }
+            ],
+            "translation": [
+                0.1,
+                0.0,
+                0.0
             ]
         },
         "104": {
@@ -330,6 +335,11 @@
                         "_myHandedness": "Right"
                     }
                 }
+            ],
+            "translation": [
+                -0.1,
+                0.0,
+                0.0
             ]
         },
         "109": {
@@ -8251,329 +8261,6 @@
             "name": "Squeeze",
             "parent": "842"
         },
-        "845": {
-            "name": "Mesh",
-            "parent": "843",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "847": {
-            "name": "Mesh",
-            "parent": "844",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ]
-        },
         "848": {
             "name": "Squeeze Hands",
             "parent": "99",
@@ -8596,331 +8283,128 @@
                 1.0
             ]
         },
-        "850": {
-            "name": "Mesh",
-            "parent": "849",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
         "851": {
             "name": "Squeeze",
             "parent": "848"
         },
-        "852": {
-            "name": "Mesh",
-            "parent": "851",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ],
+        "857": {
+            "link": {
+                "name": "Hand_open_L_mesh<Hand_open_L<Hand_open_L_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            },
+            "parent": "849",
             "translation": [
                 0.0,
                 0.0,
-                0.0
+                -0.035
             ],
             "rotation": [
+                0.9238795,
                 0.0,
                 0.0,
+                0.3826834
+            ],
+            "scaling": [
+                0.0149999,
+                0.0149999,
+                0.0149999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "864": {
+            "link": {
+                "name": "Hand_closed_L_mesh<Hand_closed_L<Hand_closed_L_$AssimpFbx$_Scaling<Hand_closed_L_$AssimpFbx$_Rotation<Hand_closed_L_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_closed_L.fbx"
+            },
+            "parent": "851",
+            "translation": [
                 0.0,
-                1.0
+                -9.5367431640625e-7,
+                -0.035
+            ],
+            "rotation": [
+                0.9238795,
+                -0.0,
+                0.0,
+                0.3826834
+            ],
+            "scaling": [
+                0.0149999,
+                0.0149999,
+                0.0149999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "869": {
+            "link": {
+                "name": "Hand_open_R_mesh<Hand_open_R<Hand_open_R_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            },
+            "parent": "843",
+            "translation": [
+                -0.0,
+                -4.7404319047927856e-7,
+                -0.035
+            ],
+            "rotation": [
+                0.3907311,
+                -0.0,
+                0.0,
+                0.9205048
+            ],
+            "scaling": [
+                0.039,
+                0.039,
+                0.039
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
+            ]
+        },
+        "876": {
+            "link": {
+                "name": "Hand_closed_R_mesh<Hand_closed_R<Hand_closed_R_$AssimpFbx$_Scaling<Hand_closed_R_$AssimpFbx$_Rotation<Hand_closed_R_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\hands\\hand_closed_R.fbx"
+            },
+            "parent": "844",
+            "translation": [
+                0.0,
+                -9.5367431640625e-7,
+                -0.035
+            ],
+            "rotation": [
+                0.9238795,
+                -0.0,
+                0.0,
+                0.3826834
+            ],
+            "scaling": [
+                0.0149999,
+                0.0149999,
+                0.0149999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "490"
+                    }
+                }
             ]
         }
     },
@@ -9385,6 +8869,30 @@
             "link": {
                 "name": "enemy_03_part_mesh",
                 "file": "assets\\models\\enemy_03_part.fbx"
+            }
+        },
+        "854": {
+            "link": {
+                "name": "Hand_open_L_mesh",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            }
+        },
+        "859": {
+            "link": {
+                "name": "Hand_closed_L_mesh",
+                "file": "assets\\models\\hands\\hand_closed_L.fbx"
+            }
+        },
+        "866": {
+            "link": {
+                "name": "Hand_open_R_mesh",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            }
+        },
+        "871": {
+            "link": {
+                "name": "Hand_closed_R_mesh",
+                "file": "assets\\models\\hands\\hand_closed_R.fbx"
             }
         }
     },
@@ -9913,6 +9421,30 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\enemy_03_part.fbx"
             }
+        },
+        "853": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_open_L.fbx"
+            }
+        },
+        "858": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_closed_L.fbx"
+            }
+        },
+        "865": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_open_R.fbx"
+            }
+        },
+        "870": {
+            "link": {
+                "name": "lambert1",
+                "file": "assets\\models\\hands\\hand_closed_R.fbx"
+            }
         }
     },
     "shaders": {
@@ -10333,7 +9865,11 @@
         "assets/models/enemy_01_part.fbx",
         "assets/models/letter_part.fbx",
         "assets/models/enemy_02_part.fbx",
-        "assets/models/enemy_03_part.fbx"
+        "assets/models/enemy_03_part.fbx",
+        "assets/models/hands/hand_open_L.fbx",
+        "assets/models/hands/hand_closed_L.fbx",
+        "assets/models/hands/hand_open_R.fbx",
+        "assets/models/hands/hand_closed_R.fbx"
     ],
     "fonts": {
         "147": {
