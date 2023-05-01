@@ -6,6 +6,10 @@ export class BulletComponent extends Component {
     };
 
     die() {
+        GameGlobals.myShotParticlesSpawner.spawn(this.object.pp_getPosition());
 
+        for (let bulletSpawner of GameGlobals.myBulletSpawners) {
+            bulletSpawner.despawnBullet(this.object);
+        }
     }
 }

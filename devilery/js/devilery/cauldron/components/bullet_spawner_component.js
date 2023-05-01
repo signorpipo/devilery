@@ -39,6 +39,11 @@ export class BulletSpawnerComponent extends Component {
         }
     }
 
+    despawnBullet(bullet) {
+        this._myBulletPools.releaseObject(bullet);
+        this._myBullets.pp_removeEqual(bullet);
+    }
+
     startBulletSpawner() {
         this._myBulletStarted = true;
     }
