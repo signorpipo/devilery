@@ -6091,7 +6091,7 @@
                 {
                     "type": "weapon",
                     "weapon": {
-                        "_myAmmo": 1,
+                        "_myAmmo": 111,
                         "_myWeapon": "Voice"
                     }
                 },
@@ -7377,7 +7377,10 @@
                 null,
                 null,
                 {
-                    "type": "voice-bullet"
+                    "type": "voice-bullet",
+                    "voice-bullet": {
+                        "_myStrength": 0.025
+                    }
                 },
                 {
                     "type": "bullet"
@@ -8602,10 +8605,10 @@
                     "type": "particles-spawner",
                     "particles-spawner": {
                         "_myParticlesContainer": "839",
-                        "_myScaleMultiplier": 1.1,
+                        "_myScaleMultiplier": 0.8999999,
                         "_myRadius": 0.0099999,
-                        "_myMinAmount": 10,
-                        "_myMaxAmount": 15,
+                        "_myMinAmount": 5,
+                        "_myMaxAmount": 10,
                         "_mySpeedMultiplier": 0.5,
                         "_myHorizontalSpeedMultiplier": 0.1,
                         "_myVerticalSpeedMultiplier": 0.5

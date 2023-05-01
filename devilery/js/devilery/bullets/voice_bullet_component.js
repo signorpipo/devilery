@@ -1,5 +1,5 @@
 import { Component, Property } from "@wonderlandengine/api";
-import { CloneUtils, Globals, vec3_create } from "../../pp";
+import { CloneUtils, Globals, Timer, vec3_create } from "../../pp";
 import { GameGlobals } from "../cauldron/game_globals";
 
 export class VoiceBulletComponent extends Component {
@@ -11,6 +11,7 @@ export class VoiceBulletComponent extends Component {
     };
 
     start() {
+        this._myRumbleTimer = new Timer(this._myDuration, false);
         this._myStarted = false;
 
         this._myRumbleHandle = Globals.getScene().pp_getObjectByName("Cameras");
@@ -30,7 +31,6 @@ export class VoiceBulletComponent extends Component {
     }
 
     _start() {
-        this._myRumbleTimer = new Timer(this._myDuration);
         this._myKilled = false;
     }
 
@@ -64,7 +64,7 @@ export class VoiceBulletComponent extends Component {
     }
 
     shot() {
-
+        this._myRumbleTimer.start();
     }
 
     onDeactivate() {

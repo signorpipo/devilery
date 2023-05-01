@@ -9,6 +9,7 @@ export class BulletSpawnerComponent extends Component {
 
     shot(referenceObject) {
         let bullet = this._myBulletPools.getObject(0);
+        bullet.pp_setActive(true);
         for (let component of bullet.pp_getComponentsSelf()) {
             if (component.shot != null) {
                 component.shot(referenceObject);
