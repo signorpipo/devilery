@@ -31,12 +31,12 @@ import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_c
 import {PrincessComponent} from './devilery/cauldron/components/princess_component.js';
 import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
 import {ShipComponent} from './devilery/cauldron/components/ship_component.js';
+import {SqueezeHandsComponents} from './devilery/cauldron/components/squeeze_hand_component.js';
 import {WeaponComponent} from './devilery/cauldron/components/weapon_component.js';
 import {ParticlesSpawnerComponent} from './playground/particles_spawner_component.js';
 import {ScaleOnSpawnComponent} from './playground/scale_on_spawn_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
-import {GamepadMeshAnimatorComponent} from './pp/index.js';
 import {GrabbableComponent} from './pp/index.js';
 import {GrabberHandComponent} from './pp/index.js';
 import {PPGatewayComponent} from './pp/index.js';
@@ -48,7 +48,6 @@ import {ShowFPSComponent} from './pp/index.js';
 import {SpatialAudioListenerComponent} from './pp/index.js';
 import {SwitchHandObjectComponent} from './pp/index.js';
 import {ToolCursorComponent} from './pp/index.js';
-import {TrackedHandDrawAllJointsComponent} from './pp/index.js';
 /* wle:auto-imports:end */
 
 import { loadRuntime } from '@wonderlandengine/api';
@@ -123,12 +122,12 @@ engine.registerComponent(GoToTargetComponent);
 engine.registerComponent(PrincessComponent);
 engine.registerComponent(SetPositionOnInitComponent);
 engine.registerComponent(ShipComponent);
+engine.registerComponent(SqueezeHandsComponents);
 engine.registerComponent(WeaponComponent);
 engine.registerComponent(ParticlesSpawnerComponent);
 engine.registerComponent(ScaleOnSpawnComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
-engine.registerComponent(GamepadMeshAnimatorComponent);
 engine.registerComponent(GrabbableComponent);
 engine.registerComponent(GrabberHandComponent);
 engine.registerComponent(PPGatewayComponent);
@@ -140,7 +139,6 @@ engine.registerComponent(ShowFPSComponent);
 engine.registerComponent(SpatialAudioListenerComponent);
 engine.registerComponent(SwitchHandObjectComponent);
 engine.registerComponent(ToolCursorComponent);
-engine.registerComponent(TrackedHandDrawAllJointsComponent);
 /* wle:auto-register:end */
 
 engine.scene.load(`${Constants.ProjectName}.bin`);
