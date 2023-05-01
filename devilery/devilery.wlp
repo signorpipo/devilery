@@ -5972,7 +5972,7 @@
             "parent": "884",
             "translation": [
                 0.0,
-                -8.677307050675155e-8,
+                -8.677307050675156e-8,
                 0.727909
             ],
             "rotation": [
@@ -6182,7 +6182,7 @@
                 0.0,
                 0.0,
                 1.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ],
             "scaling": [
                 0.9999999,
@@ -6212,7 +6212,7 @@
                 0.0,
                 0.0,
                 1.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ],
             "scaling": [
                 1.0,
@@ -6767,6 +6767,29 @@
             "components": [
                 {
                     "type": "bullet"
+                },
+                {
+                    "type": "apple-bullet",
+                    "apple-bullet": {
+                        "_myStrength": 25.0
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.125
+                        },
+                        "groups": 64,
+                        "block": 22,
+                        "kinematic": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 0.5
+                    }
                 }
             ]
         },
@@ -6913,9 +6936,9 @@
                 null
             ],
             "scaling": [
-                0.5,
-                0.5,
-                0.5
+                1.0,
+                1.0,
+                1.0
             ],
             "translation": [
                 0.0,
@@ -7964,10 +7987,10 @@
                     "type": "particles-spawner",
                     "particles-spawner": {
                         "_myParticlesContainer": "828",
-                        "_myScaleMultiplier": 0.5,
+                        "_myScaleMultiplier": 0.4,
                         "_myRadius": 0.0099999,
-                        "_myMinAmount": 10,
-                        "_myMaxAmount": 15,
+                        "_myMinAmount": 5,
+                        "_myMaxAmount": 10,
                         "_mySpeedMultiplier": 0.5,
                         "_myHorizontalSpeedMultiplier": 0.1,
                         "_myVerticalSpeedMultiplier": 0.5
@@ -8469,7 +8492,7 @@
             },
             "parent": "806",
             "translation": [
-                5.960464477539064e-8,
+                5.960464477539065e-8,
                 -0.0000076,
                 0.0
             ],
@@ -8499,7 +8522,7 @@
             },
             "parent": "813",
             "translation": [
-                5.960464477539064e-8,
+                5.960464477539065e-8,
                 -0.0000076,
                 0.0
             ],

@@ -86,7 +86,7 @@ export class DevileryBossComponent extends Component {
     startDevileryBoss() {
         this._myDevileryBossStarted = true;
 
-        this.deviler(3);
+        this.deviler(0);
     }
 
     stopDevileryBoss() {
