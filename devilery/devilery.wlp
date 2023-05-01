@@ -8431,7 +8431,8 @@
                         "static": true,
                         "groups": 2,
                         "block": 71
-                    }
+                    },
+                    "active": false
                 }
             ]
         },
@@ -9851,6 +9852,289 @@
                 1.0000001,
                 0.9999997
             ]
+        },
+        "560": {
+            "link": {
+                "name": "pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "568",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "name": "Pedestal"
+        },
+        "561": {
+            "link": {
+                "name": "pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "560",
+            "name": "Pivot",
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071068
+            ]
+        },
+        "562": {
+            "link": {
+                "name": "pedestal_mesh<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "561",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "558",
+                            "scaling": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        "gravity": false,
+                        "static": true,
+                        "groups": 2,
+                        "block": 71
+                    },
+                    "active": true
+                }
+            ]
+        },
+        "564": {
+            "link": {
+                "name": "princess_target<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "568",
+            "translation": [
+                0.0,
+                6.7658419,
+                0.0
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                0.523711,
+                0.523711,
+                0.523711
+            ],
+            "name": "Princess Target",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "gravity": false,
+                        "kinematic": true,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 8,
+                        "shape": "sphere",
+                        "box": {
+                            "extents": [
+                                1.5,
+                                1.5,
+                                1.5
+                            ]
+                        },
+                        "sphere": {
+                            "radius": 0.75
+                        }
+                    }
+                },
+                {
+                    "type": "princess"
+                }
+            ]
+        },
+        "565": {
+            "link": {
+                "name": "love_end_target<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "561"
+        },
+        "566": {
+            "link": {
+                "name": "love_start_target<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "561"
+        },
+        "567": {
+            "link": {
+                "name": "pedestal_bar_mesh<pedestal<pedestal_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\pedestal.fbx"
+            },
+            "parent": "561"
+        },
+        "568": {
+            "name": "Princess Pedestal",
+            "parent": "457"
         }
     },
     "meshes": {
@@ -10140,6 +10424,24 @@
             "link": {
                 "name": "console_notch_08_mesh",
                 "file": "assets\\models\\console.fbx"
+            }
+        },
+        "557": {
+            "link": {
+                "name": "pedestal_mesh",
+                "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "558": {
+            "link": {
+                "name": "pedestal_physx",
+                "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "559": {
+            "link": {
+                "name": "pedestal_bar_mesh",
+                "file": "assets\\models\\pedestal.fbx"
             }
         }
     },
@@ -10535,6 +10837,12 @@
                     0.5,
                     0.5
                 ]
+            }
+        },
+        "556": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\pedestal.fbx"
             }
         }
     },
@@ -10934,7 +11242,8 @@
         "assets/models/skybox.fbx",
         "assets/textures/skybox_basecolor.png",
         "assets/models/interior_walls.fbx",
-        "assets/models/console.fbx"
+        "assets/models/console.fbx",
+        "assets/models/pedestal.fbx"
     ],
     "fonts": {
         "147": {
