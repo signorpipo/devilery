@@ -1773,9 +1773,9 @@
                         "_mySkipIntro": true,
                         "_myClearConsoleOnStart": false,
                         "_myStartDelayFrames": 30,
-                        "_myNeverInLove": true,
+                        "_myNeverInLove": false,
                         "_myRandomEnemyDie": false,
-                        "_myAllFree": true,
+                        "_myAllFree": false,
                         "_myFastDevilery": false
                     }
                 }
@@ -3649,7 +3649,7 @@
                         },
                         "gravity": false,
                         "static": true,
-                        "groups": 2,
+                        "groups": 4,
                         "block": 71,
                         "convexMesh": {
                             "mesh": "572"
@@ -3667,8 +3667,8 @@
             ],
             "translation": [
                 0.0,
-                4.76837158203125e-7,
-                -0.0
+                0.0000011,
+                2.384182948844682e-7
             ],
             "rotation": [
                 0.0,
@@ -3678,7 +3678,7 @@
             ],
             "scaling": [
                 0.55,
-                0.5499998,
+                0.5499997,
                 0.6999999
             ]
         },
@@ -4920,7 +4920,8 @@
                 {
                     "type": "go-to-target",
                     "go-to-target": {
-                        "_myIsPrincess": true
+                        "_myIsPrincess": true,
+                        "_myMaxSpeed": 3.0
                     }
                 },
                 {
@@ -5177,7 +5178,8 @@
                 {
                     "type": "go-to-target",
                     "go-to-target": {
-                        "_myIsPrincess": true
+                        "_myIsPrincess": true,
+                        "_myMaxSpeed": 3.0
                     }
                 },
                 {
@@ -5485,7 +5487,8 @@
                 {
                     "type": "go-to-target",
                     "go-to-target": {
-                        "_myIsPrincess": true
+                        "_myIsPrincess": true,
+                        "_myMaxSpeed": 3.0
                     }
                 },
                 {
@@ -5948,7 +5951,7 @@
                     "type": "weapon",
                     "weapon": {
                         "_myWeapon": "Bat",
-                        "_myAmmo": 10
+                        "_myAmmo": 20
                     }
                 },
                 {
@@ -5972,19 +5975,19 @@
             "parent": "884",
             "translation": [
                 0.0,
-                -8.677307050675156e-8,
-                0.727909
+                -0.299373,
+                0.7285498
             ],
             "rotation": [
+                0.3826834,
                 0.0,
                 0.0,
-                0.0,
-                1.0
+                0.9238795
             ],
             "scaling": [
                 1.0,
-                0.9999943,
-                0.9999943
+                0.9999942,
+                0.9999942
             ]
         },
         "660": {
@@ -6023,7 +6026,7 @@
                     "type": "weapon",
                     "weapon": {
                         "_myWeapon": "Skull",
-                        "_myAmmo": 3
+                        "_myAmmo": 10
                     }
                 },
                 {
@@ -6046,20 +6049,20 @@
             "name": "Exit Target",
             "parent": "885",
             "translation": [
-                -2.980232238769531e-7,
-                -8.344795787706971e-8,
-                0.700016
+                -2.9802362178088515e-7,
+                -0.3639397,
+                0.7012302
             ],
             "rotation": [
+                0.3826834,
                 0.0,
                 0.0,
-                0.0,
-                1.0
+                0.9238795
             ],
             "scaling": [
                 1.0,
-                0.9999998,
-                0.9999998
+                0.9999984,
+                0.9999984
             ]
         },
         "663": {
@@ -7096,6 +7099,37 @@
                 null,
                 {
                     "type": "bullet"
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.125
+                        },
+                        "groups": 64,
+                        "block": 22,
+                        "kinematic": true,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.1
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 0.5
+                    }
+                },
+                {
+                    "type": "apple-bullet",
+                    "apple-bullet": {
+                        "_myStrength": 25.0
+                    }
                 }
             ]
         },
@@ -7108,9 +7142,9 @@
                 0.0
             ],
             "scaling": [
-                0.1,
-                0.1,
-                0.1
+                1.0,
+                1.0,
+                1.0
             ],
             "components": [
                 null,
@@ -7254,6 +7288,37 @@
                 null,
                 {
                     "type": "bullet"
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.125
+                        },
+                        "groups": 64,
+                        "block": 22,
+                        "kinematic": true,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.6499999,
+                                0.3499999,
+                                0.2
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "apple-bullet",
+                    "apple-bullet": {
+                        "_myStrength": 25.0
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 0.5
+                    }
                 }
             ]
         },
@@ -7450,9 +7515,9 @@
             "name": "Mesh",
             "parent": "696",
             "scaling": [
-                0.5,
-                0.5,
-                0.5
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "715": {
@@ -7462,8 +7527,8 @@
             },
             "parent": "710",
             "translation": [
-                -5.960464477539065e-8,
-                -0.0000114,
+                -5.960464477539063e-8,
+                -0.0000113,
                 0.0
             ],
             "rotation": [
@@ -7474,8 +7539,8 @@
             ],
             "scaling": [
                 1.0,
-                1.0,
-                1.0
+                0.9999999,
+                0.9999999
             ],
             "components": [
                 {
@@ -7487,7 +7552,12 @@
         },
         "721": {
             "name": "Mesh",
-            "parent": "698"
+            "parent": "698",
+            "scaling": [
+                0.25,
+                0.25,
+                0.25
+            ]
         },
         "724": {
             "link": {
@@ -8057,7 +8127,7 @@
                         "kinematic": true,
                         "gravity": false,
                         "static": true,
-                        "groups": 2,
+                        "groups": 4,
                         "block": 71
                     }
                 }
@@ -8880,9 +8950,9 @@
                 0.9205048
             ],
             "scaling": [
-                0.039,
-                0.039,
-                0.039
+                0.0379999,
+                0.0379999,
+                0.0379999
             ],
             "components": [
                 {
@@ -10139,7 +10209,8 @@
                 "js/playground",
                 "js/devilery",
                 "js/devilery/cauldron",
-                "js/devilery/cauldron/components"
+                "js/devilery/cauldron/components",
+                "js/devilery/bullets"
             ],
             "bundlingType": "esbuild",
             "libraryPaths": [
