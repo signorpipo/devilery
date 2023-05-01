@@ -2257,6 +2257,11 @@
                 {
                     "type": "devilery-boss"
                 }
+            ],
+            "translation": [
+                0.0,
+                -120.0,
+                0.0
             ]
         },
         "286": {
@@ -5168,6 +5173,701 @@
                         "block": 79
                     }
                 }
+            ]
+        },
+        "357": {
+            "name": "Devilery Skulls",
+            "parent": "285",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "359": {
+            "name": "Devilery Skull 1",
+            "parent": "357",
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "360": {
+            "name": "Pivot",
+            "parent": "359",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "361": {
+            "name": "Body",
+            "parent": "360",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "362": {
+            "name": "Nose",
+            "parent": "360",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "363": {
+            "name": "Weapon Guy Target",
+            "parent": "360",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "366": {
+            "name": "Devilery Skull 2",
+            "parent": "357",
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "367": {
+            "name": "Pivot",
+            "parent": "366",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "368": {
+            "name": "Body",
+            "parent": "367",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "369": {
+            "name": "Nose",
+            "parent": "367",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "370": {
+            "name": "Weapon Guy Target",
+            "parent": "367",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "371": {
+            "name": "Weapons",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -140.0,
+                0.0
+            ]
+        },
+        "372": {
+            "name": "Apple Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.25
+                            ]
+                        },
+                        "block": 22,
+                        "groups": 4
+                    }
+                }
+            ],
+            "translation": [
+                -2.0,
+                0.0,
+                0.0
+            ]
+        },
+        "373": {
+            "name": "Mesh",
+            "parent": "372",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.25
+            ]
+        },
+        "374": {
+            "name": "Bat Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.25
+                            ]
+                        },
+                        "groups": 4,
+                        "block": 22
+                    }
+                }
+            ],
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "375": {
+            "name": "Mesh",
+            "parent": "374",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.25
+            ]
+        },
+        "376": {
+            "name": "Skull Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "sphere",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.15,
+                                0.15
+                            ]
+                        },
+                        "groups": 4,
+                        "block": 22,
+                        "sphere": {
+                            "radius": 0.15
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "377": {
+            "name": "Mesh",
+            "parent": "376",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.15,
+                0.15,
+                0.15
+            ]
+        },
+        "378": {
+            "name": "Bat Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "sphere",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.15,
+                                0.15
+                            ]
+                        },
+                        "block": 22,
+                        "groups": 4,
+                        "sphere": {
+                            "radius": 0.15
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                2.0,
+                0.0,
+                0.0
+            ]
+        },
+        "379": {
+            "name": "Mesh",
+            "parent": "378",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.15,
+                0.15,
+                0.15
             ]
         }
     },
