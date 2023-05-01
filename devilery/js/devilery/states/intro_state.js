@@ -15,6 +15,7 @@ export class IntroState {
 
         this._myFSM.addState("init");
         this._myFSM.addState("idle");
+        this._myFSM.addState("first_timer", new TimerState(2, "end"));
         this._myFSM.addState("next_timer", new TimerState(1, "end"));
         this._myFSM.addState("next_phase", this._nextPhaseUpdate.bind(this));
         this._myFSM.addState("fade_out", this._checkFade.bind(this));
@@ -23,7 +24,8 @@ export class IntroState {
         //this._myFSM.addState("intro", new TimerState(1, "end"));
 
         this._myFSM.addTransition("init", "idle", "start");
-        this._myFSM.addTransition("idle", "next_timer", "start");
+        this._myFSM.addTransition("idle", "first_timer", "start");
+        this._myFSM.addTransition("first_timer", "next_phase", "end");
         this._myFSM.addTransition("next_timer", "next_phase", "end");
         this._myFSM.addTransition("next_phase", "last_timer", "end_intro");
         this._myFSM.addTransition("next_phase", "story", "next", this._storyStart.bind(this));
@@ -33,6 +35,7 @@ export class IntroState {
 
         this._myFSM.addTransition("idle", "idle", "skip");
         this._myFSM.addTransition("next_timer", "idle", "skip", this._skipIntro.bind(this));
+        this._myFSM.addTransition("first_timer", "idle", "skip", this._skipIntro.bind(this));
         this._myFSM.addTransition("next_phase", "idle", "skip", this._skipIntro.bind(this));
         this._myFSM.addTransition("fade_out", "idle", "skip", this._skipIntro.bind(this));
         this._myFSM.addTransition("story", "idle", "skip", this._skipIntro.bind(this));

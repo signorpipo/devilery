@@ -7,11 +7,29 @@ import { GameGlobals } from "../game_globals";
 export class DevileryConsoleComponent extends Component {
     static TypeName = "devilery-console";
     static Properties = {
-        _myEvilTargetReceiver: Property.object()
+        _myEvilTargetReceiver: Property.object(),
+        _myBar1: Property.object(),
+        _myBar2: Property.object(),
+        _myBar3: Property.object(),
+        _myBar4: Property.object(),
+        _myBar5: Property.object(),
+        _myBar6: Property.object(),
+        _myBar7: Property.object(),
+        _myBar8: Property.object()
     };
 
     start() {
         this._myStarted = false;
+
+        this._myBars = [];
+        this._myBars.push(this._myBar1);
+        this._myBars.push(this._myBar2);
+        this._myBars.push(this._myBar3);
+        this._myBars.push(this._myBar4);
+        this._myBars.push(this._myBar5);
+        this._myBars.push(this._myBar6);
+        this._myBars.push(this._myBar7);
+        this._myBars.push(this._myBar8);
     }
 
     update(dt) {
@@ -47,6 +65,10 @@ export class DevileryConsoleComponent extends Component {
 
     startDevileryConsole() {
         this._myEvilTotal = 0;
+
+        for (let i = 0; i < this._myBars.length; i++) {
+            this._myBars[i].pp_setActive(false);
+        }
     }
 
     stopDevileryConsole() {
@@ -55,9 +77,9 @@ export class DevileryConsoleComponent extends Component {
 
     _increaseEvil(evilPoint) {
         evilPoint.die();
-        this._myEvilTotal = Math.min(this._myEvilTotal + 0.2, 10);
+        this._myEvilTotal = Math.min(this._myEvilTotal + 0.2, 8);
 
-        // increase evil visually
+        this._updateBars();
     }
 
     buy(itemType) {
@@ -80,14 +102,24 @@ export class DevileryConsoleComponent extends Component {
 
         if (cost <= this._myEvilTotal || GameGlobals.myAllFree) {
             this._myEvilTotal -= cost;
-            // decrease evil visually
+
+            this._updateBars();
 
             ok = true;
 
             GameGlobals.myDevileryBoss.deviler(itemType);
-            // heart broken se lo fa da solo
         }
 
         return ok;
+    }
+
+    _updateBars() {
+        for (let i = 0; i < this._myBars.length; i++) {
+            this._myBars[i].pp_setActive(false);
+        }
+
+        for (let i = 0; i < Math.floor(this._myEvilTotal); i++) {
+            this._myBars[i].pp_setActive(true);
+        }
     }
 }

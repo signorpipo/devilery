@@ -22,7 +22,7 @@ export class EndingState {
         this._myFSM.addState("story", this._myStoryTimerState);
         this._myFSM.addState("last_story", this._myStoryTimerState);
         this._myFSM.addState("almost_last_timer", new TimerState(0, "end"));
-        this._myFSM.addState("last_timer", new TimerState(4, "end"));
+        this._myFSM.addState("last_timer", new TimerState(2, "end"));
         //this._myFSM.addState("ending", new TimerState(1, "end"));
 
         this._myFSM.addTransition("init", "idle", "start");

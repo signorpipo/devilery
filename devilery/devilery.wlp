@@ -846,18 +846,18 @@
             "name": "Player Start",
             "parent": "457",
             "translation": [
-                -2.5000042,
-                5.960464477539065e-8,
-                2.000003
+                2.0704183,
+                3.929022511783842e-7,
+                -1.2625184
             ],
             "rotation": [
-                0.0,
-                0.8660254,
-                0.0,
-                0.4999999
+                -1.5999479074935152e-8,
+                0.8660253,
+                -1.5999479074935152e-8,
+                0.5
             ],
             "scaling": [
-                0.9999992,
+                0.9999991,
                 0.9999988,
                 0.9999998
             ]
@@ -1773,7 +1773,7 @@
                         "_myClearConsoleOnStart": false,
                         "_myStartDelayFrames": 30,
                         "_myNeverInLove": false,
-                        "_myRandomEnemyDie": false,
+                        "_myRandomEnemyDie": true,
                         "_myAllFree": false,
                         "_myFastDevilery": false
                     }
@@ -2283,7 +2283,15 @@
                 {
                     "type": "devilery-console",
                     "devilery-console": {
-                        "_myEvilTargetReceiver": "528"
+                        "_myEvilTargetReceiver": "528",
+                        "_myBar1": "529",
+                        "_myBar2": "530",
+                        "_myBar3": "531",
+                        "_myBar4": "532",
+                        "_myBar5": "533",
+                        "_myBar6": "534",
+                        "_myBar7": "535",
+                        "_myBar8": "536"
                     }
                 }
             ]
