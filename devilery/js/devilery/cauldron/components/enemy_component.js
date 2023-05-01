@@ -5,7 +5,8 @@ import { GameGlobals } from "../game_globals";
 export class EnemyComponent extends Component {
     static TypeName = "enemy";
     static Properties = {
-        _myEnemy: Property.object()
+        _myEnemy: Property.object(),
+        _myAmountEvil: Property.int(0)
     };
 
     start() {
@@ -25,7 +26,7 @@ export class EnemyComponent extends Component {
     }
 
     _start() {
-        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 5) == 0);
+        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 0) == 0);
     }
 
     _update(dt) {
@@ -49,6 +50,8 @@ export class EnemyComponent extends Component {
     die() {
         GameGlobals.myShip.enemyDespawn(this._myEnemy);
         GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
+
+        GameGlobals.myEvilPointSpawner.spawnEvilPoints(this._myAmountEvil, this.object.pp_getPosition());
     }
 
     pp_clone(targetObject) {

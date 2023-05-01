@@ -70,6 +70,7 @@ export class GameState {
         GameGlobals.myDevileryBoss.startDevileryBoss();
 
         GameGlobals.myPrincess.startPrincess();
+        GameGlobals.myEvilPointSpawner.startEvilPointSpawner();
     }
 
     _lostStart() {

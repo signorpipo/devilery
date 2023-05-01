@@ -82,6 +82,8 @@ export class ShipComponent extends Component {
         for (let enemy of this._myEnemies) {
             this._myEnemyPools.releaseObject(enemy);
         }
+
+        this._myEnemies.pp_clear();
     }
 
     enemyDespawn(enemy) {

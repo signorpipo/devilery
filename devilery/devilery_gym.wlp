@@ -324,8 +324,11 @@
                 {
                     "type": "pp-console-vr-tool",
                     "pp-console-vr-tool": {
-                        "_myHandedness": "Left"
-                    }
+                        "_myHandedness": "Left",
+                        "_myShowVisibilityButton": false,
+                        "_myShowOnStart": false
+                    },
+                    "active": true
                 },
                 {
                     "type": "pp-easy-tune-tool",
@@ -937,7 +940,7 @@
                     "type": "devilery-gateway",
                     "devilery-gateway": {
                         "_myDebugEnabled": true,
-                        "_mySkipIntro": false,
+                        "_mySkipIntro": true,
                         "_myClearConsoleOnStart": false,
                         "_myStartDelayFrames": 30,
                         "_myNeverInLove": true,
@@ -1637,7 +1640,7 @@
             "name": "Weapon Table",
             "parent": "258",
             "translation": [
-                -1.3740304893872235e-8,
+                -1.3740304893872237e-8,
                 0.5999999,
                 2.499998
             ],
@@ -2424,7 +2427,8 @@
                 {
                     "type": "enemy",
                     "enemy": {
-                        "_myEnemy": "291"
+                        "_myEnemy": "291",
+                        "_myAmountEvil": 10
                     }
                 }
             ],
@@ -3436,7 +3440,7 @@
                 0.0,
                 1.0,
                 0.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ]
         },
         "319": {
@@ -3588,7 +3592,7 @@
                 0.0,
                 1.0,
                 0.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ]
         },
         "320": {
@@ -3740,7 +3744,7 @@
                 0.0,
                 1.0,
                 0.0,
-                -4.371138828673793e-8
+                -4.3711388286737935e-8
             ]
         },
         "321": {
@@ -4091,6 +4095,119 @@
                 1.0,
                 0.0,
                 -4.3711388286737935e-8
+            ]
+        },
+        "326": {
+            "name": "Evil Point Spawner",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -110.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "evil-point-spawner"
+                }
+            ]
+        },
+        "327": {
+            "name": "Evil Point",
+            "parent": "332",
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false,
+                        "_myIsEvilPoint": true,
+                        "_myMaxSpeed": 10.0
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "329": {
+            "name": "Pivot",
+            "parent": "327",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "330": {
+            "name": "Body",
+            "parent": "329",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 32,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "block": 0
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "332": {
+            "name": "Evil Points",
+            "parent": "326",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
             ]
         }
     },
@@ -4732,8 +4849,8 @@
                 "2": "Interactable",
                 "3": "Princess",
                 "4": "Enemy",
-                "5": "Group 5",
-                "6": "Group 6",
+                "5": "Evil Point",
+                "6": "Projectile",
                 "7": "Group 7"
             }
         }

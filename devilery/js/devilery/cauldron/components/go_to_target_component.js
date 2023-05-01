@@ -6,7 +6,9 @@ import { WeaponComponent } from "./weapon_component";
 export class GoToTargetComponent extends Component {
     static TypeName = "go-to-target";
     static Properties = {
-        _myIsPrincess: Property.bool(true)
+        _myIsPrincess: Property.bool(true),
+        _myIsEvilPoint: Property.bool(false),
+        _myMaxSpeed: Property.float(5)
     };
 
     init() {
@@ -24,16 +26,18 @@ export class GoToTargetComponent extends Component {
 
         this._myNextTargetDistance = 0;
 
-        this._myMaxSpeed = 5;
         this._myCurrentSpeed = this._myMaxSpeed;
         this._mySlowDown = true;
         this._mySpeedUp = true;
 
         this._myTimer = 0;
+        this._myTimerSecond = 0;
 
         this._myTurnSpeed = 100;
 
         this._myWeaponReleased = false;
+
+        this._mySpeedTurn = false;
     }
 
     update(dt) {
@@ -142,6 +146,15 @@ GoToTargetComponent.prototype._update = function () {
                 this._myTimer = 0;
             }
         }
+
+        if (this._myCurrentTargetIndex >= 1) {
+            this._myTimerSecond += dt;
+        }
+
+        if (this._mySpeedTurn || (this._myIsEvilPoint && this._myCurrentTargetIndex >= 1 && distanceToTarget < 0.1) || this._myTimerSecond > 3) {
+            this._mySpeedTurn = true;
+            this._myTurnSpeed += 100 * dt;
+        }
     };
 }();
 
@@ -158,6 +171,10 @@ GoToTargetComponent.prototype._start = function () {
     let toWorstFlat = vec3_create();
     let toWorstRotationAxis = vec3_create();
     return function _start() {
+        this._myTurnSpeed = 100;
+        this._mySpeedTurn = false;
+        this._myTimerSecond = 0;
+
         this.object.pp_getPosition(currentPosition);
 
         let bestTargetObject = null;
@@ -200,6 +217,8 @@ GoToTargetComponent.prototype._start = function () {
         this._myTargetPositions.push([bestTargetObject.pp_getPosition(), nextTargetDistance]);
         if (this._myIsPrincess) {
             this._myTargetPositions.push([GameGlobals.myPrincessTarget.pp_getPosition(), 0.2]);
+        } else if (this._myIsEvilPoint) {
+            this._myTargetPositions.push([GameGlobals.myEvilTarget.pp_getPosition(), 0.2]);
         } else {
             this._myTargetPositions.push([GameGlobals.myWeaponTarget.pp_getPosition(), 0.2]);
             this._myTargetPositions.push([worstTargetObject.pp_getPosition(), nextTargetDistance]);
