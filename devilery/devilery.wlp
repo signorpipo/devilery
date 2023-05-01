@@ -11415,7 +11415,7 @@
             "parent": "597",
             "translation": [
                 0.0,
-                -2.0,
+                -2.25,
                 0.0
             ],
             "rotation": [
@@ -11647,7 +11647,7 @@
                 {
                     "type": "enemy",
                     "enemy": {
-                        "_myEnemy": "291",
+                        "_myEnemy": null,
                         "_myAmountEvil": 5
                     }
                 }
@@ -11886,7 +11886,7 @@
                 {
                     "type": "enemy",
                     "enemy": {
-                        "_myEnemy": "295",
+                        "_myEnemy": null,
                         "_myType": "Strong",
                         "_myHits": 2
                     }
@@ -12178,7 +12178,7 @@
                 {
                     "type": "enemy",
                     "enemy": {
-                        "_myEnemy": "299",
+                        "_myEnemy": null,
                         "_myType": "Shield"
                     }
                 },
@@ -12643,7 +12643,7 @@
             "translation": [
                 0.0,
                 0.0,
-                0.0
+                0.0000038
             ],
             "rotation": [
                 0.0,
@@ -12740,6 +12740,797 @@
                 0.0,
                 0.0,
                 1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "688": {
+            "name": "Bullet Spawners",
+            "parent": "457",
+            "translation": [
+                30.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "689": {
+            "name": "Apple Bullet Spawner",
+            "parent": "688",
+            "components": [
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "694"
+                    }
+                }
+            ]
+        },
+        "690": {
+            "name": "Bat Bullet Spawner",
+            "parent": "688",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "696"
+                    }
+                }
+            ]
+        },
+        "691": {
+            "name": "Skull Bullet Spawner",
+            "parent": "688",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "698"
+                    }
+                }
+            ]
+        },
+        "692": {
+            "name": "Voice Bullet Spawner",
+            "parent": "688",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "700"
+                    }
+                }
+            ]
+        },
+        "693": {
+            "name": "Bullets",
+            "parent": "597",
+            "translation": [
+                0.0,
+                -5.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "694": {
+            "name": "Apple Bullet",
+            "parent": "693",
+            "translation": [
+                -2.0,
+                0.0,
+                0.0
+            ]
+        },
+        "695": {
+            "name": "Mesh",
+            "parent": "694",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "696": {
+            "name": "Bat Bullet",
+            "parent": "693",
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "698": {
+            "name": "Skull Bullet",
+            "parent": "693",
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "700": {
+            "name": "Voice Bullet",
+            "parent": "693",
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "709": {
+            "link": {
+                "name": "poison_apple_bullet<poison_apple_bullet<poison_apple_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            },
+            "parent": "695",
+            "translation": [
+                -2.384185791015625e-7,
+                -0.0000114,
+                0.0
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "710": {
+            "name": "Mesh",
+            "parent": "696"
+        },
+        "715": {
+            "link": {
+                "name": "bat_storm_spell_bullet_mesh<bat_storm_spell_bullet<bat_storm_spell_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            },
+            "parent": "710",
+            "translation": [
+                -5.960464477539063e-8,
+                -0.0000114,
+                0.0
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "721": {
+            "name": "Mesh",
+            "parent": "698"
+        },
+        "724": {
+            "link": {
+                "name": "skull_wand_bullet_mesh<skull_wand_bullet<skull_wand_bullet_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            },
+            "parent": "721",
+            "translation": [
+                5.960464477539063e-8,
+                -0.0000114,
+                0.0
+            ],
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
             ],
             "scaling": [
                 1.0,
@@ -13156,6 +13947,24 @@
             "link": {
                 "name": "scary_megaphone",
                 "file": "assets\\models\\scary_megaphone.fbx"
+            }
+        },
+        "703": {
+            "link": {
+                "name": "poison_apple_bullet",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            }
+        },
+        "712": {
+            "link": {
+                "name": "bat_storm_spell_bullet_mesh",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            }
+        },
+        "717": {
+            "link": {
+                "name": "skull_wand_bullet_mesh",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
             }
         }
     },
@@ -13624,6 +14433,24 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\scary_megaphone.fbx"
             }
+        },
+        "702": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\poison_apple_bullet.fbx"
+            }
+        },
+        "711": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\bat_storm_spell_bullet.fbx"
+            }
+        },
+        "716": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\skull_wand_bullet.fbx"
+            }
         }
     },
     "shaders": {
@@ -14034,7 +14861,10 @@
         "assets/models/poison_apple_gun.fbx",
         "assets/models/bat_storm_spell.fbx",
         "assets/models/skull_wand.fbx",
-        "assets/models/scary_megaphone.fbx"
+        "assets/models/scary_megaphone.fbx",
+        "assets/models/poison_apple_bullet.fbx",
+        "assets/models/bat_storm_spell_bullet.fbx",
+        "assets/models/skull_wand_bullet.fbx"
     ],
     "fonts": {
         "147": {
