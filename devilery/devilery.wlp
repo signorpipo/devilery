@@ -4876,6 +4876,9 @@
                     "mesh": {
                         "material": "537"
                     }
+                },
+                {
+                    "type": "rotate-fan"
                 }
             ]
         },

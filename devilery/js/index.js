@@ -29,6 +29,7 @@ import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_i
 import {FlapComponent} from './devilery/cauldron/components/flap_component.js';
 import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_component.js';
 import {PrincessComponent} from './devilery/cauldron/components/princess_component.js';
+import {RotateFanComponent} from './devilery/cauldron/components/rotate_fan_component.js';
 import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
 import {ShipComponent} from './devilery/cauldron/components/ship_component.js';
 import {SqueezeHandsComponents} from './devilery/cauldron/components/squeeze_hand_component.js';
@@ -120,6 +121,7 @@ engine.registerComponent(FadeViewInOutComponent);
 engine.registerComponent(FlapComponent);
 engine.registerComponent(GoToTargetComponent);
 engine.registerComponent(PrincessComponent);
+engine.registerComponent(RotateFanComponent);
 engine.registerComponent(SetPositionOnInitComponent);
 engine.registerComponent(ShipComponent);
 engine.registerComponent(SqueezeHandsComponents);
