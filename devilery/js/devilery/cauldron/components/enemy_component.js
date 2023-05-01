@@ -111,7 +111,7 @@ export class EnemyComponent extends Component {
             GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
         } else {
             GameGlobals.myDevileryBoss.devilerySkullDespawn(this._myEnemy);
-            GameGlobals.myDevilerySkullDieParticlesSpawner.spawn(this.object.pp_getPosition());
+            GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
         }
 
         GameGlobals.myEvilPointSpawner.spawnEvilPoints(this._myAmountEvil, this.object.pp_getPosition());

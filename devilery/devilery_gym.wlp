@@ -2057,6 +2057,13 @@
                             ]
                         }
                     }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myType": "Devilery Skull",
+                        "_myEnemy": "273"
+                    }
                 }
             ],
             "scaling": [
@@ -2580,7 +2587,7 @@
         },
         "304": {
             "name": "Hearts Particles Spawner",
-            "parent": "303",
+            "parent": "380",
             "components": [
                 {
                     "type": "particles-spawner",
@@ -2588,11 +2595,27 @@
                         "_myParticlesContainer": "305"
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "305": {
             "name": "Hearts",
-            "parent": "303",
+            "parent": "380",
             "translation": [
                 0.0,
                 0.0,
@@ -2942,7 +2965,7 @@
         },
         "311": {
             "name": "Enemy Die Particles Spawner",
-            "parent": "303",
+            "parent": "382",
             "components": [
                 {
                     "type": "particles-spawner",
@@ -2950,11 +2973,27 @@
                         "_myParticlesContainer": "312"
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "312": {
             "name": "Enemy Die",
-            "parent": "303",
+            "parent": "382",
             "translation": [
                 0.0,
                 0.0,
@@ -4101,7 +4140,7 @@
         },
         "333": {
             "name": "Skull Particles Spawner",
-            "parent": "303",
+            "parent": "381",
             "components": [
                 {
                     "type": "particles-spawner",
@@ -4110,11 +4149,27 @@
                         "_myParticlesContainer": "334"
                     }
                 }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
             ]
         },
         "334": {
             "name": "Skull",
-            "parent": "303",
+            "parent": "381",
             "translation": [
                 0.0,
                 0.0,
@@ -5204,6 +5259,9 @@
                     "go-to-target": {
                         "_myIsPrincess": false
                     }
+                },
+                {
+                    "type": "deviler-skull"
                 }
             ],
             "rotation": [
@@ -5379,6 +5437,12 @@
                             ]
                         }
                     }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myType": "Devilery Skull"
+                    }
                 }
             ],
             "scaling": [
@@ -5450,6 +5514,9 @@
                     "go-to-target": {
                         "_myIsPrincess": false
                     }
+                },
+                {
+                    "type": "deviler-skull"
                 }
             ],
             "rotation": [
@@ -5624,6 +5691,12 @@
                                 0.5
                             ]
                         }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myType": "Devilery Skull"
                     }
                 }
             ],
@@ -5872,6 +5945,18 @@
                 0.15,
                 0.15
             ]
+        },
+        "380": {
+            "name": "Heart",
+            "parent": "303"
+        },
+        "381": {
+            "name": "Skull",
+            "parent": "303"
+        },
+        "382": {
+            "name": "Enemy Die",
+            "parent": "303"
         }
     },
     "meshes": {

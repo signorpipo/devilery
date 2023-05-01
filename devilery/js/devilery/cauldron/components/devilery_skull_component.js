@@ -17,15 +17,19 @@ export class DevilerSkullComponent extends Component {
     }
 
     release() {
+        if (!GameGlobals.myStarted) return;
+
         if (!this._myReleased) {
             this._myReleased = true;
             if (this._myWeapon == null && GameGlobals.myDebugEnabled) {
-                this._myWeapon = this.object.pp_getComponent(WeaponComponent).object;
+                this._myWeapon = this.object.pp_getComponent(WeaponComponent)?.object;
             }
 
-            this._myWeapon.pp_getComponent(WeaponComponent)?.release();
+            if (this._myWeapon != null) {
+                this._myWeapon.pp_getComponent(WeaponComponent)?.release();
 
-            this._myWeapon = null;
+                this._myWeapon = null;
+            }
         }
     }
 
