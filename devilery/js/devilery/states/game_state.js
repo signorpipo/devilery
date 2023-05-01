@@ -33,7 +33,7 @@ export class GameState {
         GameGlobals.myPlayerLocomotion.setIdle(false);
 
         let playerStartPosition = this._myPlayerStart.pp_getPosition();
-        let rotationQuat = quat_create().quat_setForward(vec3_create(0, 0, 1));
+        let rotationQuat = this._myPlayerStart.pp_getRotationQuat();
         GameGlobals.myPlayerTransformManager.teleportAndReset(playerStartPosition, rotationQuat);
 
         GameGlobals.myBlackFade.fadeIn();

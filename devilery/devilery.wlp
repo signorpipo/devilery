@@ -1272,20 +1272,20 @@
             "name": "Player Start",
             "parent": "457",
             "translation": [
-                0.0,
-                0.0,
-                -10.0
+                -2.5000042,
+                5.960464477539063e-8,
+                2.000003
             ],
             "rotation": [
                 0.0,
+                0.8660254,
                 0.0,
-                0.0,
-                1.0
+                0.4999999
             ],
             "scaling": [
-                1.0,
-                1.0,
-                1.0
+                0.9999992,
+                0.9999988,
+                0.9999998
             ]
         },
         "249": {
@@ -11162,6 +11162,248 @@
                     }
                 }
             ]
+        },
+        "598": {
+            "name": "Ship",
+            "parent": "457",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "ship"
+                }
+            ],
+            "translation": [
+                0.0,
+                7.5,
+                -40.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "602": {
+            "link": {
+                "name": "prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "598",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Ship"
+        },
+        "603": {
+            "link": {
+                "name": "prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "602",
+            "name": "Pivot",
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071068
+            ]
+        },
+        "604": {
+            "link": {
+                "name": "prince_airship_mesh<prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "603",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "605": {
+            "link": {
+                "name": "airship_enemy_spawn_target<prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "598",
+            "translation": [
+                0.2672359,
+                -1.1359529,
+                2.4999961
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.061648,
+                0.061648,
+                0.061648
+            ],
+            "name": "Enemy Spawn"
+        },
+        "606": {
+            "link": {
+                "name": "prince_airship_propeller_mesh<prince_airship<prince_airship_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\prince_airship.fbx"
+            },
+            "parent": "603",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -11493,6 +11735,18 @@
             "link": {
                 "name": "ally_01_mesh",
                 "file": "assets\\models\\ally_01.fbx"
+            }
+        },
+        "600": {
+            "link": {
+                "name": "prince_airship_mesh",
+                "file": "assets\\models\\prince_airship.fbx"
+            }
+        },
+        "601": {
+            "link": {
+                "name": "prince_airship_propeller_mesh",
+                "file": "assets\\models\\prince_airship.fbx"
             }
         }
     },
@@ -11913,6 +12167,12 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\ally_01.fbx"
             }
+        },
+        "599": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\prince_airship.fbx"
+            }
         }
     },
     "shaders": {
@@ -12315,7 +12575,8 @@
         "assets/models/pedestal.fbx",
         "assets/models/table.fbx",
         "assets/models/landing_spot.fbx",
-        "assets/models/ally_01.fbx"
+        "assets/models/ally_01.fbx",
+        "assets/models/prince_airship.fbx"
     ],
     "fonts": {
         "147": {
