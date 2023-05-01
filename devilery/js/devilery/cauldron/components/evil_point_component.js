@@ -8,7 +8,7 @@ export class EvilPointComponent extends Component {
 
     die() {
         GameGlobals.myEvilPointSpawner.evilPointDespawn(this.object);
-        GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
+        GameGlobals.myEvilPointReceivedParticlesSpawner.spawn(this.object.pp_getPosition());
     }
 
     pp_clone(targetObject) {

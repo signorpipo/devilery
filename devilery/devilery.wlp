@@ -13795,9 +13795,9 @@
                 1.0
             ],
             "scaling": [
-                1.0,
-                0.9999999,
-                0.9999999
+                0.75,
+                0.75,
+                0.75
             ],
             "components": [
                 {
@@ -13815,8 +13815,8 @@
             "name": "Particle Spawners",
             "parent": "457",
             "translation": [
-                30.0,
-                -100.0,
+                0.0,
+                -58.0,
                 0.0
             ],
             "rotation": [
@@ -13869,7 +13869,7 @@
             "translation": [
                 0.0,
                 0.0,
-                1.0
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -13905,326 +13905,23 @@
                 0.0
             ]
         },
-        "742": {
-            "name": "Mesh",
-            "parent": "741",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "743": {
-            "name": "Heart 2",
-            "parent": "740",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
+        "745": {
+            "name": "Normal Bird Particles",
+            "parent": "737",
             "translation": [
-                0.5,
                 0.0,
+                -0.5,
                 0.0
             ]
         },
-        "744": {
-            "name": "Mesh",
-            "parent": "743",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "745": {
-            "name": "Enemy Die",
-            "parent": "737"
-        },
         "746": {
-            "name": "Enemy Die Particles Spawner",
+            "name": "Normal Bird Particles Spawner",
             "parent": "745",
             "components": [
                 {
                     "type": "particles-spawner",
                     "particles-spawner": {
-                        "_myParticlesContainer": "312"
+                        "_myParticlesContainer": "747"
                     }
                 }
             ],
@@ -14246,12 +13943,12 @@
             ]
         },
         "747": {
-            "name": "Enemy Die",
+            "name": "Normal Bird Particles",
             "parent": "745",
             "translation": [
                 0.0,
                 0.0,
-                1.0
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -14274,7 +13971,7 @@
             ]
         },
         "748": {
-            "name": "Heart 1",
+            "name": "Feather",
             "parent": "747",
             "scaling": [
                 1.0,
@@ -14285,319 +13982,16 @@
                 0.5,
                 0.0,
                 0.0
-            ]
-        },
-        "749": {
-            "name": "Mesh",
-            "parent": "748",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "750": {
-            "name": "Heart 2",
-            "parent": "747",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "751": {
-            "name": "Mesh",
-            "parent": "750",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
             ]
         },
         "752": {
             "name": "Skull",
-            "parent": "737"
+            "parent": "737",
+            "translation": [
+                0.0,
+                -2.0,
+                0.0
+            ]
         },
         "753": {
             "name": "Skull Particles Spawner",
@@ -14629,12 +14023,12 @@
             ]
         },
         "754": {
-            "name": "Skull",
+            "name": "Skulls",
             "parent": "752",
             "translation": [
                 0.0,
                 0.0,
-                1.0
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -14657,7 +14051,7 @@
             ]
         },
         "755": {
-            "name": "Heart 1",
+            "name": "Skull 1",
             "parent": "754",
             "scaling": [
                 1.0,
@@ -14665,322 +14059,19 @@
                 1.0
             ],
             "translation": [
-                0.5,
+                0.0,
                 0.0,
                 0.0
-            ]
-        },
-        "756": {
-            "name": "Mesh",
-            "parent": "755",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "757": {
-            "name": "Heart 2",
-            "parent": "754",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "758": {
-            "name": "Mesh",
-            "parent": "757",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
             ]
         },
         "759": {
             "name": "Buy",
-            "parent": "737"
+            "parent": "737",
+            "translation": [
+                0.0,
+                -2.5,
+                0.0
+            ]
         },
         "760": {
             "name": "Buy Particles Spawner",
@@ -14989,11 +14080,11 @@
                 {
                     "type": "particles-spawner",
                     "particles-spawner": {
-                        "_myParticlesContainer": "429",
-                        "_myScaleMultiplier": 0.3,
+                        "_myParticlesContainer": "828",
+                        "_myScaleMultiplier": 0.5,
                         "_myRadius": 0.0099999,
                         "_myMinAmount": 10,
-                        "_myMaxAmount": 15.0,
+                        "_myMaxAmount": 15,
                         "_mySpeedMultiplier": 0.5,
                         "_myHorizontalSpeedMultiplier": 0.1,
                         "_myVerticalSpeedMultiplier": 0.5
@@ -15015,356 +14106,6 @@
                 1.0,
                 1.0,
                 1.0
-            ]
-        },
-        "761": {
-            "name": "Buys",
-            "parent": "759",
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "components": [
-                {
-                    "type": "pp-set-active",
-                    "pp-set-active": {
-                        "_myActive": false
-                    }
-                }
-            ]
-        },
-        "762": {
-            "name": "Heart 1",
-            "parent": "761",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "763": {
-            "name": "Mesh",
-            "parent": "762",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "764": {
-            "name": "Heart 2",
-            "parent": "761",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "765": {
-            "name": "Mesh",
-            "parent": "764",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
             ]
         },
         "766": {
@@ -15378,11 +14119,11 @@
                 {
                     "type": "particles-spawner",
                     "particles-spawner": {
-                        "_myParticlesContainer": "444",
-                        "_myScaleMultiplier": 0.3,
+                        "_myParticlesContainer": "828",
+                        "_myScaleMultiplier": 0.5,
                         "_myRadius": 0.0099999,
                         "_myMinAmount": 10,
-                        "_myMaxAmount": 15.0,
+                        "_myMaxAmount": 15,
                         "_mySpeedMultiplier": 0.5,
                         "_myHorizontalSpeedMultiplier": 0.1,
                         "_myVerticalSpeedMultiplier": 0.5
@@ -15404,356 +14145,6 @@
                 1.0,
                 1.0,
                 1.0
-            ]
-        },
-        "768": {
-            "name": "Shot",
-            "parent": "766",
-            "translation": [
-                0.0,
-                0.0,
-                1.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "components": [
-                {
-                    "type": "pp-set-active",
-                    "pp-set-active": {
-                        "_myActive": false
-                    }
-                }
-            ]
-        },
-        "769": {
-            "name": "Heart 1",
-            "parent": "768",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "770": {
-            "name": "Mesh",
-            "parent": "769",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "771": {
-            "name": "Heart 2",
-            "parent": "768",
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ],
-            "translation": [
-                0.5,
-                0.0,
-                0.0
-            ]
-        },
-        "772": {
-            "name": "Mesh",
-            "parent": "771",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                }
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
             ]
         },
         "773": {
@@ -15843,6 +14234,634 @@
                                 7.0
                             ]
                         }
+                    }
+                }
+            ]
+        },
+        "780": {
+            "link": {
+                "name": "heart_part_mesh<heart_part<heart_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\heart_part.fbx"
+            },
+            "parent": "741",
+            "translation": [
+                -0.4999961,
+                -0.0000152,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                0.9999999,
+                0.9999999
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "790": {
+            "link": {
+                "name": "ally_01_part_mesh<ally_01_part_mesh_$AssimpFbx$_GeometricTranslation<ally_01_part<ally_01_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\ally_01_part.fbx"
+            },
+            "parent": "755",
+            "translation": [
+                -0.0008176,
+                0.0,
+                -0.0332469
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.75,
+                0.75,
+                0.75
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "795": {
+            "link": {
+                "name": "enemy_01_part_mesh<enemy_01_part<enemy_01_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_01_part.fbx"
+            },
+            "parent": "748",
+            "translation": [
+                0.0,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.75,
+                0.75,
+                0.75
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "796": {
+            "name": "Letter",
+            "parent": "747",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "802": {
+            "link": {
+                "name": "letter_part_mesh<letter_part<letter_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\letter_part.fbx"
+            },
+            "parent": "796",
+            "translation": [
+                0.0,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "803": {
+            "name": "Strong Bird Particles",
+            "parent": "737",
+            "translation": [
+                0.0,
+                -1.0,
+                0.0
+            ]
+        },
+        "804": {
+            "name": "Strong Bird Particles Spawner",
+            "parent": "803",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "805"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "805": {
+            "name": "Strong Bird Particles",
+            "parent": "803",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "806": {
+            "name": "Feather",
+            "parent": "805",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "808": {
+            "name": "Letter",
+            "parent": "805",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "809": {
+            "link": {
+                "name": "letter_part_mesh<letter_part<letter_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\letter_part.fbx"
+            },
+            "parent": "808",
+            "translation": [
+                0.0,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "810": {
+            "name": "Shield Bird Particles",
+            "parent": "737",
+            "translation": [
+                0.0,
+                -1.5,
+                0.0
+            ]
+        },
+        "811": {
+            "name": "Shield Bird Particles Spawner",
+            "parent": "810",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "812"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "812": {
+            "name": "Shield Bird Particles",
+            "parent": "810",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "813": {
+            "name": "Feather",
+            "parent": "812",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "815": {
+            "name": "Letter",
+            "parent": "812",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "816": {
+            "link": {
+                "name": "letter_part_mesh<letter_part<letter_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\letter_part.fbx"
+            },
+            "parent": "815",
+            "translation": [
+                0.0,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "821": {
+            "link": {
+                "name": "enemy_02_part_mesh<enemy_02_part<enemy_02_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_02_part.fbx"
+            },
+            "parent": "806",
+            "translation": [
+                5.960464477539063e-8,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.75,
+                0.75,
+                0.75
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "826": {
+            "link": {
+                "name": "enemy_03_part_mesh<enemy_03_part<enemy_03_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\enemy_03_part.fbx"
+            },
+            "parent": "813",
+            "translation": [
+                5.960464477539063e-8,
+                -0.0000076,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.75,
+                0.75,
+                0.75
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "828": {
+            "name": "Buy",
+            "parent": "759",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "829": {
+            "name": "Skull 1",
+            "parent": "828",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "833": {
+            "link": {
+                "name": "evilness_01_part_mesh<evilness_01_part<evilness_01_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\evilness_01_part.fbx"
+            },
+            "parent": "829",
+            "translation": [
+                0.0,
+                -0.0000114,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.25
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
+        },
+        "837": {
+            "name": "Evil Point Received",
+            "parent": "737",
+            "translation": [
+                0.0,
+                -3.0,
+                0.0
+            ]
+        },
+        "838": {
+            "name": "Evil Point Received Particles Spawner",
+            "parent": "837",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "839",
+                        "_myScaleMultiplier": 1.1,
+                        "_myRadius": 0.0099999,
+                        "_myMinAmount": 10,
+                        "_myMaxAmount": 15,
+                        "_mySpeedMultiplier": 0.5,
+                        "_myHorizontalSpeedMultiplier": 0.1,
+                        "_myVerticalSpeedMultiplier": 0.5
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "839": {
+            "name": "Evil Point Received",
+            "parent": "837",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "840": {
+            "name": "Skull 1",
+            "parent": "839",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "841": {
+            "link": {
+                "name": "ally_01_part_mesh<ally_01_part_mesh_$AssimpFbx$_GeometricTranslation<ally_01_part<ally_01_part_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\ally_01_part.fbx"
+            },
+            "parent": "840",
+            "translation": [
+                -0.0008176,
+                0.0,
+                -0.0332469
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.75,
+                0.75,
+                0.75
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
                     }
                 }
             ]
@@ -16273,6 +15292,42 @@
             "link": {
                 "name": "evilness_01_part_mesh",
                 "file": "assets\\models\\evilness_01_part.fbx"
+            }
+        },
+        "777": {
+            "link": {
+                "name": "heart_part_mesh",
+                "file": "assets\\models\\heart_part.fbx"
+            }
+        },
+        "782": {
+            "link": {
+                "name": "ally_01_part_mesh",
+                "file": "assets\\models\\ally_01_part.fbx"
+            }
+        },
+        "792": {
+            "link": {
+                "name": "enemy_01_part_mesh",
+                "file": "assets\\models\\enemy_01_part.fbx"
+            }
+        },
+        "799": {
+            "link": {
+                "name": "letter_part_mesh",
+                "file": "assets\\models\\letter_part.fbx"
+            }
+        },
+        "818": {
+            "link": {
+                "name": "enemy_02_part_mesh",
+                "file": "assets\\models\\enemy_02_part.fbx"
+            }
+        },
+        "823": {
+            "link": {
+                "name": "enemy_03_part_mesh",
+                "file": "assets\\models\\enemy_03_part.fbx"
             }
         }
     },
@@ -16765,6 +15820,42 @@
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\evilness_01_part.fbx"
             }
+        },
+        "776": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\heart_part.fbx"
+            }
+        },
+        "781": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\ally_01_part.fbx"
+            }
+        },
+        "791": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_01_part.fbx"
+            }
+        },
+        "798": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\letter_part.fbx"
+            }
+        },
+        "817": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_02_part.fbx"
+            }
+        },
+        "822": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\enemy_03_part.fbx"
+            }
         }
     },
     "shaders": {
@@ -17179,7 +16270,13 @@
         "assets/models/poison_apple_bullet.fbx",
         "assets/models/bat_storm_spell_bullet.fbx",
         "assets/models/skull_wand_bullet.fbx",
-        "assets/models/evilness_01_part.fbx"
+        "assets/models/evilness_01_part.fbx",
+        "assets/models/heart_part.fbx",
+        "assets/models/ally_01_part.fbx",
+        "assets/models/enemy_01_part.fbx",
+        "assets/models/letter_part.fbx",
+        "assets/models/enemy_02_part.fbx",
+        "assets/models/enemy_03_part.fbx"
     ],
     "fonts": {
         "147": {

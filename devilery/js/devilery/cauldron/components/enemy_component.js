@@ -108,7 +108,7 @@ export class EnemyComponent extends Component {
     die() {
         if (this._myType != 3) {
             GameGlobals.myShip.enemyDespawn(this._myEnemy);
-            GameGlobals.myEnemyDieParticlesSpawner.spawn(this.object.pp_getPosition());
+            GameGlobals.myEnemyDieParticlesSpawner[this._myType].spawn(this.object.pp_getPosition());
         } else {
             GameGlobals.myDevileryBoss.devilerySkullDespawn(this._myEnemy);
             GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());

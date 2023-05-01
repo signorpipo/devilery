@@ -8,7 +8,7 @@ export class ParticlesSpawnerComponent extends Component {
         _myParticlesContainer: Property.object(),
         _myRadius: Property.float(0.25),
         _myMinAmount: Property.int(15),
-        _myMaxAmount: Property.float(30),
+        _myMaxAmount: Property.int(30),
         _myScaleMultiplier: Property.float(1),
         _myHorizontalSpeedMultiplier: Property.float(1),
         _myVerticalSpeedMultiplier: Property.float(1)

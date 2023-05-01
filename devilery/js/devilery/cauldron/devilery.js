@@ -68,10 +68,10 @@ export class Devilery {
         GameGlobals.myPrincess = GameGlobals.myScene.pp_getComponent(PrincessComponent);
 
         GameGlobals.myHeartsParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
-        GameGlobals.myEnemyDieParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Enemy Die Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
         GameGlobals.mySkullParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Skull Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
         GameGlobals.myBuyParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Buy Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
         GameGlobals.myShotParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Shot Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myEvilPointReceivedParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Evil Point Received Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
 
         GameGlobals.myEvilPointSpawner = GameGlobals.myScene.pp_getObjectByName("Evil Point Spawner").pp_getComponent(EvilPointSpawnerComponent);
 
@@ -83,5 +83,10 @@ export class Devilery {
         GameGlobals.myBulletSpawners[WeaponType.BAT] = bulletSpawners.pp_getObjectByName("Bat Bullet Spawner").pp_getComponent(BulletSpawnerComponent);
         GameGlobals.myBulletSpawners[WeaponType.SKULL] = bulletSpawners.pp_getObjectByName("Skull Bullet Spawner").pp_getComponent(BulletSpawnerComponent);
         GameGlobals.myBulletSpawners[WeaponType.VOICE] = bulletSpawners.pp_getObjectByName("Voice Bullet Spawner").pp_getComponent(BulletSpawnerComponent);
+
+        GameGlobals.myEnemyDieParticlesSpawner = [];
+        GameGlobals.myEnemyDieParticlesSpawner[0] = GameGlobals.myScene.pp_getObjectByName("Normal Bird Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myEnemyDieParticlesSpawner[1] = GameGlobals.myScene.pp_getObjectByName("Strong Bird Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myEnemyDieParticlesSpawner[2] = GameGlobals.myScene.pp_getObjectByName("Shield Bird Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
     }
 }
