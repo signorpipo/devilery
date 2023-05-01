@@ -8425,7 +8425,7 @@
                     "physx": {
                         "shape": "triangleMesh",
                         "triangleMesh": {
-                            "mesh": "474"
+                            "mesh": "572"
                         },
                         "gravity": false,
                         "static": true,
@@ -10135,6 +10135,131 @@
         "568": {
             "name": "Princess Pedestal",
             "parent": "457"
+        },
+        "569": {
+            "name": "Weapon Table",
+            "parent": "457",
+            "translation": [
+                4.0320005,
+                -2.384185791015625e-7,
+                2.4240002
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0000001,
+                1.0000001
+            ]
+        },
+        "573": {
+            "link": {
+                "name": "table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "569",
+            "rotation": [
+                -0.7071068,
+                0.0,
+                0.0,
+                0.7071067
+            ],
+            "name": "Table",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scaling": [
+                1.0,
+                0.9999997,
+                0.9999997
+            ]
+        },
+        "574": {
+            "link": {
+                "name": "table<table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "573",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Pivot"
+        },
+        "575": {
+            "link": {
+                "name": "table_mesh<table<table_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\table.fbx"
+            },
+            "parent": "574",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "triangleMesh",
+                        "triangleMesh": {
+                            "mesh": "572"
+                        },
+                        "gravity": false,
+                        "static": true,
+                        "groups": 2,
+                        "block": 71
+                    },
+                    "active": true
+                }
+            ]
+        },
+        "577": {
+            "name": "Weapon Target",
+            "parent": "569",
+            "translation": [
+                0.0,
+                4.0,
+                0.0
+            ]
+        },
+        "582": {
+            "link": {
+                "name": "landing_spot<landing_spot<landing_spot_$AssimpFbx$_PreRotation",
+                "file": "assets\\models\\landing_spot.fbx"
+            },
+            "parent": "574",
+            "translation": [
+                0.7149996,
+                -0.4350006,
+                1.4480013
+            ],
+            "rotation": [
+                -4.3367208490963094e-8,
+                -2.606165416807471e-8,
+                0.8744842,
+                -0.4850539
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0000001
+            ],
+            "components": [
+                {
+                    "mesh": {
+                        "material": "537"
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -10442,6 +10567,24 @@
             "link": {
                 "name": "pedestal_bar_mesh",
                 "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "571": {
+            "link": {
+                "name": "table_mesh",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "572": {
+            "link": {
+                "name": "table_physx",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "579": {
+            "link": {
+                "name": "landing_spot",
+                "file": "assets\\models\\landing_spot.fbx"
             }
         }
     },
@@ -10826,9 +10969,9 @@
             "pipeline": "491",
             "Phong": {
                 "ambientColor": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    1.0,
+                    1.0,
+                    1.0,
                     1.0
                 ],
                 "specularColor": [
@@ -10843,6 +10986,18 @@
             "link": {
                 "name": "DefaultMaterial",
                 "file": "assets\\models\\pedestal.fbx"
+            }
+        },
+        "570": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\table.fbx"
+            }
+        },
+        "578": {
+            "link": {
+                "name": "DefaultMaterial",
+                "file": "assets\\models\\landing_spot.fbx"
             }
         }
     },
@@ -11243,7 +11398,9 @@
         "assets/textures/skybox_basecolor.png",
         "assets/models/interior_walls.fbx",
         "assets/models/console.fbx",
-        "assets/models/pedestal.fbx"
+        "assets/models/pedestal.fbx",
+        "assets/models/table.fbx",
+        "assets/models/landing_spot.fbx"
     ],
     "fonts": {
         "147": {
