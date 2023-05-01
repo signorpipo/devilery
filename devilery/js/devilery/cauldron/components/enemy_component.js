@@ -1,11 +1,13 @@
-import { Component, Property } from "@wonderlandengine/api";
-import { CloneUtils, Timer } from "../../../pp";
+import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
+import { CloneUtils, PhysicsCollisionCollector, Timer } from "../../../pp";
 import { GameGlobals } from "../game_globals";
+import { BulletComponent } from "./bullet_component";
 
 export class EnemyComponent extends Component {
     static TypeName = "enemy";
     static Properties = {
         _myEnemy: Property.object(),
+        _myHits: Property.int(1),
         _myAmountEvil: Property.int(0)
     };
 
@@ -26,16 +28,24 @@ export class EnemyComponent extends Component {
     }
 
     _start() {
-        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 0) == 0);
+        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 3) == 0);
+
+        this._myPhysX = this.object.pp_getComponent(PhysXComponent);
+        this._myCollisionsCollector = new PhysicsCollisionCollector(this._myPhysX);
+
+        this._myCurrentHits = this._myHits;
     }
 
     _update(dt) {
         if (GameGlobals.myRandomEnemyDie) {
             this._myTimerDie.update(dt);
             if (this._myTimerDie.isJustDone()) {
-                this.die();
+                this._hit();
+                this._myTimerDie.start();
             }
         }
+
+        this._checkHit(dt);
     }
 
     onActivate() {
@@ -67,5 +77,25 @@ export class EnemyComponent extends Component {
         }
 
         clonedComponent._myEnemy = parent;
+    }
+
+    _checkHit(dt) {
+        this._myCollisionsCollector.update(dt);
+
+        let collisionsStart = this._myCollisionsCollector.getCollisionsStart();
+        for (let collisionStart of collisionsStart) {
+            let bullet = collisionStart.pp_getComponent(BulletComponent);
+            if (bullet != null) {
+                bullet.die();
+                this._hit();
+            }
+        }
+    }
+
+    _hit() {
+        this._myCurrentHits--;
+        if (this._myCurrentHits == 0) {
+            this.die();
+        }
     }
 }

@@ -1,6 +1,7 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { GameGlobals } from "../game_globals";
 import { Globals, NumberRangeOverValue, ObjectPoolParams, ObjectPoolsManager, Timer, vec3_create } from "../../../pp";
+import { EnemyComponent } from "./enemy_component";
 
 export class ShipComponent extends Component {
     static TypeName = "ship";
@@ -88,6 +89,7 @@ export class ShipComponent extends Component {
 
     enemyDespawn(enemy) {
         this._myEnemyPools.releaseObject(enemy);
+        this._myEnemies.pp_removeEqual(enemy);
     }
 
     _updateTimers(dt) {
@@ -139,6 +141,13 @@ export class ShipComponent extends Component {
 
         let shieldlBird = Globals.getScene().pp_getObjectByName("Shield Bird");
         this._myEnemyPools.addPool(EnemyType.SHIELD_BIRD, shieldlBird, poolParams);
+    }
+
+    killAllEnemies() {
+        let enemies = this._myEnemies.pp_clone();
+        for (let enemy of enemies) {
+            enemy.pp_getComponent(EnemyComponent).die();
+        }
     }
 }
 

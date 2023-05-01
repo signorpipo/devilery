@@ -53,9 +53,7 @@ export class DevileryConsoleComponent extends Component {
 
     _increaseEvil(evilPoint) {
         evilPoint.die();
-        this._myEvilTotal = Math.max(this._myEvilTotal + 1, 100);
-
-        console.error(this._myEvilTotal);
+        this._myEvilTotal = Math.min(this._myEvilTotal + 1, 100);
 
         // increase evil visually
     }

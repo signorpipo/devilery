@@ -42,6 +42,7 @@ export class EvilPointSpawnerComponent extends Component {
 
     evilPointDespawn(evilPoint) {
         this._myEvilPointPools.releaseObject(evilPoint);
+        this._myEvilPoints.pp_removeEqual(evilPoint);
     }
 
     startEvilPointSpawner() {

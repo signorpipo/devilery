@@ -2443,7 +2443,7 @@
                     "type": "enemy",
                     "enemy": {
                         "_myEnemy": "291",
-                        "_myAmountEvil": 10
+                        "_myAmountEvil": 5
                     }
                 }
             ],
