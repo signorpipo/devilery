@@ -14,7 +14,7 @@ export class ScaleOnSpawnComponent extends Component {
     }
 
     start() {
-        this.object.pp_setScale(Math.PP_EPSILON);
+        this.object.pp_setScale(0.0001);
 
         this._myDelayTimer = new Timer(this._myStartDelay);
         this._myScaleDurationTimer = new Timer(this._myScaleDuration);
@@ -28,6 +28,10 @@ export class ScaleOnSpawnComponent extends Component {
 
             this.object.pp_setScale(this._myTargetScale.vec3_scale(EasingFunction.easeOut(this._myScaleDurationTimer.getPercentage())));
         }
+    }
+
+    onActivate() {
+        this.start();
     }
 
     pp_clone(targetObject) {

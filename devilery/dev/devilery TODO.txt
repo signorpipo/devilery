@@ -1,0 +1,61 @@
+FLOW:
+
+- STORIA INIZIALE
+- FADE IN
+- MAIN GAME
+	- TIMER INIZIA ONDATA
+	- DA QUI IL GIOCO VA AVANTI NORMALE
+	? IL PRINCIPE SI AVVICINA PIANO PIANO
+		- SEMPLICEMENTE AD UN CERTO PUNTO INVIA TANTISSIMI COSI E PERDI PER FORZA
+- PRINCIPESSA SI INNAMORA
+	- FADE OUT BIANCO
+	- STORIA FINE
+	- FADE OUT NERO
+	- TORNA A STORIA INIZIALE
+	
+? PRINCIPE SCONFITTO 
+	- FADE OUT NERO
+	- STORIA FINE
+	- TORNA A STORIA INIZIALE
+	
+
+TODO:
+
+- arma che spara proiettili
+	- proiettili customizzabili
+		- più che altro effetto customizzabile on press
+		- alcuni sono proiettili, ma c'è la saetta, e anche il megafono
+		
+	- l'arma dovrebbe snappare su un pivot
+		- pivot diversi per armi diverse
+		- più pivot di grab
+		
+	- l'arma si scarica e non funziona più, mostrare carica
+	
+	- se l'arma consegnata è più lontana di tot despawna
+
+- behavior dei nemici
+	- vengono verso la principessa (o il punto di entrata più vicino e poi verso la principessa)
+	- eseguono la loro abilità se ce n'è una
+	- se toccano la principessa aumentano il suo amore, esplodendo e lasciando dei particles
+	- quando muoiono lasciano particles evil
+	
+- evil particles
+	- si muovono verso l'entrata più vicina e poi girano smooth verso l'antenna arrivati aumentano il valore
+
+- principessa
+	- canta?
+	- aumentare il suo amore visivamente quando viene toccata
+	
+- nave principe
+	- si muove in cerchio intorno al castello
+	- spawna i nemici
+	- un minimo di wave system per dire come i nemici vengono spawnati e con quanta frequenza
+	
+- dEVILery system
+	- overlap e premi pulsante per comprare, oppure overlappi con tempo
+	- toglie punteggio evil, spawna particles, non funziona finche non esci e rientri nella collision
+	- spawna un teschio volante con l'arma che viene verso di te e lascia cadere l'arma, poi va via di nuovo (o esplode)
+
+- tutti gli oggetti/nemici/armi/poteri presi e tolti da una pool
+	

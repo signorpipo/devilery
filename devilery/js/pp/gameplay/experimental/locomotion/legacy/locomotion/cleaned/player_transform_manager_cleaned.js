@@ -92,6 +92,15 @@ export class CleanedPlayerTransformManager {
         // Implemented outside class definition
     }
 
+    teleportAndReset(position, rotationQuat) {
+        this.teleportPosition(position, null, true);
+        if (rotationQuat != null) {
+            this.setRotationQuat(rotationQuat);
+        }
+        this.resetReal(true, false, false, true);
+        this.resetHeadToReal();
+    }
+
     rotateQuat(rotationQuat) {
         // Implemented outside class definition
     }

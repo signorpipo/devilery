@@ -12,35 +12,43 @@
  */
 
 /* wle:auto-imports:start */
+import {FixedFoveation} from '@wonderlandengine/components';
 import {MouseLookComponent} from '@wonderlandengine/components';
-import {FadeViewComponent} from './playground/fade_view_component.js';
-import {FunComponent} from './playground/fun_component.js';
-import {GrabbableSpawnerComponent} from './playground/grabbable_spawner_component.js';
-import {LoadAudioComponent} from './playground/load_audio_component.js';
+import {TargetFramerate} from '@wonderlandengine/components';
+import {BulletSpawnerComponent} from './devilery/cauldron/components/bullet_spawner_component.js';
+import {BuyButtonComponent} from './devilery/cauldron/components/buy_button_component.js';
+import {BuyHandComponent} from './devilery/cauldron/components/buy_hand_component.js';
+import {DevileryBossComponent} from './devilery/cauldron/components/devilery_boss_component.js';
+import {DevileryConsoleComponent} from './devilery/cauldron/components/devilery_console_component.js';
+import {DevileryGatewayComponent} from './devilery/cauldron/components/devilery_gateway_component.js';
+import {DevilerSkullComponent} from './devilery/cauldron/components/devilery_skull_component.js';
+import {EnemyComponent} from './devilery/cauldron/components/enemy_component.js';
+import {EvilPointComponent} from './devilery/cauldron/components/evil_point_component.js';
+import {EvilPointSpawnerComponent} from './devilery/cauldron/components/evil_point_spawner_component.js';
+import {FadeViewInOutComponent} from './devilery/cauldron/components/fade_view_in_out_component.js';
+import {FlapComponent} from './devilery/cauldron/components/flap_component.js';
+import {GoToTargetComponent} from './devilery/cauldron/components/go_to_target_component.js';
+import {PrincessComponent} from './devilery/cauldron/components/princess_component.js';
+import {SetPositionOnInitComponent} from './devilery/cauldron/components/set_position_on_init.js';
+import {ShipComponent} from './devilery/cauldron/components/ship_component.js';
+import {WeaponComponent} from './devilery/cauldron/components/weapon_component.js';
 import {ParticlesSpawnerComponent} from './playground/particles_spawner_component.js';
-import {PlayMusicComponent} from './playground/play_music_component.js';
-import {PlaygroundGatewayComponent} from './playground/playground_gateway.js';
 import {ScaleOnSpawnComponent} from './playground/scale_on_spawn_component.js';
-import {SFXOnCollisionComponent} from './playground/sfx_on_collision_component.js';
-import {SFXOnGrabThrowComponent} from './playground/sfx_on_grab_throw_component.js';
-import {TargetHitCheckComponent} from './playground/target_hit_check_component.js';
-import {WaveMovementComponent} from './playground/wave_movement_component.js';
+import {GrabberHandComponent} from './pp/gameplay/grab_throw/grabber_hand_component.js';
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
 import {GamepadMeshAnimatorComponent} from './pp/index.js';
 import {GrabbableComponent} from './pp/index.js';
-import {GrabberHandComponent} from './pp/index.js';
-import {MuteEverythingComponent} from './pp/index.js';
 import {PPGatewayComponent} from './pp/index.js';
 import {PlayerLocomotionComponent} from './pp/index.js';
 import {SetActiveComponent} from './pp/index.js';
 import {SetHandLocalTransformComponent} from './pp/index.js';
 import {SetHeadLocalTransformComponent} from './pp/index.js';
+import {ShowFPSComponent} from './pp/index.js';
 import {SpatialAudioListenerComponent} from './pp/index.js';
 import {SwitchHandObjectComponent} from './pp/index.js';
 import {ToolCursorComponent} from './pp/index.js';
 import {TrackedHandDrawAllJointsComponent} from './pp/index.js';
-import {VirtualGamepadComponent} from './pp/index.js';
 /* wle:auto-imports:end */
 
 import { loadRuntime } from '@wonderlandengine/api';
@@ -96,35 +104,43 @@ if (document.readyState === 'loading') {
 }
 
 /* wle:auto-register:start */
+engine.registerComponent(FixedFoveation);
 engine.registerComponent(MouseLookComponent);
-engine.registerComponent(FadeViewComponent);
-engine.registerComponent(FunComponent);
-engine.registerComponent(GrabbableSpawnerComponent);
-engine.registerComponent(LoadAudioComponent);
+engine.registerComponent(TargetFramerate);
+engine.registerComponent(BulletSpawnerComponent);
+engine.registerComponent(BuyButtonComponent);
+engine.registerComponent(BuyHandComponent);
+engine.registerComponent(DevileryBossComponent);
+engine.registerComponent(DevileryConsoleComponent);
+engine.registerComponent(DevileryGatewayComponent);
+engine.registerComponent(DevilerSkullComponent);
+engine.registerComponent(EnemyComponent);
+engine.registerComponent(EvilPointComponent);
+engine.registerComponent(EvilPointSpawnerComponent);
+engine.registerComponent(FadeViewInOutComponent);
+engine.registerComponent(FlapComponent);
+engine.registerComponent(GoToTargetComponent);
+engine.registerComponent(PrincessComponent);
+engine.registerComponent(SetPositionOnInitComponent);
+engine.registerComponent(ShipComponent);
+engine.registerComponent(WeaponComponent);
 engine.registerComponent(ParticlesSpawnerComponent);
-engine.registerComponent(PlayMusicComponent);
-engine.registerComponent(PlaygroundGatewayComponent);
 engine.registerComponent(ScaleOnSpawnComponent);
-engine.registerComponent(SFXOnCollisionComponent);
-engine.registerComponent(SFXOnGrabThrowComponent);
-engine.registerComponent(TargetHitCheckComponent);
-engine.registerComponent(WaveMovementComponent);
+engine.registerComponent(GrabberHandComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
 engine.registerComponent(GamepadMeshAnimatorComponent);
 engine.registerComponent(GrabbableComponent);
-engine.registerComponent(GrabberHandComponent);
-engine.registerComponent(MuteEverythingComponent);
 engine.registerComponent(PPGatewayComponent);
 engine.registerComponent(PlayerLocomotionComponent);
 engine.registerComponent(SetActiveComponent);
 engine.registerComponent(SetHandLocalTransformComponent);
 engine.registerComponent(SetHeadLocalTransformComponent);
+engine.registerComponent(ShowFPSComponent);
 engine.registerComponent(SpatialAudioListenerComponent);
 engine.registerComponent(SwitchHandObjectComponent);
 engine.registerComponent(ToolCursorComponent);
 engine.registerComponent(TrackedHandDrawAllJointsComponent);
-engine.registerComponent(VirtualGamepadComponent);
 /* wle:auto-register:end */
 
 engine.scene.load(`${Constants.ProjectName}.bin`);

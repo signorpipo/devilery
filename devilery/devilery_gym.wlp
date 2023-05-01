@@ -28,9 +28,12 @@
                     }
                 },
                 {
-                    "type": "pp-virtual-gamepad",
-                    "pp-virtual-gamepad": {
-                        "_myShowOnDesktop": true
+                    "type": "fixed-foveation"
+                },
+                {
+                    "type": "target-framerate",
+                    "target-framerate": {
+                        "framerate": 72.0
                     }
                 }
             ]
@@ -45,8 +48,22 @@
                         "_myPhysicsBlockLayerFlags": "0, 1, 0, 0, 0, 0, 0, 0",
                         "_myMoveThroughCollisionShortcutEnabled": true,
                         "_myFlyEnabled": true,
-                        "_myMaxSpeed": 3.5
+                        "_myMaxSpeed": 2.0,
+                        "_myMinAngleToFlyUpNonVR": 90.0,
+                        "_myMinAngleToFlyDownNonVR": 90.0,
+                        "_myMinAngleToFlyUpVR": 90.0,
+                        "_myMinAngleToFlyDownVR": 90.0,
+                        "_myMinAngleToFlyRight": 90.0
                     }
+                },
+                {
+                    "type": "set-position-on-init",
+                    "set-position-on-init": {
+                        "_myObjectPosition": "232"
+                    }
+                },
+                {
+                    "type": "pp-show-fps"
                 }
             ],
             "translation": [
@@ -316,8 +333,11 @@
                 {
                     "type": "pp-console-vr-tool",
                     "pp-console-vr-tool": {
-                        "_myHandedness": "Left"
-                    }
+                        "_myHandedness": "Left",
+                        "_myShowVisibilityButton": false,
+                        "_myShowOnStart": false
+                    },
+                    "active": true
                 },
                 {
                     "type": "pp-easy-tune-tool",
@@ -733,9 +753,9 @@
                         "shape": "box",
                         "box": {
                             "extents": [
-                                20.0,
+                                10.0,
                                 1.0,
-                                20.0
+                                10.0
                             ]
                         },
                         "groups": 2,
@@ -751,9 +771,9 @@
                 0.0
             ],
             "scaling": [
-                20.0,
+                10.0,
                 1.0,
-                20.0
+                10.0
             ],
             "rotation": [
                 0.0,
@@ -849,15 +869,1410 @@
                 0.9999997
             ]
         },
-        "198": {
-            "name": "Mesh",
-            "parent": "204",
+        "231": {
+            "name": "Gym",
+            "parent": "18",
+            "components": [
+                {
+                    "type": "devilery-gateway",
+                    "devilery-gateway": {
+                        "_myDebugEnabled": true,
+                        "_mySkipIntro": true,
+                        "_myClearConsoleOnStart": false,
+                        "_myStartDelayFrames": 30,
+                        "_myNeverInLove": true,
+                        "_myRandomEnemyDie": true,
+                        "_myAllFree": true,
+                        "_myFastDevilery": true
+                    }
+                }
+            ]
+        },
+        "232": {
+            "name": "Black Room",
+            "parent": "237",
+            "translation": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "233": {
+            "name": "White Room",
+            "parent": "237",
+            "translation": [
+                0.0,
+                -10.0,
+                0.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "237": {
+            "name": "Story Rooms",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -30.0,
+                0.0
+            ]
+        },
+        "238": {
+            "name": "Empty",
+            "parent": "237"
+        },
+        "240": {
+            "name": "Fades",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -80.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "241": {
+            "name": "Black Fade",
+            "parent": "240",
+            "components": [
+                {
+                    "type": "fade-view-in-out",
+                    "fade-view-in-out": {
+                        "_myTimeToFadeIn": 1.5,
+                        "_myTimeToFadeOut": 1.5
+                    }
+                }
+            ]
+        },
+        "242": {
+            "name": "White Fade",
+            "parent": "240",
+            "components": [
+                {
+                    "type": "fade-view-in-out",
+                    "fade-view-in-out": {
+                        "_myColor": "255, 255, 255",
+                        "_myTimeToFadeOut": 1.5,
+                        "_myTimeToFadeIn": 1.5,
+                        "_myScaleMultiplier": 1.0
+                    }
+                }
+            ]
+        },
+        "244": {
+            "name": "Room",
+            "parent": "232",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "235"
+                    }
+                }
+            ],
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ]
+        },
+        "245": {
+            "name": "Room",
+            "parent": "233",
+            "scaling": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "236"
+                    }
+                }
+            ]
+        },
+        "248": {
+            "name": "Player Start",
+            "parent": "231",
+            "translation": [
+                0.0,
+                0.0,
+                -10.0
+            ]
+        },
+        "249": {
+            "name": "Princess Tower",
+            "parent": "231"
+        },
+        "250": {
+            "name": "Tower",
+            "parent": "249",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.5,
+                                5.0,
+                                0.5
+                            ]
+                        },
+                        "static": true,
+                        "groups": 2,
+                        "block": 6
+                    }
+                },
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                5.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                5.0,
+                0.5
+            ]
+        },
+        "251": {
+            "name": "Princess",
+            "parent": "249",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "gravity": false,
+                        "kinematic": true,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 8,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.5,
+                                1.5,
+                                1.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "princess"
+                }
+            ],
+            "translation": [
+                0.0,
+                11.5,
+                2.9802322387695313e-8
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.5,
+                1.5,
+                1.5
+            ]
+        },
+        "252": {
+            "name": "Princess Target",
+            "parent": "249",
+            "translation": [
+                0.0,
+                11.5,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "253": {
+            "name": "Windows Targets",
+            "parent": "252",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "254": {
+            "name": "Window Target 1",
+            "parent": "253",
+            "translation": [
+                0.0,
+                0.0,
+                -15.0
+            ]
+        },
+        "255": {
+            "name": "Window Target 2",
+            "parent": "253",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "256": {
+            "name": "Window Target 3",
+            "parent": "253",
+            "translation": [
+                -15.0,
+                0.0,
+                0.0
+            ]
+        },
+        "257": {
+            "name": "Window Target 4",
+            "parent": "253",
+            "translation": [
+                15.0,
+                0.0,
+                0.0
+            ]
+        },
+        "258": {
+            "name": "Devilery Console",
+            "parent": "231",
+            "translation": [
+                -7.5,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.7071068,
+                0.0,
+                0.7071068
+            ],
+            "scaling": [
+                0.9999995,
+                1.0,
+                0.9999995
+            ],
+            "components": [
+                {
+                    "type": "devilery-console",
+                    "devilery-console": {
+                        "_myEvilTargetReceiver": "265"
+                    }
+                }
+            ]
+        },
+        "259": {
+            "name": "Console",
+            "parent": "258",
             "components": [
                 {
                     "type": "mesh",
                     "mesh": {
                         "mesh": "p1",
                         "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                1.0,
+                                0.6,
+                                0.6
+                            ]
+                        },
+                        "static": true,
+                        "groups": 2,
+                        "block": 7
+                    }
+                }
+            ],
+            "scaling": [
+                1.0,
+                0.6,
+                0.6
+            ],
+            "translation": [
+                -2.9802322387695313e-8,
+                0.6,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "260": {
+            "name": "Antenna",
+            "parent": "258",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 2,
+                        "block": 7,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                1.0,
+                                0.1
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                1.0,
+                -0.6999999
+            ],
+            "scaling": [
+                0.1,
+                1.0,
+                0.1
+            ]
+        },
+        "262": {
+            "name": "Evil Target",
+            "parent": "260",
+            "translation": [
+                0.0,
+                1.25,
+                -0.0000152
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                2.4999997,
+                0.25,
+                2.4999997
+            ]
+        },
+        "263": {
+            "name": "Weapon Table",
+            "parent": "258",
+            "translation": [
+                -2.449100406920479e-7,
+                0.5999999,
+                4.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.5,
+                0.6,
+                0.5
+            ],
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.5,
+                                0.6,
+                                0.5
+                            ]
+                        },
+                        "groups": 2,
+                        "block": 71,
+                        "static": true
+                    }
+                }
+            ]
+        },
+        "264": {
+            "name": "Weapon Target",
+            "parent": "263",
+            "translation": [
+                -4.768325538861973e-7,
+                6.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0000004,
+                1.0000001,
+                1.0000004
+            ]
+        },
+        "265": {
+            "name": "Receiver",
+            "parent": "260",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "static": true,
+                        "groups": 2,
+                        "block": 39,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                2.980232238769531e-7,
+                1.2499998,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                2.4999997,
+                0.25,
+                2.4999997
+            ]
+        },
+        "280": {
+            "name": "Ship",
+            "parent": "231",
+            "components": [
+                {
+                    "type": "ship"
+                }
+            ],
+            "translation": [
+                -50.0,
+                15.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "281": {
+            "name": "Mesh",
+            "parent": "280"
+        },
+        "282": {
+            "name": "Body",
+            "parent": "281",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                5.0,
+                5.0,
+                10.0
+            ]
+        },
+        "283": {
+            "name": "Nose",
+            "parent": "281",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                11.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                2.0,
+                2.0,
+                1.0
+            ]
+        },
+        "284": {
+            "name": "Enemy Spawn",
+            "parent": "280",
+            "translation": [
+                11.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "285": {
+            "name": "Devilery Boss",
+            "parent": "231",
+            "components": [
+                {
+                    "type": "devilery-boss"
+                }
+            ],
+            "translation": [
+                -50.0,
+                15.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "286": {
+            "name": "Enemies",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -60.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "291": {
+            "name": "Normal Bird",
+            "parent": "286",
+            "translation": [
+                -2.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "292": {
+            "name": "Pivot",
+            "parent": "291",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "293": {
+            "name": "Body",
+            "parent": "340",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "294": {
+            "name": "Nose",
+            "parent": "340",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "295": {
+            "name": "Strong Bird",
+            "parent": "286",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "296": {
+            "name": "Pivot",
+            "parent": "295",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "297": {
+            "name": "Body",
+            "parent": "345",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.4,
+                0.25,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "298": {
+            "name": "Nose",
+            "parent": "345",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.25,
+                0.1,
+                0.1
+            ]
+        },
+        "299": {
+            "name": "Shield Bird",
+            "parent": "286",
+            "translation": [
+                2.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": true
+                    }
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "300": {
+            "name": "Pivot",
+            "parent": "299",
+            "components": [
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "301": {
+            "name": "Body",
+            "parent": "352",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.4,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "302": {
+            "name": "Nose",
+            "parent": "352",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.25,
+                0.1
+            ]
+        },
+        "303": {
+            "name": "Particle Spawners",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -100.0,
+                0.0
+            ]
+        },
+        "304": {
+            "name": "Hearts Particles Spawner",
+            "parent": "380",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "305"
                     }
                 }
             ],
@@ -873,41 +2288,376 @@
                 1.0
             ],
             "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "305": {
+            "name": "Hearts",
+            "parent": "380",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "306": {
+            "name": "Heart 1",
+            "parent": "305",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "308": {
+            "name": "Mesh",
+            "parent": "306",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
                 0.05,
                 0.05,
                 0.05
             ]
         },
-        "204": {
-            "name": "Grabbable Prototype",
-            "parent": "231",
+        "309": {
+            "name": "Heart 2",
+            "parent": "305",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "310": {
+            "name": "Mesh",
+            "parent": "309",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "311": {
+            "name": "Enemy Die Particles Spawner",
+            "parent": "382",
             "components": [
                 {
-                    "type": "physx",
-                    "physx": {
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.05,
-                                0.05,
-                                0.05
-                            ]
-                        },
-                        "groups": 4,
-                        "block": 7,
-                        "gravity": true,
-                        "static": false,
-                        "kinematic": true
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "312"
                     }
-                },
-                {
-                    "type": "pp-grabbable"
                 }
             ],
             "translation": [
                 0.0,
-                1.35,
-                1.0
+                0.0,
+                0.0
             ],
             "rotation": [
                 0.0,
@@ -921,9 +2671,5604 @@
                 1.0
             ]
         },
-        "231": {
-            "name": "Gym",
-            "parent": "18"
+        "312": {
+            "name": "Enemy Die",
+            "parent": "382",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "313": {
+            "name": "Heart 1",
+            "parent": "312",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "314": {
+            "name": "Mesh",
+            "parent": "313",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "315": {
+            "name": "Heart 2",
+            "parent": "312",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "316": {
+            "name": "Mesh",
+            "parent": "315",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "317": {
+            "name": "Black Room Stories",
+            "parent": "232"
+        },
+        "318": {
+            "name": "Story 1",
+            "parent": "317",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 1"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "319": {
+            "name": "Story 2",
+            "parent": "317",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 2"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "320": {
+            "name": "Story 3",
+            "parent": "317",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 3"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "321": {
+            "name": "White Room Stories",
+            "parent": "233",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "322": {
+            "name": "Story 1",
+            "parent": "321",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 1",
+                        "material": "325"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "323": {
+            "name": "Story 2",
+            "parent": "321",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 2",
+                        "material": "325"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "324": {
+            "name": "Story 3",
+            "parent": "321",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Story 3",
+                        "material": "325"
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                1.0,
+                0.0,
+                -4.3711388286737935e-8
+            ]
+        },
+        "326": {
+            "name": "Evil Point Spawner",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -110.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "evil-point-spawner"
+                }
+            ]
+        },
+        "327": {
+            "name": "Evil Point",
+            "parent": "332",
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false,
+                        "_myIsEvilPoint": true,
+                        "_myMaxSpeed": 10.0
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 32,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "block": 2
+                    }
+                },
+                {
+                    "type": "evil-point"
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "329": {
+            "name": "Pivot",
+            "parent": "327",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "330": {
+            "name": "Body",
+            "parent": "329",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "332": {
+            "name": "Evil Points",
+            "parent": "326",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "333": {
+            "name": "Skull Particles Spawner",
+            "parent": "381",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myRadius": 0.1,
+                        "_myParticlesContainer": "334"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "334": {
+            "name": "Skull",
+            "parent": "381",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "335": {
+            "name": "Heart 1",
+            "parent": "334",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "336": {
+            "name": "Mesh",
+            "parent": "335",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "337": {
+            "name": "Heart 2",
+            "parent": "334",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "338": {
+            "name": "Mesh",
+            "parent": "337",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "339": {
+            "name": "Enemy",
+            "parent": "292",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "291",
+                        "_myAmountEvil": 5
+                    }
+                }
+            ]
+        },
+        "340": {
+            "name": "Normal",
+            "parent": "339"
+        },
+        "344": {
+            "name": "Enemy",
+            "parent": "296",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "295",
+                        "_myType": "Strong",
+                        "_myHits": 2
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "345": {
+            "name": "Normal",
+            "parent": "344"
+        },
+        "348": {
+            "name": "Hurt",
+            "parent": "344",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "349": {
+            "name": "Body",
+            "parent": "348",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.4,
+                0.25,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "350": {
+            "name": "Nose",
+            "parent": "348",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.25,
+                0.1,
+                0.1
+            ]
+        },
+        "351": {
+            "name": "Enemy",
+            "parent": "300",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "299",
+                        "_myType": "Shield"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.4,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "352": {
+            "name": "Normal",
+            "parent": "351"
+        },
+        "353": {
+            "name": "Shield",
+            "parent": "351",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "354": {
+            "name": "Body",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.4,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "355": {
+            "name": "Nose",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.25,
+                0.1
+            ]
+        },
+        "356": {
+            "name": "Shield Block",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 1.0
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 2,
+                        "block": 79
+                    }
+                }
+            ]
+        },
+        "357": {
+            "name": "Devilery Skulls",
+            "parent": "231",
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                -120.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "359": {
+            "name": "Devilery Skull 1",
+            "parent": "357",
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                },
+                {
+                    "type": "deviler-skull"
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "360": {
+            "name": "Pivot",
+            "parent": "359",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "361": {
+            "name": "Body",
+            "parent": "360",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myType": "Devilery Skull"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "362": {
+            "name": "Nose",
+            "parent": "360",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "363": {
+            "name": "Weapon Skull Targets",
+            "parent": "360",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "366": {
+            "name": "Devilery Skull 2",
+            "parent": "357",
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "go-to-target",
+                    "go-to-target": {
+                        "_myIsPrincess": false
+                    }
+                },
+                {
+                    "type": "deviler-skull"
+                },
+                {
+                    "type": "scale-on-spawn",
+                    "scale-on-spawn": {
+                        "_myScaleDuration": 1.0
+                    }
+                }
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "367": {
+            "name": "Pivot",
+            "parent": "366",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "flap"
+                }
+            ]
+        },
+        "368": {
+            "name": "Body",
+            "parent": "367",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": true,
+                        "allowSimulation": false,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myType": "Devilery Skull"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.25,
+                0.5
+            ]
+        },
+        "369": {
+            "name": "Nose",
+            "parent": "367",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "371": {
+            "name": "Weapons",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -140.0,
+                0.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "372": {
+            "name": "Apple Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.25
+                            ]
+                        },
+                        "block": 22,
+                        "groups": 4,
+                        "kinematic": true,
+                        "gravity": true
+                    }
+                },
+                {
+                    "type": "weapon",
+                    "weapon": {
+                        "_myAmmo": -1
+                    }
+                },
+                {
+                    "type": "pp-grabbable"
+                }
+            ],
+            "translation": [
+                -2.0,
+                0.0,
+                0.0
+            ]
+        },
+        "373": {
+            "name": "Mesh",
+            "parent": "372",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.25
+            ]
+        },
+        "374": {
+            "name": "Bat Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.25
+                            ]
+                        },
+                        "groups": 4,
+                        "block": 22,
+                        "kinematic": true,
+                        "gravity": true
+                    }
+                },
+                {
+                    "type": "weapon",
+                    "weapon": {
+                        "_myWeapon": "Bat"
+                    }
+                },
+                {
+                    "type": "pp-grabbable"
+                }
+            ],
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "375": {
+            "name": "Mesh",
+            "parent": "374",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.25
+            ]
+        },
+        "376": {
+            "name": "Skull Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "sphere",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.15,
+                                0.15
+                            ]
+                        },
+                        "groups": 4,
+                        "block": 22,
+                        "sphere": {
+                            "radius": 0.15
+                        },
+                        "kinematic": true,
+                        "gravity": true
+                    }
+                },
+                {
+                    "type": "weapon",
+                    "weapon": {
+                        "_myWeapon": "Skull"
+                    }
+                },
+                {
+                    "type": "pp-grabbable"
+                }
+            ],
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "377": {
+            "name": "Mesh",
+            "parent": "376",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.15,
+                0.15,
+                0.15
+            ]
+        },
+        "378": {
+            "name": "Voice Gun",
+            "parent": "371",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "sphere",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.15,
+                                0.15
+                            ]
+                        },
+                        "block": 22,
+                        "groups": 4,
+                        "sphere": {
+                            "radius": 0.15
+                        },
+                        "kinematic": true,
+                        "gravity": true
+                    }
+                },
+                {
+                    "type": "weapon",
+                    "weapon": {
+                        "_myAmmo": 100,
+                        "_myWeapon": "Voice"
+                    }
+                },
+                {
+                    "type": "pp-grabbable"
+                }
+            ],
+            "translation": [
+                2.0,
+                0.0,
+                0.0
+            ]
+        },
+        "379": {
+            "name": "Mesh",
+            "parent": "378",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.15,
+                0.15,
+                0.15
+            ]
+        },
+        "380": {
+            "name": "Heart",
+            "parent": "303"
+        },
+        "381": {
+            "name": "Skull",
+            "parent": "303"
+        },
+        "382": {
+            "name": "Enemy Die",
+            "parent": "303"
+        },
+        "383": {
+            "name": "Apple Target",
+            "parent": "363"
+        },
+        "384": {
+            "name": "Bat Target",
+            "parent": "363"
+        },
+        "385": {
+            "name": "Skull Target",
+            "parent": "363"
+        },
+        "386": {
+            "name": "Voice Target",
+            "parent": "363"
+        },
+        "397": {
+            "name": "Weapon Skull Targets",
+            "parent": "367",
+            "translation": [
+                0.0,
+                -0.75,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "398": {
+            "name": "Apple Target",
+            "parent": "397"
+        },
+        "399": {
+            "name": "Bat Target",
+            "parent": "397"
+        },
+        "400": {
+            "name": "Skull Target",
+            "parent": "397"
+        },
+        "401": {
+            "name": "Voice Target",
+            "parent": "397"
+        },
+        "407": {
+            "name": "Apple Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "408",
+                        "_myDisabledObject": "410"
+                    }
+                }
+            ],
+            "translation": [
+                -0.6499999,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "408": {
+            "name": "On",
+            "parent": "407",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "409": {
+            "name": "Handles",
+            "parent": "258",
+            "translation": [
+                0.0,
+                1.4339462,
+                0.2838792
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "410": {
+            "name": "Off",
+            "parent": "407",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "411": {
+            "name": "Trigger",
+            "parent": "99",
+            "translation": [
+                0.0,
+                -0.0367964,
+                0.0715703
+            ],
+            "rotation": [
+                0.2649303,
+                3.5521853192221897e-7,
+                2.279618911416037e-7,
+                0.9642675
+            ],
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.05
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 128,
+                        "block": 128,
+                        "trigger": false,
+                        "allowSimulation": true
+                    }
+                },
+                {
+                    "type": "buy-hand"
+                }
+            ],
+            "scaling": [
+                0.9999923,
+                0.9999998,
+                0.9999997
+            ]
+        },
+        "412": {
+            "name": "Trigger",
+            "parent": "107",
+            "translation": [
+                -0.0,
+                -0.0367964,
+                0.0715703
+            ],
+            "rotation": [
+                0.2649303,
+                3.5521853192221897e-7,
+                2.2796190535245842e-7,
+                0.9642675
+            ],
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 0.05
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 128,
+                        "block": 128,
+                        "trigger": false,
+                        "allowSimulation": true
+                    }
+                },
+                {
+                    "type": "buy-hand",
+                    "buy-hand": {
+                        "_myHandedness": "Right"
+                    }
+                }
+            ],
+            "scaling": [
+                0.9999925,
+                0.9999998,
+                0.9999998
+            ]
+        },
+        "413": {
+            "name": "Bat Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "414",
+                        "_myDisabledObject": "415",
+                        "_myWeapon": "Bat"
+                    }
+                }
+            ],
+            "translation": [
+                -0.25,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "414": {
+            "name": "On",
+            "parent": "413",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "415": {
+            "name": "Off",
+            "parent": "413",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "416": {
+            "name": "Skull Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "417",
+                        "_myDisabledObject": "418",
+                        "_myWeapon": "Skull"
+                    }
+                }
+            ],
+            "translation": [
+                0.25,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "417": {
+            "name": "On",
+            "parent": "416",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "418": {
+            "name": "Off",
+            "parent": "416",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "419": {
+            "name": "Voice Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "420",
+                        "_myDisabledObject": "421",
+                        "_myWeapon": "Voice"
+                    }
+                }
+            ],
+            "translation": [
+                0.6499999,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "420": {
+            "name": "On",
+            "parent": "419",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "421": {
+            "name": "Off",
+            "parent": "419",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "422": {
+            "name": "Exit Target",
+            "parent": "372",
+            "translation": [
+                0.0,
+                0.0,
+                0.3499999
+            ]
+        },
+        "423": {
+            "name": "Exit Target",
+            "parent": "374",
+            "translation": [
+                0.0,
+                0.0,
+                0.3499999
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "424": {
+            "name": "Exit Target",
+            "parent": "376",
+            "translation": [
+                0.0,
+                0.0,
+                0.2
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "425": {
+            "name": "Exit Target",
+            "parent": "378",
+            "translation": [
+                0.0,
+                0.0,
+                0.2
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "427": {
+            "name": "Buy",
+            "parent": "303"
+        },
+        "428": {
+            "name": "Buy Particles Spawner",
+            "parent": "427",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "429",
+                        "_myScaleMultiplier": 0.3,
+                        "_myRadius": 0.0099999,
+                        "_myMinAmount": 10,
+                        "_myMaxAmount": 15.0,
+                        "_mySpeedMultiplier": 0.5,
+                        "_myHorizontalSpeedMultiplier": 0.1,
+                        "_myVerticalSpeedMultiplier": 0.5
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "429": {
+            "name": "Buys",
+            "parent": "427",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "430": {
+            "name": "Heart 1",
+            "parent": "429",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "431": {
+            "name": "Mesh",
+            "parent": "430",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "432": {
+            "name": "Heart 2",
+            "parent": "429",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "433": {
+            "name": "Mesh",
+            "parent": "432",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "435": {
+            "name": "Bullet Spawners",
+            "parent": "231"
+        },
+        "436": {
+            "name": "Apple Bullet Spawner",
+            "parent": "435",
+            "components": [
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "449"
+                    }
+                }
+            ]
+        },
+        "438": {
+            "name": "Bullets",
+            "parent": "231",
+            "translation": [
+                0.0,
+                -160.0,
+                0.0
+            ]
+        },
+        "439": {
+            "name": "Bat Bullet Spawner",
+            "parent": "435",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "451"
+                    }
+                }
+            ]
+        },
+        "440": {
+            "name": "Skull Bullet Spawner",
+            "parent": "435",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "453"
+                    }
+                }
+            ]
+        },
+        "441": {
+            "name": "Voice Bullet Spawner",
+            "parent": "435",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "bullet-spawner",
+                    "bullet-spawner": {
+                        "_myBullet": "455"
+                    }
+                }
+            ]
+        },
+        "442": {
+            "name": "Shot",
+            "parent": "303"
+        },
+        "443": {
+            "name": "Shot Particles Spawner",
+            "parent": "442",
+            "components": [
+                {
+                    "type": "particles-spawner",
+                    "particles-spawner": {
+                        "_myParticlesContainer": "444",
+                        "_myScaleMultiplier": 0.3,
+                        "_myRadius": 0.0099999,
+                        "_myMinAmount": 10,
+                        "_myMaxAmount": 15.0,
+                        "_mySpeedMultiplier": 0.5,
+                        "_myHorizontalSpeedMultiplier": 0.1,
+                        "_myVerticalSpeedMultiplier": 0.5
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "444": {
+            "name": "Shot",
+            "parent": "442",
+            "translation": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "pp-set-active",
+                    "pp-set-active": {
+                        "_myActive": false
+                    }
+                }
+            ]
+        },
+        "445": {
+            "name": "Heart 1",
+            "parent": "444",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "446": {
+            "name": "Mesh",
+            "parent": "445",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "447": {
+            "name": "Heart 2",
+            "parent": "444",
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "448": {
+            "name": "Mesh",
+            "parent": "447",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ]
+        },
+        "449": {
+            "name": "Apple Bullet",
+            "parent": "438",
+            "translation": [
+                -1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "450": {
+            "name": "Mesh",
+            "parent": "449",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "451": {
+            "name": "Bat Bullet",
+            "parent": "438",
+            "translation": [
+                -0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "452": {
+            "name": "Mesh",
+            "parent": "451",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "453": {
+            "name": "Skull Bullet",
+            "parent": "438",
+            "translation": [
+                0.5,
+                0.0,
+                0.0
+            ]
+        },
+        "454": {
+            "name": "Mesh",
+            "parent": "453",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "455": {
+            "name": "Voice Bullet",
+            "parent": "438",
+            "translation": [
+                1.0,
+                0.0,
+                0.0
+            ]
+        },
+        "456": {
+            "name": "Mesh",
+            "parent": "455",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p2",
+                        "material": "148"
+                    }
+                }
+            ],
+            "scaling": [
+                0.05,
+                0.05,
+                0.05
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
         }
     },
     "meshes": {
@@ -1358,6 +8703,49 @@
                     1.0
                 ]
             }
+        },
+        "235": {
+            "name": "Black Room",
+            "pipeline": "234",
+            "Phong": {
+                "diffuseColor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        "236": {
+            "name": "White Room",
+            "pipeline": "234",
+            "Phong": {
+                "diffuseColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ambientColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        "325": {
+            "name": "White",
+            "pipeline": "82",
+            "Text": {
+                "font": "147",
+                "color": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            }
         }
     },
     "shaders": {
@@ -1487,13 +8875,17 @@
                     "hand-tracking": false
                 }
             },
-            "viewObject": "21"
+            "viewObject": "21",
+            "visualizePhysX": false
         },
         "scripting": {
             "sourcePaths": [
                 "js",
                 "js/pp/index.js",
-                "js/playground"
+                "js/playground",
+                "js/devilery",
+                "js/devilery/cauldron",
+                "js/devilery/cauldron/components"
             ],
             "bundlingType": "esbuild",
             "libraryPaths": [
@@ -1516,11 +8908,11 @@
                 "0": "Player",
                 "1": "Solid",
                 "2": "Interactable",
-                "3": "Group 3",
-                "4": "Group 4",
-                "5": "Group 5",
-                "6": "Group 6",
-                "7": "Group 7"
+                "3": "Princess",
+                "4": "Enemy",
+                "5": "Evil Point",
+                "6": "Bullet",
+                "7": "Buy"
             }
         }
     },
@@ -1571,6 +8963,20 @@
                 "WITH_EMISSIVE": false,
                 "NORMAL_MAPPING": false
             }
+        },
+        "234": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            },
+            "features": {
+                "WITH_FOG": true,
+                "VERTEX_COLORS": false,
+                "WITH_EMISSIVE": false,
+                "NORMAL_MAPPING": false
+            },
+            "name": "Phong Opaque Double",
+            "doubleSided": true
         },
         "14": {
             "link": {

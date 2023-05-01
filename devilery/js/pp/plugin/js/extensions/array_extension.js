@@ -102,8 +102,9 @@
             - vec3_rotationTo       / vec3_rotationToPivoted
             - vec3_toRadians        / vec3_toDegrees            / vec3_toQuat       / vec3_toMatrix
             - vec3_addRotation
-            - vec3_log       / vec3_error         / vec3_warn    
+            - vec3_perpendicularRandom 
             - vec3_lerp      / vec3_interpolate 
+            - vec3_log       / vec3_error         / vec3_warn   
             
         VECTOR 4:
             ○ vec4_set      / vec4_copy
@@ -1500,6 +1501,46 @@ export function initArrayExtensionProtoype() {
         return this.vec3_lerp(to, lerpValue, out);
     };
 
+    arrayExtension.vec3_perpendicularRandom = function () {
+        let notThis = vec3_create();
+        return function vec3_perpendicularRandom(out = vec3_create()) {
+            if (this.vec3_isZero()) {
+                return out.vec3_zero();
+            }
+
+            notThis.vec3_copy(this);
+
+            let zeroAmount = false;
+            for (let i = 0; i < 3; i++) {
+                if (this[i] == 0) {
+                    zeroAmount++;
+                }
+            }
+
+            if (zeroAmount == 2) {
+                if (notThis[0] == 0) {
+                    notThis[0] = 1;
+                } else if (notThis[1] == 0) {
+                    notThis[1] = 1;
+                } else if (notThis[2] == 0) {
+                    notThis[2] = 1;
+                }
+            } else {
+                if (notThis[0] != 0) {
+                    notThis[0] = -notThis[0];
+                } else if (notThis[1] != 0) {
+                    notThis[1] = -notThis[1];
+                } else if (notThis[2] != 0) {
+                    notThis[2] = -notThis[2];
+                }
+            }
+
+            notThis.vec3_cross(this, out);
+
+            return out;
+        };
+    }();
+
     // VECTOR 4
 
     // glMatrix Bridge
@@ -2789,6 +2830,11 @@ let _quat_setAxes = function () {
             if (angleBetween > Math.PP_EPSILON) {
                 currentAxis.vec3_cross(firstAxis, rotationAxis);
                 rotationAxis.vec3_normalize(rotationAxis);
+
+                if (rotationAxis.vec3_isZero()) {
+                    currentAxis.vec3_perpendicularRandom(rotationAxis);
+                }
+
                 rotationQuat.quat_fromAxisRadians(angleBetween, rotationAxis);
 
                 vector.quat_rotateQuat(rotationQuat, vector);

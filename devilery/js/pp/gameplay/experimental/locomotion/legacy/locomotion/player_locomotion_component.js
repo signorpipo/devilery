@@ -123,6 +123,7 @@ export class PlayerLocomotionComponent extends Component {
             this._myStartCounter--;
             if (this._myStartCounter == 0) {
                 this._myPlayerLocomotion.start();
+                this._myPlayerLocomotion.setIdle(true);
 
                 this._myPlayerLocomotion._myPlayerTransformManager.resetReal(true, false, false, true);
                 this._myPlayerLocomotion._myPlayerTransformManager.resetHeadToReal();

@@ -7,6 +7,7 @@ import { vec3_create, vec4_create } from "../../plugin/js/extensions/array_exten
 import { EasingFunction } from "../../plugin/js/extensions/math_extension";
 import { Globals } from "../../pp/globals";
 import { GrabbableComponent } from "./grabbable_component";
+import { WeaponComponent } from "../../../devilery/cauldron/components/weapon_component";
 
 export class GrabberHandComponent extends Component {
     static TypeName = "pp-grabber-hand";
@@ -71,6 +72,16 @@ export class GrabberHandComponent extends Component {
         if (this._myGrabbables.length > 0) {
             this._updateLinearVelocityHistory();
             this._updateAngularVelocityHistory();
+
+            if (this._myGamepad.getButtonInfo(GamepadButtonID.SELECT).isPressStart()) {
+                for (let grabbableData of this._myGrabbables) {
+                    let grabbableObject = grabbableData.getGrabbable().object;
+                    let weapon = grabbableObject.pp_getComponent(WeaponComponent)
+                    if (weapon != null) {
+                        weapon.shot();
+                    }
+                }
+            }
         }
     }
 
@@ -178,8 +189,11 @@ export class GrabberHandComponent extends Component {
                     grabbableToGrab.grab(this.object);
                     grabbableToGrab.registerReleaseEventListener(this, this._onRelease.bind(this));
 
-                    if (this._mySnapOnPivot) {
+                    if (grabbableToGrab.object.pp_getComponent(WeaponComponent) || this._mySnapOnPivot) {
                         grabbableToGrab.object.pp_resetPositionLocal();
+                    }
+                    if (grabbableToGrab.object.pp_getComponent(WeaponComponent)) {
+                        grabbableToGrab.object.pp_resetRotationLocal();
                     }
 
                     this._myGrabEmitter.notify(this, grabbableToGrab);
