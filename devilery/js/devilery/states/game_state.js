@@ -3,7 +3,7 @@ import { GameGlobals } from "../cauldron/game_globals";
 
 export class GameState {
     constructor() {
-        this._myPlayerStart = Globals.getScene().pp_getObjectByName("Player Start");
+        this._myPlayerStart = GameGlobals.myScene.pp_getObjectByName("Player Start");
 
         this._myFSM = new FSM();
         //this._myFSM.setLogEnabled(true, "  Game");

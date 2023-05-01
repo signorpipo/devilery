@@ -16,7 +16,7 @@ export class ShipComponent extends Component {
 
         this._myZero = vec3_create();
 
-        this._mySpawnObject = Globals.getScene().pp_getObjectByName("Enemy Spawn");
+        this._mySpawnObject = GameGlobals.myScene.pp_getObjectByName("Enemy Spawn");
 
         this._myEnemyPools = new ObjectPoolsManager();
         this._myEnemyTimers = [];
@@ -36,7 +36,7 @@ export class ShipComponent extends Component {
 
             this._myStarted = true;
         } else {
-            this._update(dt * 0.10);
+            this._update(dt * 10);
         }
     }
 
@@ -133,13 +133,13 @@ export class ShipComponent extends Component {
         poolParams.myInitialPoolSize = 10;
         poolParams.myPercentageToAddWhenEmpty = 1;
 
-        let normalBird = Globals.getScene().pp_getObjectByName("Normal Bird");
+        let normalBird = GameGlobals.myScene.pp_getObjectByName("Normal Bird");
         this._myEnemyPools.addPool(EnemyType.NORMAL_BIRD, normalBird, poolParams);
 
-        let strongBird = Globals.getScene().pp_getObjectByName("Strong Bird");
+        let strongBird = GameGlobals.myScene.pp_getObjectByName("Strong Bird");
         this._myEnemyPools.addPool(EnemyType.STRONG_BIRD, strongBird, poolParams);
 
-        let shieldlBird = Globals.getScene().pp_getObjectByName("Shield Bird");
+        let shieldlBird = GameGlobals.myScene.pp_getObjectByName("Shield Bird");
         this._myEnemyPools.addPool(EnemyType.SHIELD_BIRD, shieldlBird, poolParams);
     }
 

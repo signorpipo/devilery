@@ -3,9 +3,9 @@ import { GameGlobals } from "../cauldron/game_globals";
 
 export class EndingState {
     constructor() {
-        this._myWhiteRoom = Globals.getScene().pp_getObjectByName("White Room");
+        this._myWhiteRoom = GameGlobals.myScene.pp_getObjectByName("White Room");
 
-        this._myWhiteRoomStories = Globals.getScene().pp_getObjectByName("White Room Stories").pp_getChildren();
+        this._myWhiteRoomStories = GameGlobals.myScene.pp_getObjectByName("White Room Stories").pp_getChildren();
         this._myCurrentStoryIndex = 0;
 
         this._myFSM = new FSM();

@@ -49,29 +49,29 @@ export class Devilery {
         GameGlobals.myPlayerLocomotion = playerLocomotionComponent._myPlayerLocomotion;
         GameGlobals.myPlayerTransformManager = playerLocomotionComponent._myPlayerLocomotion._myPlayerTransformManager;
 
-        GameGlobals.myBlackFade = Globals.getScene().pp_getObjectByName("Black Fade").pp_getComponent(FadeViewInOutComponent);
-        GameGlobals.myWhiteFade = Globals.getScene().pp_getObjectByName("White Fade").pp_getComponent(FadeViewInOutComponent);
+        GameGlobals.myBlackFade = GameGlobals.myScene.pp_getObjectByName("Black Fade").pp_getComponent(FadeViewInOutComponent);
+        GameGlobals.myWhiteFade = GameGlobals.myScene.pp_getObjectByName("White Fade").pp_getComponent(FadeViewInOutComponent);
 
-        GameGlobals.myPrincessTarget = Globals.getScene().pp_getObjectByName("Princess Target");
+        GameGlobals.myPrincessTarget = GameGlobals.myScene.pp_getObjectByName("Princess Target");
 
-        GameGlobals.myWindowsTargets = Globals.getScene().pp_getObjectByName("Windows Targets").pp_getChildren();
+        GameGlobals.myWindowsTargets = GameGlobals.myScene.pp_getObjectByName("Windows Targets").pp_getChildren();
 
-        GameGlobals.myEvilTarget = Globals.getScene().pp_getObjectByName("Evil Target");
+        GameGlobals.myEvilTarget = GameGlobals.myScene.pp_getObjectByName("Evil Target");
 
-        GameGlobals.myWeaponTarget = Globals.getScene().pp_getObjectByName("Weapon Target");
+        GameGlobals.myWeaponTarget = GameGlobals.myScene.pp_getObjectByName("Weapon Target");
 
-        GameGlobals.myShip = Globals.getScene().pp_getObjectByName("Ship").pp_getComponent(ShipComponent);
-        GameGlobals.myDevileryBoss = Globals.getScene().pp_getObjectByName("Devilery Boss").pp_getComponent(DevileryBossComponent);
+        GameGlobals.myShip = GameGlobals.myScene.pp_getObjectByName("Ship").pp_getComponent(ShipComponent);
+        GameGlobals.myDevileryBoss = GameGlobals.myScene.pp_getObjectByName("Devilery Boss").pp_getComponent(DevileryBossComponent);
 
-        GameGlobals.myPrincess = Globals.getScene().pp_getComponent(PrincessComponent);
+        GameGlobals.myPrincess = GameGlobals.myScene.pp_getComponent(PrincessComponent);
 
-        GameGlobals.myHeartsParticlesSpawner = Globals.getScene().pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
-        GameGlobals.myEnemyDieParticlesSpawner = Globals.getScene().pp_getObjectByName("Enemy Die Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
-        GameGlobals.mySkullParticlesSpawner = Globals.getScene().pp_getObjectByName("Skull Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
-        GameGlobals.myBuyParticlesSpawner = Globals.getScene().pp_getObjectByName("Buy Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myHeartsParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Hearts Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myEnemyDieParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Enemy Die Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.mySkullParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Skull Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
+        GameGlobals.myBuyParticlesSpawner = GameGlobals.myScene.pp_getObjectByName("Buy Particles Spawner").pp_getComponent(ParticlesSpawnerComponent);
 
-        GameGlobals.myEvilPointSpawner = Globals.getScene().pp_getObjectByName("Evil Point Spawner").pp_getComponent(EvilPointSpawnerComponent);
+        GameGlobals.myEvilPointSpawner = GameGlobals.myScene.pp_getObjectByName("Evil Point Spawner").pp_getComponent(EvilPointSpawnerComponent);
 
-        GameGlobals.myDevileryConsole = Globals.getScene().pp_getObjectByName("Devilery Console").pp_getComponent(DevileryConsoleComponent);
+        GameGlobals.myDevileryConsole = GameGlobals.myScene.pp_getObjectByName("Devilery Console").pp_getComponent(DevileryConsoleComponent);
     }
 }

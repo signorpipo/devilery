@@ -32,7 +32,7 @@ export class EvilPointSpawnerComponent extends Component {
         poolParams.myInitialPoolSize = 10;
         poolParams.myPercentageToAddWhenEmpty = 1;
 
-        let evilPoint = Globals.getScene().pp_getObjectByName("Evil Point");
+        let evilPoint = GameGlobals.myScene.pp_getObjectByName("Evil Point");
         this._myEvilPointPools.addPool(0, evilPoint, poolParams);
     }
 

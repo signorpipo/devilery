@@ -19,7 +19,7 @@ export class DevilerSkullComponent extends Component {
             vec3_create(Math.pp_random(-5, 5), Math.pp_random(-5, 5), Math.pp_random(-5, 5))));
         this.object.pp_rotateAroundAxis(Math.pp_random(0, 360), GameGlobals.myUp, this._myZero);
 
-        GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
+        //GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
     }
 
     release() {
@@ -33,7 +33,7 @@ export class DevilerSkullComponent extends Component {
     }
 
     despawn() {
-        GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
+        //GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
         GameGlobals.myDevileryBoss.devilerySkullDespawn(this.object);
     }
 

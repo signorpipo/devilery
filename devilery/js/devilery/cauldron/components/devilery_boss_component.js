@@ -30,7 +30,7 @@ export class DevileryBossComponent extends Component {
         this._myDevilerySkullPools = new ObjectPoolsManager();
         this._myDevilerySkulls = [];
 
-        this._myDevilerySkullsTypes = Globals.getScene().pp_getObjectByName("Devilery Skulls").pp_getChildren();
+        this._myDevilerySkullsTypes = GameGlobals.myScene.pp_getObjectByName("Devilery Skulls").pp_getChildren();
 
         let poolParams = new ObjectPoolParams();
 
@@ -44,7 +44,7 @@ export class DevileryBossComponent extends Component {
         this._myWeaponPools = new ObjectPoolsManager();
         this._myWeapons = [];
 
-        let weaponTypes = Globals.getScene().pp_getObjectByName("Weapons");
+        let weaponTypes = GameGlobals.myScene.pp_getObjectByName("Weapons");
 
         this._myWeaponPools.addPool(WeaponType.APPLE, weaponTypes.pp_getObjectByName("Apple Gun"), poolParams);
         this._myWeaponPools.addPool(WeaponType.BAT, weaponTypes.pp_getObjectByName("Bat Gun"), poolParams);

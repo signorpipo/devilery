@@ -3,9 +3,9 @@ import { GameGlobals } from "../cauldron/game_globals";
 
 export class IntroState {
     constructor() {
-        this._myBlackRoom = Globals.getScene().pp_getObjectByName("Black Room");
+        this._myBlackRoom = GameGlobals.myScene.pp_getObjectByName("Black Room");
 
-        this._myBlackRoomStories = Globals.getScene().pp_getObjectByName("Black Room Stories").pp_getChildren();
+        this._myBlackRoomStories = GameGlobals.myScene.pp_getObjectByName("Black Room Stories").pp_getChildren();
         this._myCurrentStoryIndex = 0;
 
         this._myFSM = new FSM();

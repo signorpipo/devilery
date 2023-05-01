@@ -27,6 +27,8 @@ export class DevileryGatewayComponent extends Component {
     }
 
     start() {
+        GameGlobals.myScene = this.object;
+
         GameGlobals.myDebugEnabled = this._myDebugEnabled && Globals.isDebugEnabled();
         GameGlobals.mySkipIntro = this._mySkipIntro && Globals.isDebugEnabled();
         GameGlobals.myNeverInLove = this._myNeverInLove && Globals.isDebugEnabled();

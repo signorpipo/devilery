@@ -1,6 +1,8 @@
 import { vec3_create } from "../../pp";
 
 export let GameGlobals = {
+    myScene: null,
+
     myUp: vec3_create(0, 1, 0),
 
     myStarted: false,
