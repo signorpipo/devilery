@@ -1876,103 +1876,6 @@
                 2.4999997
             ]
         },
-        "266": {
-            "name": "Enemy",
-            "parent": "231",
-            "translation": [
-                -20.0,
-                20.0,
-                20.0
-            ],
-            "components": [
-                {
-                    "type": "go-to-target",
-                    "go-to-target": {
-                        "_myIsPrincess": true
-                    }
-                },
-                {
-                    "type": "pp-set-active",
-                    "pp-set-active": {
-                        "_myActive": false
-                    }
-                }
-            ]
-        },
-        "267": {
-            "name": "Pivot",
-            "parent": "266",
-            "components": [
-                {
-                    "type": "flap"
-                }
-            ]
-        },
-        "268": {
-            "name": "Body",
-            "parent": "267",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": true,
-                        "allowSimulation": false,
-                        "groups": 16,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.25,
-                                0.25,
-                                0.5
-                            ]
-                        }
-                    }
-                }
-            ],
-            "scaling": [
-                0.25,
-                0.25,
-                0.5
-            ]
-        },
-        "269": {
-            "name": "Nose",
-            "parent": "267",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.5
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                0.1,
-                0.1,
-                0.1
-            ]
-        },
         "273": {
             "name": "Devilery Guy",
             "parent": "231",
@@ -2412,7 +2315,7 @@
         },
         "293": {
             "name": "Body",
-            "parent": "292",
+            "parent": "340",
             "components": [
                 {
                     "type": "mesh",
@@ -2420,42 +2323,28 @@
                         "mesh": "p1",
                         "material": "148"
                     }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": false,
-                        "allowSimulation": true,
-                        "groups": 16,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.25,
-                                0.25,
-                                0.5
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "enemy",
-                    "enemy": {
-                        "_myEnemy": "291",
-                        "_myAmountEvil": 5
-                    }
                 }
             ],
             "scaling": [
                 0.25,
                 0.25,
                 0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         },
         "294": {
             "name": "Nose",
-            "parent": "292",
+            "parent": "340",
             "components": [
                 {
                     "type": "mesh",
@@ -2521,7 +2410,7 @@
         },
         "297": {
             "name": "Body",
-            "parent": "296",
+            "parent": "345",
             "components": [
                 {
                     "type": "mesh",
@@ -2529,41 +2418,28 @@
                         "mesh": "p1",
                         "material": "148"
                     }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": false,
-                        "allowSimulation": true,
-                        "groups": 16,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.4,
-                                0.25,
-                                0.5
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "enemy",
-                    "enemy": {
-                        "_myEnemy": "295"
-                    }
                 }
             ],
             "scaling": [
                 0.4,
                 0.25,
                 0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         },
         "298": {
             "name": "Nose",
-            "parent": "296",
+            "parent": "345",
             "components": [
                 {
                     "type": "mesh",
@@ -2629,7 +2505,7 @@
         },
         "301": {
             "name": "Body",
-            "parent": "300",
+            "parent": "352",
             "components": [
                 {
                     "type": "mesh",
@@ -2637,41 +2513,28 @@
                         "mesh": "p1",
                         "material": "148"
                     }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": false,
-                        "allowSimulation": true,
-                        "groups": 16,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.25,
-                                0.4,
-                                0.5
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "enemy",
-                    "enemy": {
-                        "_myEnemy": "299"
-                    }
                 }
             ],
             "scaling": [
                 0.25,
                 0.4,
                 0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         },
         "302": {
             "name": "Nose",
-            "parent": "300",
+            "parent": "352",
             "components": [
                 {
                     "type": "mesh",
@@ -4590,6 +4453,722 @@
                 0.05,
                 0.05
             ]
+        },
+        "339": {
+            "name": "Enemy",
+            "parent": "292",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "291",
+                        "_myAmountEvil": 5
+                    }
+                }
+            ]
+        },
+        "340": {
+            "name": "Normal",
+            "parent": "339"
+        },
+        "344": {
+            "name": "Enemy",
+            "parent": "296",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "295",
+                        "_myType": "Strong",
+                        "_myHits": 2
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.4,
+                                0.25,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "345": {
+            "name": "Normal",
+            "parent": "344"
+        },
+        "348": {
+            "name": "Hurt",
+            "parent": "344",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "349": {
+            "name": "Body",
+            "parent": "348",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.4,
+                0.25,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "350": {
+            "name": "Nose",
+            "parent": "348",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.25,
+                0.1,
+                0.1
+            ]
+        },
+        "351": {
+            "name": "Enemy",
+            "parent": "300",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "enemy",
+                    "enemy": {
+                        "_myEnemy": "299",
+                        "_myType": "Shield"
+                    }
+                },
+                {
+                    "type": "physx",
+                    "physx": {
+                        "kinematic": true,
+                        "gravity": false,
+                        "trigger": false,
+                        "allowSimulation": true,
+                        "groups": 16,
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.25,
+                                0.4,
+                                0.5
+                            ]
+                        }
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "352": {
+            "name": "Normal",
+            "parent": "351"
+        },
+        "353": {
+            "name": "Shield",
+            "parent": "351",
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "354": {
+            "name": "Body",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "scaling": [
+                0.25,
+                0.4,
+                0.5
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "355": {
+            "name": "Nose",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.5
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.25,
+                0.1
+            ]
+        },
+        "356": {
+            "name": "Shield Block",
+            "parent": "353",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "sphere": {
+                            "radius": 1.0
+                        },
+                        "gravity": false,
+                        "kinematic": true,
+                        "groups": 2,
+                        "block": 79
+                    }
+                }
+            ]
         }
     },
     "meshes": {
@@ -5196,7 +5775,8 @@
                     "hand-tracking": false
                 }
             },
-            "viewObject": "21"
+            "viewObject": "21",
+            "visualizePhysX": false
         },
         "scripting": {
             "sourcePaths": [
@@ -5231,7 +5811,7 @@
                 "3": "Princess",
                 "4": "Enemy",
                 "5": "Evil Point",
-                "6": "Projectile",
+                "6": "Bullet",
                 "7": "Group 7"
             }
         }

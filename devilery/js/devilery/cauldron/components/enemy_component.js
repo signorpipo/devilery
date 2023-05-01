@@ -8,6 +8,9 @@ export class EnemyComponent extends Component {
     static Properties = {
         _myEnemy: Property.object(),
         _myHits: Property.int(1),
+        _myType: Property.enum(["Normal", "Strong", "Shield"], "Normal"),
+        _myShieldActiveTime: Property.float(1),
+        _myShieldInactiveTime: Property.float(1),
         _myAmountEvil: Property.int(0)
     };
 
@@ -28,12 +31,36 @@ export class EnemyComponent extends Component {
     }
 
     _start() {
-        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 3) == 0);
+        this._myTimerDie = new Timer(Math.pp_random(3, 4), Math.pp_randomInt(0, 0) == 0);
 
         this._myPhysX = this.object.pp_getComponent(PhysXComponent);
         this._myCollisionsCollector = new PhysicsCollisionCollector(this._myPhysX);
 
         this._myCurrentHits = this._myHits;
+
+        this._myNormalObject = this.object.pp_getObjectByName("Normal");
+        this._myHurtObject = this.object.pp_getObjectByName("Hurt");
+        this._myShieldObject = this.object.pp_getObjectByName("Shield");
+
+        if (this._myNormalObject != null) {
+            this._myNormalObject.pp_resetTransformLocal();
+            this._myNormalObject.pp_setActive(true);
+        }
+
+        if (this._myHurtObject != null) {
+            this._myHurtObject.pp_resetTransformLocal();
+            this._myHurtObject.pp_setActive(false);
+        }
+
+        if (this._myShieldObject != null) {
+            this._myShieldObject.pp_resetTransformLocal();
+            this._myShieldObject.pp_setActive(false);
+        }
+
+        this._myTimerShieldActive = new Timer(this._myShieldActiveTime);
+        this._myTimerShieldInactive = new Timer(this._myShieldInactiveTime);
+
+        this._myShieldActive = false;
     }
 
     _update(dt) {
@@ -42,6 +69,26 @@ export class EnemyComponent extends Component {
             if (this._myTimerDie.isJustDone()) {
                 this._hit();
                 this._myTimerDie.start();
+            }
+        }
+
+        if (this._myType == 2) {
+            if (this._myShieldActive) {
+                this._myTimerShieldActive.update(dt);
+                if (this._myTimerShieldActive.isJustDone()) {
+                    this._myShieldActive = false;
+                    this._myShieldObject.pp_setActive(false);
+                    this._myNormalObject.pp_setActive(true);
+                    this._myTimerShieldInactive.start();
+                }
+            } else {
+                this._myTimerShieldInactive.update(dt);
+                if (this._myTimerShieldInactive.isJustDone()) {
+                    this._myShieldActive = true;
+                    this._myShieldObject.pp_setActive(true);
+                    this._myNormalObject.pp_setActive(false);
+                    this._myTimerShieldActive.start();
+                }
             }
         }
 
@@ -93,9 +140,16 @@ export class EnemyComponent extends Component {
     }
 
     _hit() {
-        this._myCurrentHits--;
-        if (this._myCurrentHits == 0) {
-            this.die();
+        if (!this._myShieldActive) {
+            this._myCurrentHits--;
+            if (this._myCurrentHits == 0) {
+                this.die();
+            } else if (this._myType == 1) {
+                if (this._myHurtObject != null) {
+                    this._myNormalObject.pp_setActive(false);
+                    this._myHurtObject.pp_setActive(true);
+                }
+            }
         }
     }
 }
