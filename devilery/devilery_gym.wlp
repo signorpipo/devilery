@@ -860,78 +860,6 @@
                 0.9999997
             ]
         },
-        "198": {
-            "name": "Mesh",
-            "parent": "204",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                0.05,
-                0.05,
-                0.05
-            ]
-        },
-        "204": {
-            "name": "Grabbable Prototype",
-            "parent": "231",
-            "components": [
-                {
-                    "type": "physx",
-                    "physx": {
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.05,
-                                0.05,
-                                0.05
-                            ]
-                        },
-                        "groups": 4,
-                        "block": 7,
-                        "gravity": true,
-                        "static": false,
-                        "kinematic": true
-                    }
-                },
-                {
-                    "type": "pp-grabbable"
-                }
-            ],
-            "translation": [
-                0.0,
-                1.35,
-                1.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
         "231": {
             "name": "Gym",
             "parent": "18",
@@ -1874,296 +1802,6 @@
                 2.4999997,
                 0.25,
                 2.4999997
-            ]
-        },
-        "273": {
-            "name": "Devilery Guy",
-            "parent": "231",
-            "translation": [
-                -10.0,
-                25.0,
-                10.0
-            ],
-            "components": [
-                {
-                    "type": "go-to-target",
-                    "go-to-target": {
-                        "_myIsPrincess": false
-                    }
-                },
-                {
-                    "type": "deviler-skull"
-                },
-                {
-                    "type": "pp-set-active",
-                    "pp-set-active": {
-                        "_myActive": false
-                    }
-                }
-            ]
-        },
-        "274": {
-            "name": "Pivot",
-            "parent": "273",
-            "components": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
-                    "type": "flap"
-                }
-            ]
-        },
-        "275": {
-            "name": "Body",
-            "parent": "274",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "148"
-                    }
-                },
-                {
-                    "type": "physx",
-                    "physx": {
-                        "kinematic": true,
-                        "gravity": false,
-                        "trigger": true,
-                        "allowSimulation": false,
-                        "groups": 16,
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.25,
-                                0.25,
-                                0.5
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "enemy",
-                    "enemy": {
-                        "_myType": "Devilery Skull",
-                        "_myEnemy": "273"
-                    }
-                }
-            ],
-            "scaling": [
-                0.25,
-                0.25,
-                0.5
-            ]
-        },
-        "276": {
-            "name": "Nose",
-            "parent": "274",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "translation": [
-                0.0,
-                0.0,
-                0.5
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                0.1,
-                0.1,
-                0.1
-            ]
-        },
-        "278": {
-            "name": "Weapon",
-            "parent": "402",
-            "components": [
-                {
-                    "type": "physx",
-                    "physx": {
-                        "shape": "box",
-                        "box": {
-                            "extents": [
-                                0.1,
-                                0.1,
-                                0.4
-                            ]
-                        },
-                        "kinematic": true,
-                        "groups": 4,
-                        "block": 6
-                    }
-                },
-                {
-                    "type": "weapon"
-                }
-            ],
-            "translation": [
-                -9.0,
-                145.0,
-                10.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "279": {
-            "name": "Mesh",
-            "parent": "278",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "p1",
-                        "material": "149"
-                    }
-                }
-            ],
-            "scaling": [
-                0.1,
-                0.1,
-                0.4
             ]
         },
         "280": {
@@ -6047,42 +5685,6 @@
             "name": "Voice Target",
             "parent": "397"
         },
-        "402": {
-            "name": "Weapon Skull Targets",
-            "parent": "274",
-            "translation": [
-                9.0,
-                -145.75,
-                -10.0
-            ],
-            "rotation": [
-                0.0,
-                0.0,
-                0.0,
-                1.0
-            ],
-            "scaling": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        "403": {
-            "name": "Apple Target",
-            "parent": "402"
-        },
-        "404": {
-            "name": "Bat Target",
-            "parent": "402"
-        },
-        "405": {
-            "name": "Skull Target",
-            "parent": "402"
-        },
-        "406": {
-            "name": "Voice Target",
-            "parent": "402"
-        },
         "407": {
             "name": "Apple Handle",
             "parent": "409",
@@ -6193,7 +5795,7 @@
             ],
             "translation": [
                 0.0,
-                -0.895053,
+                0.0,
                 0.0000019
             ],
             "rotation": [
@@ -6287,6 +5889,324 @@
                 0.9999925,
                 0.9999998,
                 0.9999998
+            ]
+        },
+        "413": {
+            "name": "Bat Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "414",
+                        "_myDisabledObject": "415",
+                        "_myWeapon": "Bat"
+                    }
+                }
+            ],
+            "translation": [
+                -0.25,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "414": {
+            "name": "On",
+            "parent": "413",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "415": {
+            "name": "Off",
+            "parent": "413",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "416": {
+            "name": "Skull Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "417",
+                        "_myDisabledObject": "418",
+                        "_myWeapon": "Skull"
+                    }
+                }
+            ],
+            "translation": [
+                0.25,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "417": {
+            "name": "On",
+            "parent": "416",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "418": {
+            "name": "Off",
+            "parent": "416",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "419": {
+            "name": "Voice Handle",
+            "parent": "409",
+            "components": [
+                {
+                    "type": "physx",
+                    "physx": {
+                        "shape": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.1,
+                                0.1
+                            ]
+                        },
+                        "kinematic": true,
+                        "gravity": false,
+                        "static": true,
+                        "groups": 128,
+                        "block": 128
+                    }
+                },
+                {
+                    "type": "buy-button",
+                    "buy-button": {
+                        "_myEnableObject": "420",
+                        "_myDisabledObject": "421",
+                        "_myWeapon": "Voice"
+                    }
+                }
+            ],
+            "translation": [
+                0.6499999,
+                -0.0000146,
+                0.0000586
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "420": {
+            "name": "On",
+            "parent": "419",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "148"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000047
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "421": {
+            "name": "Off",
+            "parent": "419",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "p1",
+                        "material": "149"
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0000019
+            ],
+            "rotation": [
+                0.0,
+                -0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
             ]
         }
     },

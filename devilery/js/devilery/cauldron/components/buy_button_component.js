@@ -1,5 +1,5 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
-import { GamepadButtonID, Globals, InputUtils, PhysicsCollisionCollector } from "../../../pp";
+import { GamepadButtonID, Globals, InputUtils, PhysicsCollisionCollector, Timer } from "../../../pp";
 import { BuyHandComponent } from "./buy_hand_component";
 
 export class BuyButtonComponent extends Component {
@@ -29,6 +29,9 @@ export class BuyButtonComponent extends Component {
     }
 
     _start() {
+        this._myEnabled = true;
+        this._myTimerEnable = new Timer(2, false);
+
         this._myPhysX = this.object.pp_getComponent(PhysXComponent);
         this._myCollisionsCollector = new PhysicsCollisionCollector(this._myPhysX);
 
@@ -48,9 +51,32 @@ export class BuyButtonComponent extends Component {
                 }
             }
         }
+
+        if (!this._myEnabled) {
+            this._myTimerEnable.update(dt);
+            if (this._myTimerEnable.isJustDone()) {
+                this._myEnableObject.pp_setActive(true);
+                this._myDisabledObject.pp_setActive(false);
+
+                this._myEnabled = true;
+
+                // particles
+            }
+        }
     }
 
     buy() {
-        console.error("buy");
+        if (this._myEnabled) {
+            let buyOk = GameGlobals.myDevileryConsole.buy(this._myWeapon);
+
+            if (buyOk) {
+                this._myEnabled = false;
+                this._myEnableObject.pp_setActive(false);
+                this._myDisabledObject.pp_setActive(true);
+
+                this._myTimerEnable.start();
+                // particles
+            }
+        }
     }
 }

@@ -33,7 +33,6 @@ import {ParticlesSpawnerComponent} from './playground/particles_spawner_componen
 import {ConsoleVRToolComponent} from './pp/index.js';
 import {EasyTuneToolComponent} from './pp/index.js';
 import {GamepadMeshAnimatorComponent} from './pp/index.js';
-import {GrabbableComponent} from './pp/index.js';
 import {GrabberHandComponent} from './pp/index.js';
 import {PPGatewayComponent} from './pp/index.js';
 import {PlayerLocomotionComponent} from './pp/index.js';
@@ -121,7 +120,6 @@ engine.registerComponent(ParticlesSpawnerComponent);
 engine.registerComponent(ConsoleVRToolComponent);
 engine.registerComponent(EasyTuneToolComponent);
 engine.registerComponent(GamepadMeshAnimatorComponent);
-engine.registerComponent(GrabbableComponent);
 engine.registerComponent(GrabberHandComponent);
 engine.registerComponent(PPGatewayComponent);
 engine.registerComponent(PlayerLocomotionComponent);
