@@ -1,5 +1,5 @@
 import { Component } from "@wonderlandengine/api";
-import { Globals, ObjectPoolParams, ObjectPoolsManager, vec3_create } from "../../../pp";
+import { ObjectPoolParams, ObjectPoolsManager, vec3_create } from "../../../pp";
 import { GameGlobals } from "../game_globals";
 
 export class EvilPointSpawnerComponent extends Component {

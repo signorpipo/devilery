@@ -1,7 +1,7 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { PhysicsCollisionCollector, vec3_create } from "../../../pp";
-import { EnemyComponent } from "./enemy_component";
 import { GameGlobals } from "../game_globals";
+import { EnemyComponent } from "./enemy_component";
 
 export class PrincessComponent extends Component {
     static TypeName = "princess";

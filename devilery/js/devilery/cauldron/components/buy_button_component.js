@@ -1,7 +1,7 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
 import { GamepadButtonID, Globals, InputUtils, PhysicsCollisionCollector, Timer } from "../../../pp";
-import { BuyHandComponent } from "./buy_hand_component";
 import { GameGlobals } from "../game_globals";
+import { BuyHandComponent } from "./buy_hand_component";
 
 export class BuyButtonComponent extends Component {
     static TypeName = "buy-button";

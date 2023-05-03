@@ -31,4 +31,4 @@ export let GameGlobals = {
     myRandomEnemyDie: false,
 };
 
-window.GameGlobals = GameGlobals;
+//window.GameGlobals = GameGlobals;

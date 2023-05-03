@@ -1,6 +1,6 @@
-import { Component, Property } from "@wonderlandengine/api";
+import { Component } from "@wonderlandengine/api";
+import { NumberRangeOverValue, ObjectPoolParams, ObjectPoolsManager, Timer, vec3_create } from "../../../pp";
 import { GameGlobals } from "../game_globals";
-import { Globals, NumberRangeOverValue, ObjectPoolParams, ObjectPoolsManager, Timer, vec3_create } from "../../../pp";
 import { EnemyComponent } from "./enemy_component";
 
 export class ShipComponent extends Component {

@@ -1,5 +1,6 @@
-import { Component, Property } from "@wonderlandengine/api";
+import { Component } from "@wonderlandengine/api";
 import { CloneUtils } from "../../../pp";
+import { GameGlobals } from "../game_globals";
 
 export class EvilPointComponent extends Component {
     static TypeName = "evil-point";

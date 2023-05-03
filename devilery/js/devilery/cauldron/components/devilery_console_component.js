@@ -1,8 +1,8 @@
 import { Component, PhysXComponent, Property } from "@wonderlandengine/api";
-import { EvilPointComponent } from "./evil_point_component";
 import { PhysicsCollisionCollector } from "../../../pp";
-import { WeaponType } from "./weapon_component";
 import { GameGlobals } from "../game_globals";
+import { EvilPointComponent } from "./evil_point_component";
+import { WeaponType } from "./weapon_component";
 
 export class DevileryConsoleComponent extends Component {
     static TypeName = "devilery-console";

@@ -1,5 +1,6 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { ObjectPoolParams, ObjectPoolsManager, vec3_create } from "../../../pp";
+import { GameGlobals } from "../game_globals";
 
 export class BulletSpawnerComponent extends Component {
     static TypeName = "bullet-spawner";

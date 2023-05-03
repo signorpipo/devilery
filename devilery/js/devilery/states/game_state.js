@@ -1,4 +1,4 @@
-import { FSM, GamepadButtonID, Globals, quat_create, vec3_create } from "../../pp";
+import { FSM, GamepadButtonID, Globals } from "../../pp";
 import { GameGlobals } from "../cauldron/game_globals";
 
 export class GameState {
