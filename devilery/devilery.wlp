@@ -26,7 +26,9 @@
                         "_myText": "110",
                         "_myScene": "18",
                         "_myEnableDebugs": false,
-                        "_myEnableTools": false
+                        "_myEnableTools": false,
+                        "_myAddPPToWindow": false,
+                        "_myAddWLToWindow": false
                     }
                 },
                 {
@@ -9826,9 +9828,9 @@
         },
         "rendering": {
             "clearColor": [
-                0.7622584,
-                0.436888,
-                0.9551569,
+                0.9529411,
+                0.5254902,
+                0.8431372,
                 1.0
             ],
             "textureAtlasSize": [
