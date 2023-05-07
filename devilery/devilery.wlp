@@ -50,7 +50,7 @@
                     "type": "pp-player-locomotion",
                     "pp-player-locomotion": {
                         "_myPhysicsBlockLayerFlags": "0, 1, 0, 0, 0, 0, 0, 0",
-                        "_myMoveThroughCollisionShortcutEnabled": true,
+                        "_myMoveThroughCollisionShortcutEnabled": false,
                         "_myFlyEnabled": false,
                         "_myMaxSpeed": 2.5,
                         "_myMinAngleToFlyUpNonVR": 90.0,
