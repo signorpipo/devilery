@@ -18,6 +18,7 @@ import { PlayerTransformManagerParams } from "../player_transform_manager";
 import { PlayerLocomotionTeleport, PlayerLocomotionTeleportParams } from "../teleport/player_locomotion_teleport";
 import { CleanedPlayerLocomotionSmooth } from "./player_locomotion_smooth_cleaned";
 import { CleanedPlayerTransformManager } from "./player_transform_manager_cleaned";
+import { GameGlobals } from "../../../../../../../devilery/cauldron/game_globals";
 
 export class CleanedPlayerLocomotion {
 
@@ -337,6 +338,12 @@ export class CleanedPlayerLocomotion {
 
         if (Globals.getLeftGamepad(this._myParams.myEngine).getButtonInfo(GamepadButtonID.THUMBSTICK).isPressEnd(2)) {
             if (this._myLocomotionMovementFSM.isInState("smooth") && this._myPlayerLocomotionSmooth.canStop()) {
+                if (GameGlobals.myGoogleAnalytics) {
+                    gtag("event", "switch_teleport", {
+                        "value": 1
+                    });
+                }
+
                 this._myLocomotionMovementFSM.perform("next");
             } else if (this._myLocomotionMovementFSM.isInState("teleport") && this._myPlayerLocomotionTeleport.canStop()) {
                 this._myLocomotionMovementFSM.perform("next");

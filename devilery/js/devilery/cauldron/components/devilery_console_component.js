@@ -77,7 +77,17 @@ export class DevileryConsoleComponent extends Component {
 
     _increaseEvil(evilPoint) {
         evilPoint.die();
+
+        let currentTotal = this._myEvilTotal;
         this._myEvilTotal = Math.min(this._myEvilTotal + 0.2, 8);
+
+        if (Math.floor(currentTotal) < Math.floor(this._myEvilTotal)) {
+            if (GameGlobals.myGoogleAnalytics) {
+                gtag("event", "evilness_gained", {
+                    "value": 1
+                });
+            }
+        }
 
         this._updateBars();
     }
@@ -108,6 +118,35 @@ export class DevileryConsoleComponent extends Component {
             ok = true;
 
             GameGlobals.myDevileryBoss.deviler(itemType);
+
+            if (GameGlobals.myGoogleAnalytics) {
+                gtag("event", "buy_weapon", {
+                    "value": 1
+                });
+
+                switch (itemType) {
+                    case 0:
+                        gtag("event", "buy_apple", {
+                            "value": 1
+                        });
+                        break;
+                    case 1:
+                        gtag("event", "buy_bat", {
+                            "value": 1
+                        });
+                        break;
+                    case 2:
+                        gtag("event", "buy_skull", {
+                            "value": 1
+                        });
+                        break;
+                    case 3:
+                        gtag("event", "buy_voice", {
+                            "value": 1
+                        });
+                        break;
+                }
+            }
         }
 
         return ok;

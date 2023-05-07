@@ -9855,7 +9855,8 @@
                 }
             },
             "viewObject": "21",
-            "visualizePhysX": false
+            "visualizePhysX": false,
+            "googleAnalytics": "G-5FKCCL6EHM"
         },
         "scripting": {
             "sourcePaths": [

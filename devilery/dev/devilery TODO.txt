@@ -1,3 +1,31 @@
+POST JAM TO DO:
+
+- add sfx
+- add music
+- balance game
+	- aggiungere delivery guy che rilascia evil point
+	- ridurre particles per sparo
+	- cambiare un po' sistema ondate
+		- magari diminuisce il tempo di spawn di uccello generico e poi una volta che deve spawnare scegli randomicamente il tipo
+		- questo evita che spawnino 2 uno subito dopo l'altro perché i timer combaciano, ne spawna sempre uno per volta con delay
+		- più facile anche da gestire
+- finire arma bat e skull
+- add leaderboard e zesty
+	- metterli nel lato libero, con il cuore per interagirci e un occhio per nasconderli cosi da non infastidirti
+	- se nascosti, tornano visibili alla run dopo
+	- il cuore per la ledearboard switcha tra locale e world
+- aggiungere qualcosa accanto a zesty e leaderboard per andare al mio itch / itch del gioco?
+	- magari il pannello con l'occhio ha anche quello per andare alla pagina itch (wondermelon? oppure una cosa custom per noi due)
+	- quindi non c'è un occhio per zesty e uno per leaderboard ma uno comune accanto
+- visual
+	- rimuovere puntatore mouse da story screen
+	- mettere colore giusto per barra principessa
+- fix
+	- se sei non vr deve resettare anche l'angolo verticale quando perdi o nell'intro per farti vedere bene lo screen
+
+
+JAM TODO:
+
 FLOW:
 
 - STORIA INIZIALE

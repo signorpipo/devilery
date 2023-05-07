@@ -6,6 +6,7 @@ export let GameGlobals = {
     myUp: vec3_create(0, 1, 0),
 
     myStarted: false,
+    myGoogleAnalytics: false,
 
     myPlayerLocomotion: null,
     myPlayerTransformManager: null,

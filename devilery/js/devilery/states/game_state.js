@@ -38,6 +38,8 @@ export class GameState {
 
         GameGlobals.myBlackFade.fadeIn();
 
+        this._myTotalTimeSurvived = 0;
+
         this._myFSM.perform("start");
     }
 
@@ -59,6 +61,8 @@ export class GameState {
 
     update(dt, fsm) {
         this._myFSM.update(dt);
+
+        this._myTotalTimeSurvived += dt;
     }
 
     _gameUpdate(dt, fsm) {
@@ -92,6 +96,35 @@ export class GameState {
     }
 
     _lostStart() {
+        let surviveSeconds = Math.round(this._myTotalTimeSurvived);
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "survive_seconds", {
+                "value": surviveSeconds
+            });
+
+            if (surviveSeconds >= 60 * 5) {
+                gtag("event", "survive_5_minutes", {
+                    "value": 1
+                });
+            } else if (surviveSeconds >= 60 * 3) {
+                gtag("event", "survive_3_minutes", {
+                    "value": 1
+                });
+            } else if (surviveSeconds >= 60 * 2) {
+                gtag("event", "survive_2_minutes", {
+                    "value": 1
+                });
+            } else if (surviveSeconds >= 60 * 1) {
+                gtag("event", "survive_1_minute", {
+                    "value": 1
+                });
+            } else if (surviveSeconds >= 30) {
+                gtag("event", "survive_30_seconds", {
+                    "value": 1
+                });
+            }
+        }
+
         GameGlobals.myWhiteFade.fadeOut();
     }
 

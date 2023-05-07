@@ -56,6 +56,12 @@ export class EndingState {
     }
 
     start(fsm) {
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "lost", {
+                "value": 1
+            });
+        }
+
         this._myWhiteRoomStories[0].pp_getParent().pp_setActive(false);
         this._myCurrentStoryIndex = -1;
 
@@ -158,11 +164,29 @@ export class EndingState {
         }
     }
 
-    _endEnding() {
+    _endEnding(skipped = false) {
+        if (!skipped && GameGlobals.myGoogleAnalytics) {
+            gtag("event", "ending_watched", {
+                "value": 1
+            });
+        }
+
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "ending_done", {
+                "value": 1
+            });
+        }
+
         this._myParentFSM.perform("end");
     }
 
     _skipEnding() {
-        this._endEnding();
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "ending_skipped", {
+                "value": 1
+            });
+        }
+
+        this._endEnding(true);
     }
 }

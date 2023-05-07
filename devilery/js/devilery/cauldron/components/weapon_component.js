@@ -35,6 +35,37 @@ export class WeaponComponent extends Component {
         }
     }
 
+    grabbed() {
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "grab_weapon", {
+                "value": 1
+            });
+
+            switch (this._myWeapon) {
+                case 0:
+                    gtag("event", "grab_apple", {
+                        "value": 1
+                    });
+                    break;
+                case 1:
+                    gtag("event", "grab_bat", {
+                        "value": 1
+                    });
+                    break;
+                case 2:
+                    gtag("event", "grab_skull", {
+                        "value": 1
+                    });
+                    break;
+                case 3:
+                    gtag("event", "grab_voice", {
+                        "value": 1
+                    });
+                    break;
+            }
+        }
+    }
+
     shot() {
         let shotOk = true;
 
@@ -48,6 +79,35 @@ export class WeaponComponent extends Component {
 
         if (shotOk) {
             if (this._myCurrentAmmo > 0 || this._myAmmo < 0) {
+                if (GameGlobals.myGoogleAnalytics) {
+                    gtag("event", "shot_weapon", {
+                        "value": 1
+                    });
+
+                    switch (this._myWeapon) {
+                        case 0:
+                            gtag("event", "shot_apple", {
+                                "value": 1
+                            });
+                            break;
+                        case 1:
+                            gtag("event", "shot_bat", {
+                                "value": 1
+                            });
+                            break;
+                        case 2:
+                            gtag("event", "shot_skull", {
+                                "value": 1
+                            });
+                            break;
+                        case 3:
+                            gtag("event", "shot_voice", {
+                                "value": 1
+                            });
+                            break;
+                    }
+                }
+
                 GameGlobals.myBulletSpawners[this._myWeapon].shot(this._myExitTarget);
                 this._myCurrentAmmo--;
                 GameGlobals.myShotParticlesSpawner.spawn(this._myExitTarget.pp_getPosition());

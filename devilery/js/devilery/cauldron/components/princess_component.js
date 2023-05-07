@@ -43,6 +43,12 @@ export class PrincessComponent extends Component {
     }
 
     delovery(enemy) {
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "princess_delovery", {
+                "value": 1
+            });
+        }
+
         enemy.delovery();
 
         this._myDelovery = Math.min(10, this._myDelovery + 1);

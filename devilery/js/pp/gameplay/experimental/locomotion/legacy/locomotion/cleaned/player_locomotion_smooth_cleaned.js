@@ -41,6 +41,8 @@ export class CleanedPlayerLocomotionSmooth extends PlayerLocomotionMovement {
 
         this._myGravitySpeed = 0;
 
+        this._myNonVRPlayingTimer = new Timer(15);
+
         this._myDestroyed = false;
 
         XRUtils.registerSessionStartEndEventListeners(this, this._onXRSessionStart.bind(this), this._onXRSessionEnd.bind(this), true, false, this._myParams.myEngine);
@@ -157,6 +159,27 @@ CleanedPlayerLocomotionSmooth.prototype.update = function () {
 
             this._myParams.myPlayerTransformManager.move(headMovement, this._myLocomotionRuntimeParams.myCollisionRuntimeParams);
             if (horizontalMovement) {
+                if (this._myNonVRPlayingTimer.isRunning()) {
+                    this._myNonVRPlayingTimer.update(dt);
+                    if (this._myNonVRPlayingTimer.isDone()) {
+                        if (GameGlobals.myGoogleAnalytics) {
+                            if (!XRUtils.isSessionActive()) {
+                                gtag("event", "moving_non_vr", {
+                                    "value": 1
+                                });
+                            } else {
+                                gtag("event", "moving_vr", {
+                                    "value": 1
+                                });
+                            }
+
+                            gtag("event", "moving", {
+                                "value": 1
+                            });
+                        }
+                    }
+                }
+
                 this._myParams.myPlayerTransformManager.resetReal(true, false, false);
                 this._myParams.myPlayerTransformManager.resetHeadToReal();
             }

@@ -107,9 +107,40 @@ export class EnemyComponent extends Component {
 
     die() {
         if (this._myType != 3) {
+            if (GameGlobals.myGoogleAnalytics) {
+                gtag("event", "kill_bird", {
+                    "value": 1
+                });
+
+                switch (this._myType) {
+                    case 0:
+                        gtag("event", "kill_bird_normal", {
+                            "value": 1
+                        });
+                        break;
+                    case 1:
+                        gtag("event", "kill_bird_strong", {
+                            "value": 1
+                        });
+                        break;
+                    case 2:
+                        gtag("event", "kill_bird_shield", {
+                            "value": 1
+                        });
+                        break;
+                }
+            }
+
+
             GameGlobals.myShip.enemyDespawn(this._myEnemy);
             GameGlobals.myEnemyDieParticlesSpawner[this._myType].spawn(this.object.pp_getPosition());
         } else {
+            if (GameGlobals.myGoogleAnalytics) {
+                gtag("event", "kill_delivery_guy", {
+                    "value": 1
+                });
+            }
+
             GameGlobals.myDevileryBoss.devilerySkullDespawn(this._myEnemy);
             GameGlobals.mySkullParticlesSpawner.spawn(this.object.pp_getPosition());
         }

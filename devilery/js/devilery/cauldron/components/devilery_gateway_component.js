@@ -1,7 +1,7 @@
 import { Component, Property } from "@wonderlandengine/api";
 import { initDevilery } from "../init_devilery";
 import { GameGlobals } from "../game_globals";
-import { Globals, PlayerLocomotionComponent } from "../../../pp";
+import { GamepadButtonID, Globals, PlayerLocomotionComponent, XRUtils } from "../../../pp";
 import { Devilery } from "../devilery";
 
 let _alreadyRegisteredEngines = [];
@@ -27,6 +27,10 @@ export class DevileryGatewayComponent extends Component {
         }
     }
 
+    init() {
+        GameGlobals.myGoogleAnalytics = window.gtag != null;
+    }
+
     start() {
         GameGlobals.myScene = this.object;
 
@@ -40,6 +44,10 @@ export class DevileryGatewayComponent extends Component {
         this._myDevilery = new Devilery();
 
         this._myStartCounter = this._myStartDelayFrames;
+
+        this._myButtonPressed = false;
+
+        XRUtils.registerSessionStartEventListener(this, this._onXRSessionStart.bind(this));
     }
 
     update(dt) {
@@ -50,6 +58,20 @@ export class DevileryGatewayComponent extends Component {
             }
         } else {
             this._myDevilery.update(dt);
+
+            if (XRUtils.isSessionActive()) {
+                if (!this._myButtonPressed) {
+                    if (Globals.getLeftGamepad().getButtonInfo(GamepadButtonID.SELECT).isPressEnd() || Globals.getLeftGamepad().getButtonInfo(GamepadButtonID.SQUEEZE).isPressEnd() ||
+                        Globals.getRightGamepad().getButtonInfo(GamepadButtonID.SELECT).isPressEnd() || Globals.getRightGamepad().getButtonInfo(GamepadButtonID.SQUEEZE).isPressEnd()) {
+                        this._myButtonPressed = true;
+                        if (GameGlobals.myGoogleAnalytics) {
+                            gtag("event", "button_pressed", {
+                                "value": 1
+                            });
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -61,5 +83,13 @@ export class DevileryGatewayComponent extends Component {
         this._myDevilery.start();
 
         GameGlobals.myStarted = true;
+    }
+
+    _onXRSessionStart() {
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "enter_vr", {
+                "value": 1
+            });
+        }
     }
 }

@@ -139,11 +139,29 @@ export class IntroState {
         GameGlobals.myBlackFade.fadeIn();
     }
 
-    _endIntro() {
+    _endIntro(skipped = false) {
+        if (!skipped && GameGlobals.myGoogleAnalytics) {
+            gtag("event", "intro_watched", {
+                "value": 1
+            });
+        }
+
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "intro_done", {
+                "value": 1
+            });
+        }
+
         this._myParentFSM.perform("end");
     }
 
     _skipIntro() {
-        this._endIntro();
+        if (GameGlobals.myGoogleAnalytics) {
+            gtag("event", "intro_skipped", {
+                "value": 1
+            });
+        }
+
+        this._endIntro(true);
     }
 }

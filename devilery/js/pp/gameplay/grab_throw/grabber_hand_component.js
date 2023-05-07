@@ -189,11 +189,15 @@ export class GrabberHandComponent extends Component {
                     grabbableToGrab.grab(this.object);
                     grabbableToGrab.registerReleaseEventListener(this, this._onRelease.bind(this));
 
-                    if (grabbableToGrab.object.pp_getComponent(WeaponComponent) || this._mySnapOnPivot) {
+                    let weaponComponent = grabbableToGrab.object.pp_getComponent(WeaponComponent);
+                    if (weaponComponent != null || this._mySnapOnPivot) {
                         grabbableToGrab.object.pp_resetPositionLocal();
                     }
-                    if (grabbableToGrab.object.pp_getComponent(WeaponComponent)) {
+
+                    if (weaponComponent != null) {
                         grabbableToGrab.object.pp_resetRotationLocal();
+
+                        weaponComponent.grabbed();
                     }
 
                     this._myGrabEmitter.notify(this, grabbableToGrab);
