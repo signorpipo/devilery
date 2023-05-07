@@ -22,6 +22,7 @@ POST JAM TO DO:
 	- mettere colore giusto per barra principessa
 - fix
 	- se sei non vr deve resettare anche l'angolo verticale quando perdi o nell'intro per farti vedere bene lo screen
+	- improve performances (less particles)
 
 
 JAM TODO:
