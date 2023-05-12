@@ -23,6 +23,7 @@ POST JAM TO DO:
 - fix
 	- se sei non vr deve resettare anche l'angolo verticale quando perdi o nell'intro per farti vedere bene lo screen
 	- improve performances (less particles)
+	- add a hide if hand pose invalid component
 
 
 JAM TODO:
