@@ -1,8 +1,8 @@
 import { Component, Property } from "@wonderlandengine/api";
-import { initDevilery } from "../init_devilery";
-import { GameGlobals } from "../game_globals";
-import { GamepadButtonID, Globals, PlayerLocomotionComponent, XRUtils } from "../../../pp";
+import { GamepadButtonID, Globals, XRUtils } from "../../../pp";
 import { Devilery } from "../devilery";
+import { GameGlobals } from "../game_globals";
+import { initDevilery } from "../init_devilery";
 
 let _alreadyRegisteredEngines = [];
 
