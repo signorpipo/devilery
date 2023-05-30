@@ -1,5 +1,6 @@
 POST JAM TO DO:
 
+- disablitare features pipeline che non servono
 - add sfx
 - add music
 - balance game
@@ -24,6 +25,7 @@ POST JAM TO DO:
 	- se sei non vr deve resettare anche l'angolo verticale quando perdi o nell'intro per farti vedere bene lo screen
 	- improve performances (less particles)
 	- add a hide if hand pose invalid component
+	- provare i nuovi solve iteration flag sugli oggetti fisici per vedere se cadono in modo piu naturale
 
 
 JAM TODO:
